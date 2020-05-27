@@ -1,0 +1,157 @@
+﻿@inherits LayoutComponentBase
+@page "/Doc"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <div class="bd-header-titles">
+            <UIContent>
+                <p class="title is-2">
+                    CZGL.BlazorUI 中文文档
+                </p>
+                <p class="subtitle is-5">
+                    <strong>CZGL.BlazorUI</strong> 是一个轻量级的 <strong>Blazor</strong> 组件库，完全基于 <code>C#</code> + <code>css</code> 打造。
+                </p>
+            </UIContent>
+        </div>
+        <br />
+        <hr />
+        <br />
+
+        <div class="bd-content">
+            <nav class="bd-links">
+                <a class="bd-link" href="@(nameof(Doc)+"/"+nameof(Pages.Docs.Start))">
+                    <h2 class="bd-link-name">
+                        <figure class="bd-link-figure">
+                            <UIIcon IconClass="fa fa-eye" Color="UIETextColor.Info" />
+                        </figure>
+                        开始使用(Overview)
+                    </h2>
+                    <p class="bd-link-subtitle">
+                        Bulma CSS 框架概述
+                    </p>
+                </a>
+
+                <a class="bd-link" href="#">
+                    <h2 class="bd-link-name">
+                        <figure class="bd-link-figure">
+                            <UIIcon IconClass="fas fa-paint-brush" Color="UIETextColor.Info" />
+                        </figure>
+                        自定义(Customize)
+                    </h2>
+                    <p class="bd-link-subtitle">
+                        通过事件绑定和属性配置来创建你的<strong>主题(theme)</strong>以及页面交互逻辑
+                    </p>
+                </a>
+
+                <a class="bd-link" href="/documentation/modifiers/">
+                    <h2 class="bd-link-name">
+                        <figure class="bd-link-figure">
+                            <UIIcon IconClass="fas fa-cogs" Color="UIETextColor.Info" />
+                        </figure>
+                        组件修饰(Modifiers)
+                    </h2>
+                    <p class="bd-link-subtitle">
+                        配合组件工作的辅助
+                    </p>
+                </a>
+
+                <a class="bd-link" href="/Doc/Column">
+                    <h2 class="bd-link-name">
+                        <figure class="bd-link-figure">
+                            <UIIcon IconClass="fas fa-columns" Color="UIETextColor.Info" />
+                        </figure>
+                        列(Columns)
+                    </h2>
+                    <p class="bd-link-subtitle">
+                        基于 <strong>Flexbox</strong> 的简单界面布局设计
+                    </p>
+                </a>
+
+                <a class="bd-link" href="/Doc/Container">
+                    <h2 class="bd-link-name">
+                        <figure class="bd-link-figure">
+                            <UIIcon IconClass="fas fa-warehouse" Color="UIETextColor.Info" />
+                        </figure>
+                        布局(Layout)
+                    </h2>
+                    <p class="bd-link-subtitle">
+                        使用组件轻松设计你的网页<strong>结构</strong>，省去繁杂的<code>CSS</code> 设置
+                    </p>
+                </a>
+
+                <a class="bd-link" href="/Doc/FormStart">
+                    <h2 class="bd-link-name">
+                        <figure class="bd-link-figure">
+                            <UIIcon IconClass="fas fa-file-invoice" Color="UIETextColor.Info" />
+                        </figure>
+                        表单(Form)
+                    </h2>
+                    <p class="bd-link-subtitle">
+                        必不可少的 <strong>表单控件</strong>, 与 Blazor 结合，让验证更简单
+                    </p>
+                </a>
+
+                <a class="bd-link" href="/Doc/Box">
+                    <h2 class="bd-link-name">
+                        <figure class="bd-link-figure">
+                            <UIIcon IconClass="fas fa-cube" Color="UIETextColor.Info" />
+                        </figure>
+                        元素(Elements)
+                    </h2>
+                    <p class="bd-link-subtitle">
+                        最简单的页面元素
+                    </p>
+
+                </a>
+
+                <a class="bd-link" href="#">
+                    <h2 class="bd-link-name">
+                        <figure class="bd-link-figure">
+                            <UIIcon IconClass="fas fa-cubes" Color="UIETextColor.Info" />
+                        </figure>
+                        组件(Components)
+                    </h2>
+                    <p class="bd-link-subtitle">
+                        多元素组合，快速形成个性页面
+                    </p>
+                </a>
+            </nav>
+        </div>
+    </UIColumn>
+</UIColumns>
+
+
+<p>文档页面布局</p>
+<div class="bd-snippet-code  ">
+    <figure class="highlight">
+        <pre><code class="language-html" data-lang="html">
+    &lt;UIColumns&gt;
+    &lt;UIColumn Size=&quot;UIEColumnSize.X2&quot;&gt;
+    &lt;DocsMenu /&gt;
+    &lt;/UIColumn&gt;
+    &lt;UIColumn Size=&quot;UIEColumnSize.X10&quot;&gt;
+    文档
+    &lt;/UIColumn&gt;
+    &lt;/UIColumns&gt;
+</code></pre><button class="button is-small bd-copy">Copy</button><button class="button is-small bd-expand">Expand</button>
+    </figure>
+</div>
+
+
+
+代码高亮
+<div class="bd-snippet-code  ">
+    <figure class="highlight">
+        <pre><code class="language-html" data-lang="html">
+    &lt;div class=&quot;bd-snippet-code  &quot;&gt;
+    &lt;figure class=&quot;highlight&quot;&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;
+
+    &lt;/code&gt;&lt;/pre&gt;&lt;button class=&quot;button is-small bd-copy&quot;&gt;Copy&lt;/button&gt;&lt;button class=&quot;button is-small bd-expand&quot;&gt;Expand&lt;/button&gt;
+    &lt;/figure&gt;
+    &lt;/div&gt;
+</code></pre><button class="button is-small bd-copy">Copy</button><button class="button is-small bd-expand">Expand</button>
+    </figure>
+</div>

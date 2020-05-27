@@ -1,0 +1,196 @@
+﻿@page "/Doc/Textarea"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <h2 class="title is-2">文本域(UITextarea)</h2>
+        <UIContent>
+            <p>
+                文本域使用十分简单，用于多行编辑文本。
+            </p>
+        </UIContent>
+
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UITextarea Placeholder="文本域，你可以在此输入文本内容"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UITextarea Placeholder=&quot;文本域，你可以在此输入文本内容&quot;&gt;&lt;/UITextarea&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <UIContent>
+            <p><code>Rows</code> 可设置显示的行数。</p>
+            <p>在不设置行数和列数时，文本域会自动适应容器大小。</p>
+        </UIContent>
+
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.X2">
+                <UITextarea Placeholder="文本域"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="文本域"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X6">
+                <UITextarea Placeholder="文本域"></UITextarea>
+            </UIColumn>
+        </UIColumns>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.X2">
+                <UITextarea Placeholder="Rows:2" Rows="2"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Rows:5" Rows="5"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X6">
+                <UITextarea Placeholder="Rows:10" Rows="10"></UITextarea>
+            </UIColumn>
+        </UIColumns>
+        <UICode>
+            &lt;UIColumns&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X2&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Rows:2&quot; Rows=&quot;2&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Rows:5&quot; Rows=&quot;5&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X6&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Rows:10&quot; Rows=&quot;10&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;/UIColumns&gt;
+        </UICode>
+        <br />
+        <h3 class="title is-3">颜色</h3>
+        <UIContent>
+            <p><code>Color</code> 属性可以设置文本域的边框颜色。</p>
+        </UIContent>
+
+        <UIColumns IsMultiline="true">
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Black" Color="UIEColor.Black"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Danger" Color="UIEColor.Danger"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Dark" Color="UIEColor.Dark"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Info" Color="UIEColor.Info"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Light" Color="UIEColor.Light"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Link" Color="UIEColor.Link"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Primary" Color="UIEColor.Primary"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Success" Color="UIEColor.Success"></UITextarea>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UITextarea Placeholder="Warning" Color="UIEColor.Warning"></UITextarea>
+            </UIColumn>
+        </UIColumns>
+        <UICode>
+            &lt;UIColumns IsMultiline=&quot;true&quot;&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Black&quot; Color=&quot;UIEColor.Black&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Danger&quot; Color=&quot;UIEColor.Danger&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Dark&quot; Color=&quot;UIEColor.Dark&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Info&quot; Color=&quot;UIEColor.Info&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Light&quot; Color=&quot;UIEColor.Light&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Link&quot; Color=&quot;UIEColor.Link&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Primary&quot; Color=&quot;UIEColor.Primary&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Success&quot; Color=&quot;UIEColor.Success&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+            &lt;UITextarea Placeholder=&quot;Warning&quot; Color=&quot;UIEColor.Warning&quot;&gt;&lt;/UITextarea&gt;
+            &lt;/UIColumn&gt;
+            &lt;/UIColumns&gt;
+        </UICode>
+
+        <br />
+        <h3 class="title is-3">大小</h3>
+        <UIContent>
+            <p><code>Size</code> 属性可以设置文本域的大小。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIField>
+                    <UIControl>
+                        <UITextarea Size="UIETextSize.Small" Placeholder="Small"></UITextarea>
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UITextarea Size="UIETextSize.None" Placeholder="None"></UITextarea>
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UITextarea Size="UIETextSize.Medium" Placeholder="Medium"></UITextarea>
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UITextarea Size="UIETextSize.Large" Placeholder="Large"></UITextarea>
+                    </UIControl>
+                </UIField>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UITextarea Size=&quot;UIETextSize.Small&quot; Placeholder=&quot;Small&quot;&gt;&lt;/UITextarea&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UITextarea Size=&quot;UIETextSize.None&quot; Placeholder=&quot;None&quot;&gt;&lt;/UITextarea&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UITextarea Size=&quot;UIETextSize.Medium&quot; Placeholder=&quot;Medium&quot;&gt;&lt;/UITextarea&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UITextarea Size=&quot;UIETextSize.Large&quot; Placeholder=&quot;Large&quot;&gt;&lt;/UITextarea&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                </UICode>
+
+            </UIColumn>
+        </UIColumns>
+
+
+        <UIH3>其它设置</UIH3>
+        <p><code>@nameof(UITextarea)</code>拥有跟 <code>@nameof(UIInput)</code> 一样的状态属性。</p>
+        <p><code>State</code> 属性可以配置控件状态。</p>
+        <p><code>IsStatic</code> 属性可以设置控件为静态。</p>
+        <p><code>IsReadonly</code> 属性设置只读。</p>
+        <p><code>IsDisabled</code> 属性设置控件为禁用状态。具体可参考<UICode>@nameof(UIInput)</UICode> ，这里不再赘述，毕竟写文档是很累的，整个网站的文档全靠手撸。</p>
+    </UIColumn>
+</UIColumns>
+

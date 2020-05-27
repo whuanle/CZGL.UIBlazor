@@ -1,0 +1,109 @@
+﻿@page "/Doc/File"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>文件框(UIFile)</UIH2>
+        <UIContent>
+            <p>
+                用于表单选择文件。
+            </p>
+        </UIContent>
+
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <p>使用起来非常简单。</p>
+                <br />
+                <UIFile>选择文件</UIFile>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIFile&gt;选择文件&lt;/UIFile&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+        <hr />
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <p>使用 <code>IsShowFile</code> 默认会显示选择的文件完整路径和文件名称。如果不想带有文件路径等，可以将 <code>IsHasPath</code> 设置为 false。</p>
+                <p><code>FileDefaultName</code> 可以设置在为选择文件前，选择框显示的文字。你可以分别在下面三个选择框中选择文件，看看输出如何。</p>
+                <UIFile IsShowFile="true">选择文件</UIFile>
+                <UIFile IsShowFile="true" IsHasPath="false">选择文件</UIFile>
+                <UIFile IsShowFile="true" FileDefaultName="请选择文件">选择文件</UIFile>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIFile IsShowFile=&quot;true&quot;&gt;选择文件&lt;/UIFile&gt;
+                    &lt;UIFile IsShowFile=&quot;true&quot; IsHasPath=&quot;false&quot;&gt;选择文件&lt;/UIFile&gt;
+                    &lt;UIFile IsShowFile=&quot;true&quot; FileDefaultName=&quot;请选择文件&quot;&gt;选择文件&lt;/UIFile&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+        <hr />
+        <p>可以使用 <code>IsBox</code> 设置选择框为一个盒子样式。</p>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.X2">
+                <UIFile IsBox="true">选择文件</UIFile>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X2">
+                <UIFile IsShowFile="true" IsBox="true">选择文件</UIFile>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIFile IsBox=&quot;true&quot;&gt;选择文件&lt;/UIFile&gt;
+                    &lt;UIFile IsShowFile=&quot;true&quot; IsBox=&quot;true&quot;&gt;选择文件&lt;/UIFile&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <h3 class="title is-3">颜色</h3>
+        <UIContent>
+            <p><code>Color</code> 属性可以设置文件选择框的颜色。</p>
+        </UIContent>
+        <UIColumns IsMultiline="true">
+            @for (int i = 0; i <= 10; i++)
+            {
+                int tmp = i;
+                <UIColumn Size="UIEColumnSize.X2">
+                    <UIFile Color="(UIEColor)tmp">@(Enum.GetName(typeof(UIEColor), (UIEColor)tmp))</UIFile>
+                </UIColumn>
+            }
+        </UIColumns>
+
+        <UIColumns IsMultiline="true">
+            @for (int i = 0; i <= 10; i++)
+            {
+                int tmp = i;
+                <UIColumn Size="UIEColumnSize.X2">
+                    <UIFile IsShowFile="true" Color="(UIEColor)tmp">@(Enum.GetName(typeof(UIEColor), (UIEColor)tmp))</UIFile>
+                </UIColumn>
+            }
+        </UIColumns>
+        <UIColumns IsMultiline="true">
+            @for (int i = 0; i <= 10; i++)
+            {
+                int tmp = i;
+                <UIColumn Size="UIEColumnSize.X2">
+                    <UIFile IsBox="true" Color="(UIEColor)tmp">@(Enum.GetName(typeof(UIEColor), (UIEColor)tmp))</UIFile>
+                </UIColumn>
+            }
+        </UIColumns>
+
+        <UIColumns IsMultiline="true">
+            @for (int i = 0; i <= 10; i++)
+            {
+                int tmp = i;
+                <UIColumn Size="UIEColumnSize.X2">
+                    <UIFile IsBox="true" IsShowFile="true" Color="(UIEColor)tmp">@(Enum.GetName(typeof(UIEColor), (UIEColor)tmp))</UIFile>
+                </UIColumn>
+            }
+
+        </UIColumns>
+
+        <h3 class="title is-3">大小</h3>
+        <UIContent>
+            <p><code>Size</code> 属性可以设置组件的大小。这里不再赘述。</p>
+        </UIContent>
+    </UIColumn>
+</UIColumns>

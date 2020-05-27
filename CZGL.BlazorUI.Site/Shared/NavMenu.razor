@@ -1,0 +1,35 @@
+﻿<UINavBar>
+    <UINavbarBrand>
+        <UINavbarItem>
+            <img src="/images/logo.png" width="112" height="28">
+        </UINavbarItem>
+    </UINavbarBrand>
+    <UINavbarMenu style="margin-top:20px;">
+        <UINavbarStart>
+            <NavLink class="is-link" href="/" Match="NavLinkMatch.All">
+                <UINavbarItem>
+                    <UIIcon IconClass="fas fa-home" style="margin-right:10px;" />
+                    主页
+                </UINavbarItem>
+            </NavLink>
+            <NavLink class="is-link" href="@nameof(Pages.Doc)">
+                <UINavbarItem>
+                    <UIIcon IconClass="fas fa-book" style="margin-right:10px;" />
+                    文档
+                </UINavbarItem>
+            </NavLink>
+        </UINavbarStart>
+        <UINavbarEnd>
+            <UINavbarItem>
+                <UIButtonGroup>
+                    <UIButton Color="UIEColor.Primary">
+                        登录
+                    </UIButton>
+                    <UIButton Color="UIEColor.Primary">
+                        注销
+                    </UIButton>
+                </UIButtonGroup>
+            </UINavbarItem>
+        </UINavbarEnd>
+    </UINavbarMenu>
+</UINavBar>

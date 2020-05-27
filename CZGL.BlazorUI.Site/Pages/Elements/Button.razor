@@ -1,0 +1,614 @@
+﻿@page "/Doc/Button"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>按钮(UIButton)</UIH2>
+        <p 使用 <code>@nameof(UIButton)</code> 组件即可使用按钮。示例如下：
+        </p>
+        <br />
+
+        <UIColumns>
+            <UIColumn>
+                <UIButton>Button</UIButton>
+            </UIColumn>
+        </UIColumns>
+        <br />
+        <p>
+            代码如下：
+        </p>
+<pre>
+        &lt;UIButton&gt;Button&lt;/UIButton&gt;
+</pre>
+        <br />
+        <UIH3>颜色</UIH3>
+        <p class="tile">
+            使用 <code> UIButton.Color </code> 属性，可以设置按钮样式，一共有九种样式。
+        </p>
+        <br />
+        <UIColumns IsMultiline="true">
+            <UIColumn>
+                <UIButton Color="UIEColor.None">None</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Black">Black</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Danger">Danger</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Dark">Dark</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Info">Info</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Light">Light</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Link">Link</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Primary">Primary</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Success">Success</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Warning">Warning</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.While">While</UIButton>
+            </UIColumn>
+        </UIColumns>
+<pre>
+        &lt;UIButton Color=&quot;UIEColor.None&quot;&gt;None&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Black&quot;&gt;Black&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Danger&quot;&gt;Danger&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Dark&quot;&gt;Black&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Info&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Light&quot;&gt;Light&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Link&quot;&gt;Link&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Primary&quot;&gt;Primary&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Success&quot;&gt;Success&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.Warning&quot;&gt;Warning&lt;/UIButton&gt;
+        &lt;UIButton Color=&quot;UIEColor.While&quot;&gt;While&lt;/UIButton&gt;
+</pre>
+        <UIContent>
+            <p>使用 <code>IsLight</code> 属性，则可以使颜色变淡。</p>
+        </UIContent>
+        <UIColumns IsMultiline="true">
+            <UIColumn>
+                <UIButton Color="UIEColor.None" IsLight="true">None</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Black" IsLight="true">Black</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Danger" IsLight="true">Danger</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Dark" IsLight="true">Dark</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Info" IsLight="true">Info</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Light" IsLight="true">Light</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Link" IsLight="true">Link</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Primary" IsLight="true">Primary</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Success" IsLight="true">Success</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.Warning" IsLight="true">Warning</UIButton>
+            </UIColumn>
+            <UIColumn>
+                <UIButton Color="UIEColor.While" IsLight="true">While</UIButton>
+            </UIColumn>
+        </UIColumns>
+
+
+        <br />
+        <UIH3>按钮大小</UIH3>
+        <UIContent>
+            <p>
+                按钮可以设置大小，有四种不同的选择。
+                <ul>
+                    <li>small</li>
+                    <li>normal</li>
+                    <li>medium</li>
+                    <li>large</li>
+                </ul>
+            </p>
+        </UIContent>
+        <UIBox>
+            <UIColumns>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Primary" Size="UIEButtonSize.None">None</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Primary" Size="UIEButtonSize.Small">Small</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Primary" Size="UIEButtonSize.Normal">Normal</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Primary" Size="UIEButtonSize.Medium">Medium</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Primary" Size="UIEButtonSize.Large">Large</UIButton>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+
+<pre>
+&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.None&quot;&gt;None&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Small&quot;&gt;Small&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Normal&quot;&gt;Normal&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Medium&quot;&gt;Medium&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Large&quot;&gt;Large&lt;/UIButton&gt;
+</pre>
+
+        <UIH3>按钮组</UIH3>
+        <UIContent>
+            <p>
+                可以使用 <code>@nameof(UIButtonGroup)</code> 来包含一组按钮，并通过 <code>Size</code> 属性设置按钮组中所有按钮的大小。
+            </p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn>
+                <UIButtonGroup Size="UIEButtonSize.Small">
+                    <UIButton Color="UIEColor.Info">Small</UIButton>
+                    <UIButton Color="UIEColor.Info">Small</UIButton>
+                    <UIButton Color="UIEColor.Info">Small</UIButton>
+                </UIButtonGroup>
+            </UIColumn>
+            <UIColumn>
+                <UIButtonGroup Size="UIEButtonSize.Medium">
+                    <UIButton Color="UIEColor.Info">Medium</UIButton>
+                    <UIButton Color="UIEColor.Info">Medium</UIButton>
+                    <UIButton Color="UIEColor.Info">Medium</UIButton>
+                </UIButtonGroup>
+            </UIColumn>
+            <UIColumn>
+                <UIButtonGroup Size="UIEButtonSize.Large">
+                    <UIButton Color="UIEColor.Info">Large</UIButton>
+                    <UIButton Color="UIEColor.Info">Large</UIButton>
+                    <UIButton Color="UIEColor.Info">Large</UIButton>
+                </UIButtonGroup>
+            </UIColumn>
+        </UIColumns>
+
+<pre>
+&lt;UIButtonGroup Size=&quot;UIEButtonSize.Small&quot;&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
+&lt;/UIButtonGroup&gt;
+
+&lt;UIButtonGroup Size=&quot;UIEButtonSize.Medium&quot;&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
+&lt;/UIButtonGroup&gt;
+
+&lt;UIButtonGroup Size=&quot;UIEButtonSize.Large&quot;&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
+&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
+&lt;/UIButtonGroup&gt;
+</pre>
+
+        <UIH3>全宽度</UIH3>
+        <p>
+            使用 <code>IsFullWidth</code> 属性，可以让按钮占据全宽度。
+        </p>
+
+        <UIColumns>
+            <UIColumn>
+                <UIButton Color="UIEColor.Success" IsFullWidth="true">全宽度</UIButton>
+            </UIColumn>
+        </UIColumns>
+
+<pre>
+        &lt;UIButton IsFullWidth=&quot;true&quot;&gt;全宽度&lt;/UIButton&gt;
+</pre>
+
+        <UIH3>是否带边框</UIH3>
+        <UIContent>
+            <p>
+                使用 <code>IsOutLine</code> 属性可以设置带边框。使用此属性，会导致按钮背景颜色被反转。<br />
+                使用 <code>IsInverted</code> 属性可以反向背景颜色。
+            </p>
+        </UIContent>
+        <UIBox>
+            <UIColumns>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success">源按钮</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" IsOutLine="true">带边框</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" IsInverted="true">反转背景颜色</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" IsOutLine="true" IsInverted="true">带边框+反转背景颜色</UIButton>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+        <UIBox style="background-color:blue;">
+            <UIColumns>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success">源按钮</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" IsOutLine="true">带边框</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" IsInverted="true">反转背景颜色</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" IsOutLine="true" IsInverted="true">带边框+反转背景颜色</UIButton>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+        <UIContent>
+            <div class="bd-snippet-code  ">
+                <figure class="highlight">
+                    <pre><code class="language-html" data-lang="html">
+                    <pre><code class="language-html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">UIBox</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumns</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span>&gt;</span>源按钮<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span> <span class="hljs-attr">IsOutLine</span>=<span class="hljs-string">"true"</span>&gt;</span>带边框<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span> <span class="hljs-attr">IsInverted</span>=<span class="hljs-string">"true"</span>&gt;</span>反转背景颜色<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span> <span class="hljs-attr">IsOutLine</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">IsInverted</span>=<span class="hljs-string">"true"</span>&gt;</span>带边框+反转背景颜色<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIBox</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">UIBox</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color:blue;"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumns</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span>&gt;</span>源按钮<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span> <span class="hljs-attr">IsOutLine</span>=<span class="hljs-string">"true"</span>&gt;</span>带边框<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span> <span class="hljs-attr">IsInverted</span>=<span class="hljs-string">"true"</span>&gt;</span>反转背景颜色<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span> <span class="hljs-attr">IsOutLine</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">IsInverted</span>=<span class="hljs-string">"true"</span>&gt;</span>带边框+反转背景颜色<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIBox</span>&gt;</span>
+        </code></pre>
+</code></pre>
+                </figure>
+            </div>
+        </UIContent>
+
+
+        <br />
+        <UIH3>圆角</UIH3>
+
+        <p>
+            使用 <code>IsRound</code> 来设置按钮是否为圆角。
+        </p>
+        <UIBox>
+            <UIColumns>
+                <UIColumn>
+                    <UIButton Color="UIEColor.None" IsRounded="true">None</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Black" IsRounded="true">Black</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Danger" IsRounded="true">Danger</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Dark" IsRounded="true">Dark</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Info" IsRounded="true">Info</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Light" IsRounded="true">Light</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Link" IsRounded="true">Link</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Primary" IsRounded="true">Primary</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" IsRounded="true">Success</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Warning" IsRounded="true">Warning</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.While" IsRounded="true">While</UIButton>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+
+
+        <br />
+        <UIH3>加载中</UIH3>
+
+        <p>
+            使用 <code>IsLoading</code> 来设置按钮显示为加载中，会出现一个旋转的图标。
+        </p>
+        <UIBox>
+            <UIColumns IsMultiline="true">
+                <UIColumn>
+                    <UIButton Color="UIEColor.None" IsLoading="true">None</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Black" IsLoading="true">Black</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Danger" IsLoading="true">Danger</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Dark" IsLoading="true">Dark</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Info" IsLoading="true">Info</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Light" IsLoading="true">Light</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Link" IsLoading="true">Link</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Primary" IsLoading="true">Primary</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" IsLoading="true">Success</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Warning" IsLoading="true">Warning</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.While" IsLoading="true">While</UIButton>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+
+
+        <br />
+        <UIH3>静态</UIH3>
+
+        <p>
+            使用 <code>IsStatic</code> 属性来设置按钮为静止状态。设置的样式均失效；鼠标移动或点击，不会出现任何效果。
+        </p>
+        <UIBox>
+            <UIColumns>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Danger" IsStatic="true">Danger</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Info" IsStatic="true">Info</UIButton>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+
+
+        <br />
+        <p>
+            要使按钮无法点击，则使用 <code>IsDisabled</code> 属性就ok。
+        </p>
+        <UIBox>
+            <UIColumns IsMultiline="true">
+                <UIColumn>
+                    <UIButton Color="UIEColor.None" disabled>None</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Black" disabled>Black</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Danger" disabled>Danger</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Dark" disabled>Dark</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Info" disabled>Info</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Light" disabled>Light</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Link" disabled>Link</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Primary" disabled>Primary</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Success" disabled>Success</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.Warning" disabled>Warning</UIButton>
+                </UIColumn>
+                <UIColumn>
+                    <UIButton Color="UIEColor.While" disabled>While</UIButton>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+
+        <UIContent>
+            <UICode>&lt;UIButton Color=&quot;UIEColor.None&quot; disabled&gt;None&lt;/UIButton&gt;</UICode>
+        </UIContent>
+
+
+        <UIH3>设计漂亮的按钮</UIH3>
+        <UIContent>
+            <p>通过 Font Awesome icon 图标框架，可以轻易设计出美观的图标。</p>
+            <p>你可以点击下面三个图标，文本输入框的文字样式会有所变化。</p>
+        </UIContent>
+        <UIBox>
+            <UIContent>
+                <UITextarea Placeholder="请输入内容" value="通过 Font Awesome icon 图标框架，可以轻易设计出美观的图标。" @bind-style="textStyle" @bind-style:event="oninput"></UITextarea>
+            </UIContent>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UIButtonGroup>
+                        <UIButton DownEvent="EventB"><UIIcon Size="UIETextSize.Small" IconClass="fas fa-bold" /></UIButton>
+                        <UIButton DownEvent="EventI"><UIIcon Size="UIETextSize.Small" IconClass="fas fa-italic" /></UIButton>
+                        <UIButton DownEvent="EventU"><UIIcon Size="UIETextSize.Small" IconClass="fas fa-underline" /></UIButton>
+                    </UIButtonGroup>
+
+                </UIColumn>
+
+                <UIColumn Size="UIEColumnSize.Half"></UIColumn>
+            </UIColumns>
+
+            <UIContent>
+                <p>另外其它一些图标示例：</p>
+                <UIBox>
+                    <UIButtonGroup>
+                        <UIButton><UIIcon IconClass="fab fa-github" /><span>GitHub</span></UIButton>
+                        <UIButton Color="UIEColor.Primary"><UIIcon IconClass="fab fa-twitter" /><span>@@jgthms</span></UIButton>
+                        <UIButton Color="UIEColor.Success"><UIIcon IconClass="fas fa-check" /><span>Save</span></UIButton>
+                        <UIButton Color="UIEColor.Danger"><span>Delete</span><UIIcon IconClass="fas fa-times" /></UIButton>
+                    </UIButtonGroup>
+
+                    <UIButtonGroup>
+                        <UIButton Size="UIEButtonSize.Small"><UIIcon IconClass="fab fa-github" /></UIButton>
+                        <UIButton Size="UIEButtonSize.None"><UIIcon IconClass="fab fa-github" /><span>GitHub</span></UIButton>
+                        <UIButton Size="UIEButtonSize.Medium"><UIIcon IconClass="fab fa-github" /><span>GitHub</span></UIButton>
+                        <UIButton Size="UIEButtonSize.Large"><UIIcon IconClass="fab fa-github" /><span>GitHub</span></UIButton>
+                    </UIButtonGroup>
+                </UIBox>
+            </UIContent>
+        </UIBox>
+
+        <UIContent>
+            <p>
+                另外要使多个按钮组件在一起，除了水平表单，还可以使用 <code>UIbuttonGroup.IsHasAddons</code> 。区别在于水平表单的组件是并排，但是有一定间距。
+                后者的按钮组是合在一起的。
+            </p>
+            <p><code>UIbuttonGroup.Align</code> 属性则可以设置按钮在容器中的位置。</p>
+        </UIContent>
+        <UIBox>
+            <UIContent>
+                <p>附加按钮组：</p>
+            </UIContent>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UIButtonGroup IsHasAddons="true">
+                        <UIButton>Yes</UIButton>
+                        <UIButton>Maybe</UIButton>
+                        <UIButton>No</UIButton>
+                    </UIButtonGroup>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UIContent>
+                        <UICode>
+                            &lt;UIButtonGroup IsHasAddons=&quot;true&quot;&gt;
+                            &lt;UIButton&gt;Yes&lt;/UIButton&gt;
+                            &lt;UIButton&gt;Maybe&lt;/UIButton&gt;
+                            &lt;UIButton&gt;No&lt;/UIButton&gt;
+                            &lt;/UIButtonGroup&gt;
+                        </UICode>
+                    </UIContent>
+                </UIColumn>
+            </UIColumns>
+
+            <UIContent>
+                <p>对齐：</p>
+            </UIContent>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UIButtonGroup IsHasAddons="true" Align="UIEAlign.Left">
+                        <UIButton>Yes</UIButton>
+                        <UIButton>Maybe</UIButton>
+                        <UIButton>No</UIButton>
+                    </UIButtonGroup>
+
+                    <UIButtonGroup IsHasAddons="true" Align="UIEAlign.Center">
+                        <UIButton>Yes</UIButton>
+                        <UIButton>Maybe</UIButton>
+                        <UIButton>No</UIButton>
+                    </UIButtonGroup>
+
+                    <UIButtonGroup IsHasAddons="true" Align="UIEAlign.Right">
+                        <UIButton>Yes</UIButton>
+                        <UIButton>Maybe</UIButton>
+                        <UIButton>No</UIButton>
+                    </UIButtonGroup>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UIContent>
+                        <UICode>
+                            &lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Left&quot;&gt;
+                            &lt;UIButton&gt;Yes&lt;/UIButton&gt;
+                            &lt;UIButton&gt;Maybe&lt;/UIButton&gt;
+                            &lt;UIButton&gt;No&lt;/UIButton&gt;
+                            &lt;/UIButtonGroup&gt;
+
+                            &lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Center&quot;&gt;
+                            &lt;UIButton&gt;Yes&lt;/UIButton&gt;
+                            &lt;UIButton&gt;Maybe&lt;/UIButton&gt;
+                            &lt;UIButton&gt;No&lt;/UIButton&gt;
+                            &lt;/UIButtonGroup&gt;
+
+                            &lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Right&quot;&gt;
+                            &lt;UIButton&gt;Yes&lt;/UIButton&gt;
+                            &lt;UIButton&gt;Maybe&lt;/UIButton&gt;
+                            &lt;UIButton&gt;No&lt;/UIButton&gt;
+                            &lt;/UIButtonGroup&gt;
+                        </UICode>
+                    </UIContent>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+    </UIColumn>
+</UIColumns>
+@code{
+    private string textStyle = "";
+    private bool IsB = false;
+    private bool IsI = false;
+    private bool IsU = false;
+    private void EventB(MouseEventArgs e)
+    {
+        IsB = !IsB;
+        InitStyle();
+    }
+    private void EventI(MouseEventArgs e)
+    {
+        IsI = !IsI;
+        InitStyle();
+    }
+    private void EventU(MouseEventArgs e)
+    {
+        IsU = !IsU;
+        InitStyle();
+    }
+    private void InitStyle()
+    {
+        textStyle =
+            (IsB ? " font-weight: bold;" : "") +
+            (IsI ? " font-style:italic;" : "") +
+            (IsU ? " text-decoration: underline;" : "");
+    }
+}

@@ -1,0 +1,189 @@
+﻿@page "/Doc/Hero"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>巨幕(UIHero)</UIH2>
+        <UIContent>
+            <p><code>@nameof(UIHero)</code> 相当于 Bootstrap 的 jumbotron 。</p>
+            <p>巨幕主要由以下层次结构组成。</p>
+            <ul>
+                <li><code>UIHero</code> 容器。</li>
+                <ul>
+                    <li><code>UIHeroHead</code> 放置标题等信息</li>
+                    <li><code>UIHeroBody</code> 巨幕主体</li>
+                    <li><code>UIHeroFoot</code> 底部信息</li>
+                </ul>
+            </ul>
+            <p>一般只需要 <code>@nameof(UIHeroBody)</code> 。如果需要全高的 <code>UIHero</code> ，则需要 <code>UIHeroHead</code> 和 <code>UIHeroFoot</code> 。</p>
+        </UIContent>
+
+        <br />
+        <UIHero>
+            <UIHeroBody>
+                <UIContainer>
+                    <h1 class="title">
+                        Hero title
+                    </h1>
+                    <h2 class="subtitle">
+                        Hero subtitle
+                    </h2>
+                </UIContainer>
+            </UIHeroBody>
+        </UIHero>
+        <UIBox>
+            <UIContent>
+                <UICode>
+                    &lt;UIHero&gt;
+                    &lt;UIHeroBody&gt;
+                    &lt;UIContainer&gt;
+                    &lt;h1 class=&quot;title&quot;&gt;
+                    Hero title
+                    &lt;/h1&gt;
+                    &lt;h2 class=&quot;subtitle&quot;&gt;
+                    Hero subtitle
+                    &lt;/h2&gt;
+                    &lt;/UIContainer&gt;
+                    &lt;/UIHeroBody&gt;
+                    &lt;/UIHero&gt;
+                </UICode>
+            </UIContent>
+        </UIBox>
+        <br />
+        <p>其它子元素位置：</p>
+        <UIHero Color="UIEColor.Success">
+            <UIHeroHead>
+                <h1 class="title">Head</h1>
+            </UIHeroHead>
+            <UIHeroBody>
+                <UIContainer>
+                    <h1 class="title">Body</h1>
+                </UIContainer>
+            </UIHeroBody>
+            <UIHeroFoot>
+                <h1 class="title">Foot</h1>
+            </UIHeroFoot>
+        </UIHero>
+        <UIContent>
+            <pre><code class="language-html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">UIHero</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIHeroHead</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Head<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIHeroHead</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIHeroBody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIContainer</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIContainer</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIHeroBody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIHeroFoot</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Foot<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIHeroFoot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIHero</span>&gt;</span>
+        </code></pre>
+        </UIContent>
+        <br />
+        <h3 class="title is-3">颜色(Color)</h3>
+        <UIContent>
+            <p>使用 <code>UIEHero.Color</code> 属性，可以为巨幕设置背景颜色。</p>
+        </UIContent>
+        <UIHero Color="UIEColor.Primary">
+            <UIHeroBody>
+                <UIContainer>
+                    <h1 class="title">
+                        Hero title
+                    </h1>
+                    <h2 class="subtitle">
+                        Hero subtitle
+                    </h2>
+                </UIContainer>
+            </UIHeroBody>
+        </UIHero>
+        <UICode>
+            &lt;UIHero Color=&quot;UIEColor.Primary&quot;&gt;
+            &lt;UIHeroBody&gt;
+            &lt;UIContainer&gt;
+            &lt;h1 class=&quot;title&quot;&gt;
+            Hero title
+            &lt;/h1&gt;
+            &lt;h2 class=&quot;subtitle&quot;&gt;
+            Hero subtitle
+            &lt;/h2&gt;
+            &lt;/UIContainer&gt;
+            &lt;/UIHeroBody&gt;
+            &lt;/UIHero&gt;
+        </UICode>
+        <p>
+            其它样式演示：
+        </p>
+        @for (int i = 0; i < 10; i++)
+        {
+            int tmp = i;
+            <UIHero Color="((UIEColor)tmp)">
+                <UIHeroBody>
+                    <UIContainer>
+                        <h1 class="title">
+                            @Enum.GetName(typeof(UIEColor), (UIEColor)tmp) title
+                        </h1>
+                        <h2 class="subtitle">
+                            @Enum.GetName(typeof(UIEColor), (UIEColor)tmp) subtitle
+                        </h2>
+                    </UIContainer>
+                </UIHeroBody>
+            </UIHero>
+        }
+
+        <br />
+        <UIH3>渐变(IsBold)</UIH3>
+        <UIContent><code>UIEHero.IsBold</code> 属性可以设置是否生成渐变。话说，这个渐变很难观察到，就是从左到右颜色逐渐变淡。</UIContent>
+        @for (int i = 0; i < 10; i++)
+        {
+            int tmp = i;
+            <UIHero Color="((UIEColor)tmp)" IsBold="true">
+                <UIHeroBody>
+                    <UIContainer>
+                        <h1 class="title">
+                            @Enum.GetName(typeof(UIEColor), (UIEColor)tmp) title
+                        </h1>
+                        <h2 class="subtitle">
+                            @Enum.GetName(typeof(UIEColor), (UIEColor)tmp) subtitle
+                        </h2>
+                    </UIContainer>
+                </UIHeroBody>
+            </UIHero>
+        }
+
+        <br />
+        <UIH3>大小(Size)</UIH3>
+        <UIContent>
+            <p>
+                样式如下：
+            </p>
+        </UIContent>
+        <UIHero Color="UIEColor.Info" Size="UIETextSize.Small">
+            <UIHeroBody>
+                Small
+            </UIHeroBody>
+
+        </UIHero>
+        <UIHero Color="UIEColor.Success" Size="UIETextSize.None">
+            <UIHeroBody>
+                None
+            </UIHeroBody>
+
+        </UIHero>
+        <UIHero Color="UIEColor.Warning" Size="UIETextSize.Medium">
+            <UIHeroBody>Medium</UIHeroBody>
+
+        </UIHero>
+        <UIHero Color="UIEColor.Danger" Size="UIETextSize.Large">
+            <UIHeroBody>Large</UIHeroBody>
+        </UIHero>
+        <br />
+        <UIH3>是否全高</UIH3>
+        <UIContent><code>UIHero.IsFullHeight</code> 属性可以设置巨幕高度为一个满屏高度，如果上面有导航条，就会与导航条一起整体高度刚好一个满屏。</UIContent>
+        <UIHero Color="UIEColor.Info" IsFullHeight="true">
+            <UIHeroBody>Large</UIHeroBody>
+        </UIHero>
+    </UIColumn>
+</UIColumns>

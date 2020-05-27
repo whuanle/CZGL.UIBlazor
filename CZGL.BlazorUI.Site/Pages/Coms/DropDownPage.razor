@@ -1,0 +1,18 @@
+﻿@page "/DropDownPage"
+<UIDropdown Title="title" Footer="footer">
+    <UIDropdownItem>
+        <a href="#">导航1</a>
+    </UIDropdownItem>
+    <UIDropdownItem>
+        <a href="#">导航2</a>
+    </UIDropdownItem>
+    <UIDropdownItem>
+        <a href="#">导航3</a>
+    </UIDropdownItem>
+</UIDropdown>
+
+@code
+{
+    private RenderFragment title =@<p>标题</p>;
+    private RenderFragment footer =@<p>底部</p>;
+}

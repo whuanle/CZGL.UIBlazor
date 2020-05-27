@@ -1,0 +1,29 @@
+﻿<div @bind-class="_allClass" @bind-class:event="oninput">
+    <header class="bd-category-header" @onclick="Click">
+        <a class="bd-category-toggle">
+            <UIIcon IconClass="fas fa-angle-up" />
+        </a>
+        <a class="bd-category-name ">
+            <strong>@Title</strong>
+        </a>
+    </header>
+    <ul class="bd-category-list">
+        @ChildContent
+    </ul>
+</div>
+
+@code{
+    private string _allClass = "bd-category";
+    private bool IsClick;
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    private void Click(MouseEventArgs e)
+    {
+        if (!IsClick)
+            _allClass = "bd-category is-active";
+        else _allClass = "bd-category";
+        IsClick = !IsClick;
+    }
+}

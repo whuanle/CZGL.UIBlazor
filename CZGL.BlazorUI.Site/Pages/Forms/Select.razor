@@ -1,0 +1,255 @@
+﻿@page "/Doc/Select"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <h2 class="title is-2">选择框(UISelect)</h2>
+        <p>选择框由<code>@nameof(UISelect)</code> 和 <code>@nameof(UISelectItem)</code> 两部分组成。</p>
+        <p>下面是一个选择框示例。</p>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UISelect>
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                    <UISelectItem>第三项</UISelectItem>
+                </UISelect>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UISelect&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第三项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+        <UIContent>
+            <p>默认情况下，选择框只显示一条内容，你可以使用 <code>Line</code> 设置显示的选择条数。这样选择框就会变成划动选择</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UISelect Line="5">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                    <UISelectItem>第三项</UISelectItem>
+                    <UISelectItem>第四项</UISelectItem>
+                    <UISelectItem>第五项</UISelectItem>
+                    <UISelectItem>第六项</UISelectItem>
+                    <UISelectItem>第七项</UISelectItem>
+                    <UISelectItem>第八项</UISelectItem>
+                    <UISelectItem>第九项</UISelectItem>
+                </UISelect>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UISelect Line=&quot;5&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第三项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第四项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第五项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第六项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第七项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第八项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第九项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <h3 class="title" is-3>颜色</h3>
+        <UIContent>
+            <p><code>Color</code> 属性可以设置选择框的边框颜色。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UISelect Color="UIEColor.Black">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Danger">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Dark">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Info">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Light">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Warning">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Primary">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Success">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UISelect Color=&quot;UIEColor.Black&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Danger&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Dark&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Info&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Light&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Warning&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Primary&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Success&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+
+
+
+        <h3 class="title" is-3>圆角</h3>
+        <UIContent>
+            <p><code>IsRounded</code> 属性可以设置边框为圆角。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UISelect Color="UIEColor.Black" IsRounded="true">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UISelect Color=&quot;UIEColor.Black&quot; IsRounded=&quot;true&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+
+        <h3 class="title" is-3>大小</h3>
+        <UIContent>
+            <p><code>Size</code> 属性可以设置组件的大小。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UISelect Color="UIEColor.Black" Size="UIETextSize.Small">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Black" Size="UIETextSize.None">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Black" Size="UIETextSize.Medium">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+                <br />
+                <UISelect Color="UIEColor.Black" Size="UIETextSize.Large">
+                    <UISelectItem>第一项</UISelectItem>
+                    <UISelectItem>第二项</UISelectItem>
+                </UISelect>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UISelect Color=&quot;UIEColor.Black&quot; Size=&quot;UIETextSize.Small&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Black&quot; Size=&quot;UIETextSize.None&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Black&quot; Size=&quot;UIETextSize.Medium&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Black&quot; Size=&quot;UIETextSize.Large&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <h3 class="title" is-3>图标</h3>
+        <UIContent>
+            <p>你可以利用<code>@nameof(UIControl)</code> 组件，为选择框设置图标。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIField>
+                    <UIControl IconAlign="UIEAlign.Left">
+                        <UISelect Color="UIEColor.Black" Size="UIETextSize.Medium">
+                            <UISelectItem>第一项</UISelectItem>
+                            <UISelectItem>第二项</UISelectItem>
+                        </UISelect>
+                        <UIIcon Color="UIETextColor.Success" IconClass="fas fa-globe" />
+                    </UIControl>
+                </UIField>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIField&gt;
+                    &lt;UIControl IconAlign=&quot;UIEAlign.Left&quot;&gt;
+                    &lt;UISelect Color=&quot;UIEColor.Black&quot; Size=&quot;UIETextSize.Medium&quot;&gt;
+                    &lt;UISelectItem&gt;第一项&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;第二项&lt;/UISelectItem&gt;
+                    &lt;/UISelect&gt;
+                    &lt;UIIcon IconClass=&quot;fas fa-globe&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <UIContent>
+            <p>另外还有 <code>State</code> 属性可以设置选择框状态，<code>IsFullWidth</code> 设置全宽的选择框。</p>
+        </UIContent>
+
+    </UIColumn>
+</UIColumns>

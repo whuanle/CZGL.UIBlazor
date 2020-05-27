@@ -1,0 +1,44 @@
+﻿@inherits DropdownBase
+<div @bind-class="IsActive" @bind-class:event="oninput" @onmousedown="MouseDown" @onmousemove="MouseMove" @onmouseout="MouseOut">
+    <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+            <span>@Title</span>
+            <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+        </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+            @ChildContent
+            <hr class="dropdown-divider">
+            <div class="dropdown-item">
+                @Footer
+            </div>
+        </div>
+    </div>
+</div>
+@code{
+    private static string[] DropdownActive = new string[]
+    {
+        "dropdown",
+        "dropdown is-hoverable",
+        "dropdown is-active"
+                    };
+
+    private string IsActive = "dropdown";
+    private void MouseDown(MouseEventArgs e)
+    {
+        if (IsMouseDown)
+            IsActive = DropdownActive[2];
+    }
+    private void MouseMove(MouseEventArgs e)
+    {
+        if (!IsMouseDown)
+            IsActive = DropdownActive[1];
+    }
+    private void MouseOut(MouseEventArgs e)
+    {        if (!IsMouseDown)
+        IsActive = DropdownActive[0];
+    }
+}

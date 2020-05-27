@@ -1,0 +1,9 @@
+﻿@inherits ButtonBase
+@if (IsDisabled)
+{
+    <button class="button @_allClass" @attributes="UIAttributes" @onclick="DownEvent" disabled>@ChildContent</button>
+}
+else
+{
+    <button class="button @_allClass" @attributes="UIAttributes" @onclick="DownEvent">@ChildContent</button>
+}

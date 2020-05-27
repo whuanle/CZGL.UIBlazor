@@ -1,0 +1,75 @@
+﻿@inherits CategorieBase
+<div @bind-class="IsActive" @bind-class:event="Oninput">
+    <header class="bd-category-header"  @onmousedown="MouseDown" @onmousemove="MouseMove" @onmouseout="MouseOut">
+        <div class="bd-category-toggle">
+            <div class="bd-category-name">
+                @Head
+                <span class="icon">
+                    <i @bind-class="iconStyle" @bind-class:event="Oninput"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+    <ul class="bd-category-list">
+        @ChildContent
+    </ul>
+</div>
+
+@code{
+
+    /// <summary>
+    /// 是否点击才展开分类
+    /// </summary>
+    [Parameter]
+    public bool IsMouseDown { get; set; }
+    private bool IsOpen = false;
+    private static string[] IsActives = new string[]
+    {
+        "bd-category",
+        "bd-category is-active"
+            };
+    private static string[] Icons = new string[]
+    {
+        "fas fa-angle-up",
+        "fas fa-angle-down"
+            };
+    private string IsActive = "bd-category";
+    private string iconStyle = "fas fa-angle-up";
+    private void MouseDown(MouseEventArgs e)
+    {
+        if (IsMouseDown)
+        {
+            if (IsOpen)
+            {
+                iconStyle = Icons[0];
+                IsActive = IsActives[1];
+            }
+            else
+            {
+                iconStyle = Icons[1];
+                IsActive = IsActives[0];
+            }
+        }
+
+    }
+    private void MouseMove(MouseEventArgs e)
+    {
+        if (!IsMouseDown)
+        {
+            iconStyle = Icons[1];
+            IsActive = IsActives[1];
+            IsOpen = true;
+        }
+
+    }
+    private void MouseOut(MouseEventArgs e)
+    {
+        if (!IsMouseDown)
+        {
+            iconStyle = Icons[0];
+            IsActive = IsActives[0];
+            IsOpen = false;
+        }
+
+    }
+}

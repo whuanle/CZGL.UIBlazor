@@ -1,0 +1,60 @@
+﻿@page "/Doc/ColumnOption"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <h2 class="title is-2">列其它选项</h2>
+        <UIContent>
+            <p>使用 <code>UIColumns.IsVcentered</code> 属性可以让列垂直对齐，简单来说，就是上下对称。</p>
+        </UIContent>
+        <p>原(顶部对齐)：</p>
+        <UIBox>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.X9"><p class="bd-notification is-info">1</p></UIColumn>
+                <UIColumn Size="UIEColumnSize.X3"><p class="bd-notification is-info">Second column with more content. This is so you can see the vertical alignment</p></UIColumn>
+            </UIColumns>
+        </UIBox>
+        <UIBox>
+            <UIColumns IsVcentered="true">
+                <UIColumn Size="UIEColumnSize.X9"><p class="bd-notification is-info">1</p></UIColumn>
+                <UIColumn Size="UIEColumnSize.X3"><p class="bd-notification is-info">Second column with more content. This is so you can see the vertical alignment</p></UIColumn>
+            </UIColumns>
+        </UIBox>
+        <UIContent>
+            <UICode>
+                &lt;UIColumns IsVcentered=&quot;true&quot;&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X9&quot;&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;1&lt;/p&gt;&lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X3&quot;&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;Second column with more content. This is so you can see the vertical alignment&lt;/p&gt;&lt;/UIColumn&gt;
+                &lt;/UIColumns&gt;
+            </UICode>
+        </UIContent>
+
+        <UIH3>多行列</UIH3>
+        <UIContent>
+            <p><code>UIColumns.IsMultiline</code> 允许列能够换行，这部分已经在基础部分说明，这里不再赘述。</p>
+        </UIContent>
+
+        <UIH3>居中列</UIH3>
+        <UIContent>
+            <p>默认列是从左到右铺满行，两头对齐。</p>
+            <p><code>UIColumns.IsCentered</code> 属性可以让列居中对齐。</p>
+        </UIContent>
+        <UIBox>
+            <UIColumns IsCentered="true">
+                <UIColumn Size="UIEColumnSize.Half">
+                    <p class="bd-notification is-info">居中</p>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+    </UIColumn>
+    <UIContent>
+        <UICode>
+            &lt;UIColumns IsCentered=&quot;true&quot;&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.Half&quot;&gt;
+            &lt;p class=&quot;bd-notification is-info&quot;&gt;居中&lt;/p&gt;
+            &lt;/UIColumn&gt;
+            &lt;/UIColumns&gt;
+        </UICode>
+    </UIContent>
+</UIColumns>

@@ -1,0 +1,363 @@
+﻿@page "/Doc/Input"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>输入框(@nameof(UIInput))</UIH2>
+        <UIContent>
+            <p>
+                <code>@nameof(UIInput)</code> 组件的样式支持以下 type 类型：
+                <ul>
+                    <li>text</li>
+                    <li>password</li>
+                    <li>email</li>
+                    <li>tel</li>
+                </ul>
+            </p>
+            <p>你可以使用 <code>Type</code> 属性来设置 input 的类型，其它类型没有样式支持，但是依然可以使用，不过可能导致样式显示得很奇怪。</p>
+            <p>你可以观察下面控件类型。</p>
+            <UIColumns IsMultiline="true">
+                @for (int i = 0; i < 23; i++)
+                {
+                    int tmp = i;
+                    <UIColumn Size="UIEColumnSize.X3">
+                        <p>
+                            @Enum.GetName(typeof(UIEInputType), (UIEInputType)tmp)
+                            <UIInput Type="((UIEInputType)tmp)" Placeholder="@Enum.GetName(typeof(UIEInputType),(UIEInputType)tmp)" value="@Enum.GetName(typeof(UIEInputType),(UIEInputType)tmp)" />
+                        </p>
+                    </UIColumn>
+                }
+            </UIColumns>
+        </UIContent>
+        <p><code>@nameof(UIInput)</code> 还支持 <code>Color</code> 、<code>Size</code>、<code>State</code> 三个属性。</p>
+        <br />
+        <h3 class="title is-3">颜色</h3>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Full">
+
+                @for (int i = 0; i <= 10; i++)
+                {
+                    int tmp = i;
+                    <UIField>
+                        <UIControl>
+                            <UIInput Color="((UIEColor)tmp)" Type="UIEInputType.Text" Placeholder="@(Enum.GetName(typeof(UIEColor),(UIEColor)tmp))" />
+                        </UIControl>
+                    </UIField>
+                }
+            </UIColumn>
+        </UIColumns>
+        <UIContent>
+            <UICode>
+                @@for (int i = 0; i &lt;= 10; i++)
+                {
+                int tmp = i;
+                &lt;UIField&gt;
+                &lt;UIControl&gt;
+                &lt;UIInput Color=&quot;((UIEColor)tmp)&quot; Type=&quot;UIEInputType.Text&quot; Placeholder=&quot;@@(Enum.GetName(typeof(UIEColor), (UIEColor)tmp))&quot; /&gt;
+                &lt;/UIControl&gt;
+                &lt;/UIField&gt;
+                }
+            </UICode>
+        </UIContent>
+        <br />
+        <h3 class="title is-3">大小</h3>
+        <p><code>Size</code> 属性可以设置输入框大小。</p>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIField>
+                    <UIControl>
+                        <UIInput Size="UIETextSize.Small" Placeholder="Small" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UIInput Size="UIETextSize.None" Placeholder="None" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UIInput Size="UIETextSize.Medium" Placeholder="Medium" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UIInput Size="UIETextSize.Large" Placeholder="Large" />
+                    </UIControl>
+                </UIField>
+            </UIColumn>
+
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput Size=&quot;UIETextSize.Small&quot; Placeholder=&quot;Small&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput Size=&quot;UIETextSize.None&quot; Placeholder=&quot;None&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput Size=&quot;UIETextSize.Medium&quot; Placeholder=&quot;Medium&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput Size=&quot;UIETextSize.Large&quot; Placeholder=&quot;Large&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <br />
+        <h3 class="title is-3">圆边框</h3>
+        <p><code>IsRounded</code> 属性可以设置输入框为圆角边框。</p>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIField>
+                    <UIControl>
+                        <UIInput IsRounded="true" Size="UIETextSize.Small" Placeholder="Small" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UIInput IsRounded="true" Size="UIETextSize.None" Placeholder="None" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UIInput IsRounded="true" Size="UIETextSize.Medium" Placeholder="Medium" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UIInput IsRounded="true" Size="UIETextSize.Large" Placeholder="Large" />
+                    </UIControl>
+                </UIField>
+            </UIColumn>
+
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput IsRounded=&quot;true&quot; Size=&quot;UIETextSize.Small&quot; Placeholder=&quot;Small&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput IsRounded=&quot;true&quot; Size=&quot;UIETextSize.None&quot; Placeholder=&quot;None&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput IsRounded=&quot;true&quot; Size=&quot;UIETextSize.Medium&quot; Placeholder=&quot;Medium&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput IsRounded=&quot;true&quot; Size=&quot;UIETextSize.Large&quot; Placeholder=&quot;Large&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <br />
+        <h3 class="title is-3">状态</h3>
+        <p><code>State</code> 属性可以设置输入框状态。例如 <code>UIEState.Hover</code> ，输入框会处于焦点状态。</p>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIField>
+                    <UIControl>
+                        <UIInput Placeholder="None" State="UIEState.None" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UIInput Placeholder="Hover" State="UIEState.Hover" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl>
+                        <UIInput Placeholder="Focus" State="UIEState.Focus" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl IsLoading="true">
+                        <UIInput Placeholder="Loading" />
+                    </UIControl>
+                </UIField>
+                <p>设置加载状态，要在 <code>UIControl</code> 中设置，在输入框中设置无效。</p>
+                <p>如果要设置禁用输入框得话，可以在后面加上 <code>disabled</code> 暂时未实现#*#。</p>
+                <UIField>
+                    <UIControl>
+                        <UIInput Placeholder="disabled" disabled />
+                    </UIControl>
+                </UIField>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput Placeholder=&quot;None&quot; State=&quot;UIEState.None&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput Placeholder=&quot;Hover&quot; State=&quot;UIEState.Hover&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl&gt;
+                    &lt;UIInput Placeholder=&quot;Focus&quot; State=&quot;UIEState.Focus&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl IsLoading=&quot;true&quot;&gt;
+                    &lt;UIInput Placeholder=&quot;Loading&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <UIContent>
+            <p>你还可以使用 <code>IsDisabled</code> 属性禁用菜单，使用 <code>IsReadonly</code> 属性设置输入框只读。</p>
+        </UIContent>
+        <UIBox>
+            <p>禁用：</p>
+            <UIInput Color="UIEColor.Primary" IsDisabled="true" />
+            <p>只读：</p>
+            <UIInput Color="UIEColor.Primary" IsReadonly="true" value="你可以复制，但不能编辑这句话。" />
+        </UIBox>
+
+        <br />
+        <h3 class="title is-3">图标</h3>
+        <p><code>UIControl</code> 组件的 <code>IconAlign</code> 属性，可以设置输入框图标的显示位置。其中 Justify 和 Center 是等效的，都是使图标显示在输入框两侧。</p>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIField>
+                    <UIControl IconAlign="UIEAlign.Justify">
+                        <UIInput Type="UIEInputType.Email" Placeholder="email" />
+                        <UIIcon IconClass="fas fa-envelope" Size="UIETextSize.Small" />
+                        <UIIcon IconClass="fas fa-check" IsRight="true" Size="UIETextSize.Small" />
+                    </UIControl>
+                </UIField>
+                <UIField>
+                    <UIControl IconAlign="UIEAlign.Left">
+                        <UIInput Type="UIEInputType.Password" Placeholder="Password" />
+                        <UIIcon IconClass="fas fa-lock" Size="UIETextSize.Small" />
+                    </UIControl>
+                </UIField>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIField&gt;
+                    &lt;UIControl IconAlign=&quot;UIEAlign.Justify&quot;&gt;
+                    &lt;UIInput Type=&quot;UIEInputType.Email&quot; Placeholder=&quot;email&quot; /&gt;
+                    &lt;UIIcon IconClass=&quot;fas fa-envelope&quot; Size=&quot;UIETextSize.Small&quot; /&gt;
+                    &lt;UIIcon IconClass=&quot;fas fa-check&quot; IsRight=&quot;true&quot; Size=&quot;UIETextSize.Small&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField&gt;
+                    &lt;UIControl IconAlign=&quot;UIEAlign.Left&quot;&gt;
+                    &lt;UIInput Type=&quot;UIEInputType.Password&quot; Placeholder=&quot;Password&quot; /&gt;
+                    &lt;UIIcon IconClass=&quot;fas fa-lock&quot; Size=&quot;UIETextSize.Small&quot; /&gt;
+                    &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <p>你还可以使用 <code>IsStatic</code> 属性设置输入框处于静态的，这样跟普通文本一致。</p>
+        <p>下面实现一个输入框，看起来像一个文本，没有任何效果，看不出是输入框；当点击之后触发事件，此后，移动到相应位置显示输入框，移出隐藏输入框。</p>
+        <UIBox>
+            <UIField IsHorizontal="true">
+                <UIFieldLabel>收件人</UIFieldLabel>
+                <UIFieldBody>
+                    <UIField IsAddon="true">
+                        <a @onmouseout="inputMouseOut" @onmouseover="inputMouseMove">
+                            <UIControl IconAlign="UIEAlign.Left">
+                                <UIInput RefreshEvent="SetRefresh" Color="UIEColor.Black" @bind-IsStatic="inputIsStatic" Placeholder="your&#64;example.com" />
+                                <UIIcon IconClass="fas fa-envelope" />
+                            </UIControl>
+                        </a>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+        </UIBox>
+
+        <div class="bd-snippet-code  ">
+            <figure class="highlight">
+                <pre><code class="language-html hljs xml">
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsHorizontal</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldLabel</span>&gt;</span>收件人<span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldLabel</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldBody</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsAddon</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> @@<span class="hljs-attr">onmouseout</span>=<span class="hljs-string">"inputMouseOut"</span> @@<span class="hljs-attr">onmouseover</span>=<span class="hljs-string">"inputMouseMove"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">IconAlign</span>=<span class="hljs-string">"UIEAlign.Left"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">RefreshEvent</span>=<span class="hljs-string">"SetRefresh"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Black"</span> @@<span class="hljs-attr">bind-IsStatic</span>=<span class="hljs-string">"inputIsStatic"</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"your<span class="hljs-symbol">&amp;#64;</span>example.com"</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-envelope"</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldBody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+@@code{
+    private bool inputIsStatic = true;
+
+    // 绑定控件，通过此事件可以刷新控件
+    private EventCallback inputRefresh;
+    private void SetRefresh(EventCallback e)
+    {
+        inputRefresh = e;
+    }
+
+    // 鼠标点击或移入时
+    private void inputMouseOut(MouseEventArgs e)
+    {
+        inputIsStatic = false;
+        inputRefresh.InvokeAsync(new object()).Wait();
+    }
+    // 鼠标移出后
+    private void inputMouseMove(MouseEventArgs e)
+    {
+        inputIsStatic = true;
+        inputRefresh.InvokeAsync(new object()).Wait();
+    }
+}
+</code></pre>
+            </figure>
+        </div>
+
+    </UIColumn>
+</UIColumns>
+@code{
+    private bool inputIsStatic = true;
+
+    // 绑定控件，通过此事件可以刷新控件
+    private EventCallback inputRefresh;
+    private void SetRefresh(EventCallback e)
+    {
+        inputRefresh = e;
+    }
+
+    // 鼠标点击或移入时
+    private void inputMouseOut(MouseEventArgs e)
+    {
+        inputIsStatic = false;
+        inputRefresh.InvokeAsync(new object()).Wait();
+    }
+    // 鼠标移出后
+    private void inputMouseMove(MouseEventArgs e)
+    {
+        inputIsStatic = true;
+        inputRefresh.InvokeAsync(new object()).Wait();
+    }
+}

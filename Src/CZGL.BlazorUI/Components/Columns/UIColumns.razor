@@ -1,0 +1,57 @@
+﻿@inherits ColumnBase
+<div class="columns @_allClass" @attributes="UIAttributes">@ChildContent</div>
+@code{
+    /// <summary>
+    /// 列间隙
+    /// </summary>
+    [Parameter]
+    public UIEGap Size { get; set; }
+
+    /// <summary>
+    /// 支持移动设备
+    /// </summary>
+    [Parameter]
+    public bool IsMobile { get; set; }
+
+    /// <summary>
+    /// 去掉间隙
+    /// </summary>
+    [Parameter]
+    public bool IsGapless { get; set; }
+
+    /// <summary>
+    /// 垂直对齐
+    /// </summary>
+    [Parameter]
+    public bool IsVcentered { get; set; }
+
+    /// <summary>
+    /// 是否允许多行
+    /// </summary>
+    [Parameter]
+    public bool IsMultiline { get; set; }
+
+    /// <summary>
+    /// 列居中
+    /// </summary>
+    [Parameter]
+    public bool IsCentered { get; set; }
+    /// <summary>
+    /// 设置列之间的间隙大小
+    /// </summary>
+    [Parameter]
+    public UIEGap GapSize { get; set; } = UIEGap.None;
+
+    protected override void UIInit()
+    {
+        _allClass =
+            CacheData.GetColumGap(Size) +
+            (IsMobile ? " is-mobile" : "") +
+            (IsGapless ? " is-gapless" : "") +
+            (IsMultiline ? " is-multiline" : "") +
+            (IsVcentered ? "is-vcentered" : "") +
+            (IsCentered ? " is-centered" : "") +
+            (GapSize == UIEGap.None ? "" : CacheData.GetUIEGap(GapSize));
+    }
+
+}

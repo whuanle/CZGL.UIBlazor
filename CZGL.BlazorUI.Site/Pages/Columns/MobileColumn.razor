@@ -1,0 +1,116 @@
+﻿@page "/Doc/MobileColumn"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>响应式列</UIH2>
+        <UIContent>
+            <p>默认情况下，<code>UIColumns</code> 组件只能在平板及以上屏幕更大的设备上生效(水平排布)，在屏幕较小的移动设备上是堆叠的。</p>
+            <p>使用 <code>UIColumns.IsMobile</code> 属性，则可以使得页面在移动设备下，保持一致的样式。</p>
+        </UIContent>
+        <p>原：</p>
+        <UIColumns>
+            <UIColumn><p class="bd-notification is-info">1</p></UIColumn>
+            <UIColumn><p class="bd-notification is-info">2</p></UIColumn>
+            <UIColumn><p class="bd-notification is-info">3</p></UIColumn>
+            <UIColumn><p class="bd-notification is-info">4</p></UIColumn>
+            <UIColumn><p class="bd-notification is-info">5</p></UIColumn>
+        </UIColumns>
+        <p>加上了<code>IsMobile</code></p>
+        <UIColumns IsMobile="true">
+            <UIColumn><p class="bd-notification is-info">1</p></UIColumn>
+            <UIColumn><p class="bd-notification is-info">2</p></UIColumn>
+            <UIColumn><p class="bd-notification is-info">3</p></UIColumn>
+            <UIColumn><p class="bd-notification is-info">4</p></UIColumn>
+            <UIColumn><p class="bd-notification is-info">5</p></UIColumn>
+        </UIColumns>
+        <br />
+        <p>你可以按 F2 ，然后按 Ctrl + Shit + M 来使用浏览器模拟移动设备访问，或者使用真实移动设备访问。</p>
+        <br />
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.X8">
+                <UICode>
+                    &lt;UIColumns&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;1&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;2&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;3&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;4&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;5&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;/UIColumns&gt;
+                    &lt;UIColumns IsMobile=&quot;true&quot;&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;1&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;2&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;3&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;4&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;5&lt;/p&gt;&lt;/UIColumn&gt;
+                    &lt;/UIColumns&gt;
+                </UICode>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UIImage>
+                    <img src="/images/MobileColumn.png" style="width:300px;" />
+                </UIImage>
+            </UIColumn>
+        </UIColumns>
+
+
+        <UIH3>针对不同设备</UIH3>
+        <UIContent>
+            <p><code>UIColumn.EquipSize</code> 属性允许单独对一种设备设置一种宽度。</p>
+            <p>你还可以针对不同的设备，设置不同的列宽度比例。有三种设备可以选择，Mobbile(移动设备)、Tablet(平板设备)、Desktop(桌面设备)。</p>
+            <p>下面来设计一个列，这个列在不同宽度的屏幕下，显示不一样的比例。下面示例配置了，窗口越小，第一列占据的比例就越高。</p>
+            <p>你可以调整窗口大小，来观察第一列占据的宽度比例。</p>
+        </UIContent>
+        <UIBox>
+            <UIColumns IsMobile="true">
+                <UIColumn EquipSize="new List<ColumnEquip>
+                             {
+                                 new ColumnEquip{Size=UIEColumnSize.ThreeQuarters,Equip=UIEEquip.Mobile },
+                                 new ColumnEquip{ Size=UIEColumnSize.TwoThirds,Equip=UIEEquip.Tablet},
+                                 new ColumnEquip{ Size=UIEColumnSize.Half,Equip=UIEEquip.Desptop},
+                                 new ColumnEquip{ Size=UIEColumnSize.OneThird,Equip=UIEEquip.Widescreen},
+                                 new ColumnEquip{ Size=UIEColumnSize.OneQuarter,Equip=UIEEquip.Fullhd}
+                             }">
+                    <p class="bd-notification is-info">
+                        Mobile：四分之三<br />
+                        Tablet：三分之二<br />
+                        Desktop：二分之一<br />
+                        Widescren：三分之一<br />
+                        Fullhd：四分之一
+                    </p>
+                </UIColumn>
+                <UIColumn><p class="bd-notification is-info">2</p></UIColumn>
+                <UIColumn><p class="bd-notification is-info">3</p></UIColumn>
+                <UIColumn><p class="bd-notification is-info">4</p></UIColumn>
+                <UIColumn><p class="bd-notification is-info">5</p></UIColumn>
+            </UIColumns>
+        </UIBox>
+        <UIContent>
+            <pre><code class="language-html hljs xml">
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumns IsMobile=&quot;true&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span> <span class="hljs-attr">EquipSize</span>=<span class="hljs-string">"new List&lt;ColumnEquip&gt;
+                             {
+                                 new ColumnEquip{Size=UIEColumnSize.ThreeQuarters,Equip=UIEEquip.Mobile },
+                                 new ColumnEquip{ Size=UIEColumnSize.TwoThirds,Equip=UIEEquip.Tablet},
+                                 new ColumnEquip{ Size=UIEColumnSize.Half,Equip=UIEEquip.Desptop},
+                                 new ColumnEquip{ Size=UIEColumnSize.OneThird,Equip=UIEEquip.Widescreen},
+                                 new ColumnEquip{ Size=UIEColumnSize.OneQuarter,Equip=UIEEquip.Fullhd}
+                             }"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>
+                Mobile：四分之三<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                Tablet：三分之二<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                Desktop：二分之一<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                Widescren：三分之一<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                Fullhd：四分之一
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
+        </code></pre>
+        </UIContent>
+    </UIColumn>
+</UIColumns>

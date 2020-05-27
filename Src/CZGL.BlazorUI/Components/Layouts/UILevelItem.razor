@@ -1,0 +1,20 @@
+﻿@inherits LevelBase
+<div class="level-item @_allClass">@ChildContent</div>
+@code{
+
+    /// <summary>
+    /// 文本颜色
+    /// </summary>
+    [Parameter]
+    public UIETextColor TextColor { get; set; }
+
+    /// <summary>
+    /// 文本对齐
+    /// </summary>
+    [Parameter]
+    public UIEAlign Align { get; set; }
+    protected override void OnInitialized()
+    {
+        _allClass = CacheData.GetTextColor(TextColor) + CacheData.GetUIEAlign(Align);
+    }
+}

@@ -1,0 +1,75 @@
+﻿@page "/Doc/Container"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>容器(UIContainer)</UIH2>
+        <UIContent>
+            <p><code>UIContainer</code> 主要是对内部元素做了一些响应式布局调整，跟 Bootstrap 中的 Container 一致。</p>
+            <p>
+                <code>@nameof(UIContainer)</code> 可以在任何情况下使用，但是一般用于以下组件：
+                <ul>
+                    <li><code>@nameof(UINavBar)</code></li>
+                    <li><code>@nameof(UIHero)</code></li>
+                    <li><code>@nameof(UISection)</code></li>
+                    <li><code>@nameof(UIFooter)</code></li>
+                </ul>
+            </p>
+            <p>
+                容器的宽度相对固定，分别是 960px,1152px,1344px，会在不同大小的分辨率屏幕下，显示不同的宽度。
+            </p>
+            <div class="is-fullwidth">
+                <hr style="background-color:red;" />
+
+                <UIContainer style="background-color:burlywood;">
+                    一行简单的文字
+                </UIContainer>
+
+                <hr style="background-color:red;" />
+            </div>
+        </UIContent>
+
+        <p>另外 <code>@nameof(UIContainer)</code> 会有一些对齐效果，以及 margin 或者 padding 设定。</p>
+        <UIBox>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <p class="bd-notification is-info">
+                    <p class="bd-notification is-success">
+                        无容器
+                    </p>
+                    </p>
+                </UIColumn>
+                <UIColumn>
+                    <UICode>
+                        &lt;p class=&quot;bd-notification is-info&quot;&gt;
+                        &lt;p class=&quot;bd-notification is-success&quot;&gt;无容器&lt;/p&gt;
+                        &lt;/p&gt;
+                    </UICode>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+
+        <UIBox>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <div class="bd-notification is-info">
+                        <UIContainer>
+                            <p class="bd-notification is-success">无容器</p>
+                        </UIContainer>
+                    </div>
+                </UIColumn>
+                <UIColumn>
+                    <UICode>
+                        &lt;p class=&quot;bd-notification is-info&quot;&gt;
+                        &lt;UIContainer&gt;
+                        &lt;p class=&quot;bd-notification is-success&quot;&gt;无容器&lt;/p&gt;
+                        &lt;/UIContainer&gt;
+                        &lt;/p&gt;
+                    </UICode>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+    </UIColumn>
+</UIColumns>
+

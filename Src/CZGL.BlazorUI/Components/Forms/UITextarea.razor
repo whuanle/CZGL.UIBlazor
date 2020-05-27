@@ -1,0 +1,17 @@
+﻿@inherits TextareaBase
+
+@if (IsDisabled)
+{
+    <textarea class="textarea @_allClass" placeholder="@Placeholder" @attributes="UIAttributes" rows="@Rows" cols="@Cols" disabled></textarea>
+}
+else
+{
+    if (IsReadonly)
+    {
+<textarea class="textarea @_allClass" placeholder="@Placeholder" @attributes="UIAttributes" rows="@Rows" cols="@Cols" readonly></textarea>
+    }
+    else
+    {
+<textarea class="textarea @_allClass" placeholder="@Placeholder" @attributes="UIAttributes" rows="@Rows" cols="@Cols"></textarea>
+    }
+}

@@ -1,0 +1,11 @@
+﻿@inherits BreadBase
+<li class="@_allClass" @inherits BreadBase>@ChildContent</li>
+@code{
+
+    [Parameter]
+    public bool IsActive { get; set; }
+    protected override void UIInit()
+    {
+        _allClass = (IsActive ? "is-active" : "");
+    }
+}

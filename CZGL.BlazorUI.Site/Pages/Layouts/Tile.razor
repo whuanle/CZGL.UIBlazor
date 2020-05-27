@@ -1,0 +1,512 @@
+﻿@page "/Doc/Tile"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>二维布局(UITile)</UIH2>
+        <UIContent>
+            <p><code>UITile</code> 组件可以用来容纳多个组件，生成类似二维码的布局。</p>
+            <p>
+                <code>UITile</code> 组件有 3 个配置属性。
+                <br />
+                3个上下文 修饰符：
+                <ul>
+                    <li><code>IsRelation</code> 设定外内层</li>
+                    <li><code>IsVertical</code> 设定是否垂直对齐</li>
+                    <li><code>Size</code> 设定水平尺寸大小</li>
+                </ul>
+                也可以不设置修饰符。
+            </p>
+        </UIContent>
+        <br />
+        <UIContent>
+            <p>横三个列：</p>
+        </UIContent>
+        <UIBox>
+            <UIContainer>
+                <UITile Relation="UIERelation.Ancestor">
+                    <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                        <UIBox>
+                            <p>标题内容</p>
+                        </UIBox>
+                    </UITile>
+                    <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                        <UIBox>
+                            <p>标题内容</p>
+                        </UIBox>
+                    </UITile>
+                    <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                        <UIBox>
+                            <p>标题内容</p>
+                        </UIBox>
+                    </UITile>
+                </UITile>
+            </UIContainer>
+        </UIBox>
+        <UICode>
+            &lt;UITile Relation=&quot;UIERelation.Ancestor&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; Size=&quot;UIEXSize.X4&quot;&gt;
+            &lt;UIBox&gt;
+            &lt;p&gt;标题内容&lt;/p&gt;
+            &lt;/UIBox&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; Size=&quot;UIEXSize.X4&quot;&gt;
+            &lt;UIBox&gt;
+            &lt;p&gt;标题内容&lt;/p&gt;
+            &lt;/UIBox&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; Size=&quot;UIEXSize.X4&quot;&gt;
+            &lt;UIBox&gt;
+            &lt;p&gt;标题内容&lt;/p&gt;
+            &lt;/UIBox&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+        </UICode>
+
+        <UIContent>
+            <p>竖三个列：</p>
+        </UIContent>
+        <UIBox>
+            <UIContainer>
+                <UITile Relation="UIERelation.Ancestor" IsVertical="true">
+                    <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                        <UIBox>
+                            <p>标题内容</p>
+                        </UIBox>
+                    </UITile>
+                    <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                        <UIBox>
+                            <p>标题内容</p>
+                        </UIBox>
+                    </UITile>
+                    <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                        <UIBox>
+                            <p>标题内容</p>
+                        </UIBox>
+                    </UITile>
+                </UITile>
+            </UIContainer>
+        </UIBox>
+        <UICode>
+            &lt;UITile Relation=&quot;UIERelation.Ancestor&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; Size=&quot;UIEXSize.X4&quot;&gt;
+            &lt;UIBox&gt;
+            &lt;p&gt;标题内容&lt;/p&gt;
+            &lt;/UIBox&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; Size=&quot;UIEXSize.X4&quot;&gt;
+            &lt;UIBox&gt;
+            &lt;p&gt;标题内容&lt;/p&gt;
+            &lt;/UIBox&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; Size=&quot;UIEXSize.X4&quot;&gt;
+            &lt;UIBox&gt;
+            &lt;p&gt;标题内容&lt;/p&gt;
+            &lt;/UIBox&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+        </UICode>
+        <UIContent>
+            <p>又横又竖：</p>
+        </UIContent>
+        <UIBox>
+            <UIContainer>
+                <UITile Relation="UIERelation.Ancestor">
+                    <UITile IsVertical="true">
+                        <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                            <UIBox>
+                                <p>标题内容</p>
+                            </UIBox>
+                        </UITile>
+                        <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                            <UIBox>
+                                <p>标题内容</p>
+                            </UIBox>
+                        </UITile>
+                    </UITile>
+
+                    <UITile Relation="UIERelation.Parent" Size="UIEXSize.X4">
+                        <UIBox>
+                            <p>标题内容</p>
+                        </UIBox>
+                    </UITile>
+                </UITile>
+            </UIContainer>
+        </UIBox>
+        <br />
+        <p>假如，我们要设计一个类似下图的布局。我们分步完成。</p>
+        <UIImage><img src="/images/tile.png" style="width:300px;" /></UIImage>
+        <UIBox>
+            <UIContainer>
+                <UITile Relation="UIERelation.Ancestor">
+                    <UITile Size="UIEXSize.X8" IsVertical="true">
+                        <p class="notification is-primary">
+                            【占位】.............................................................................................................................................................................................................
+                        </p>
+                    </UITile>
+                    <UITile>
+                        <p class="notification is-success">
+                            【占位】.............................................................................................................
+                        </p>
+                    </UITile>
+                </UITile>
+            </UIContainer>
+        </UIBox>
+        <UICode>
+            &lt;UITile Relation=&quot;UIERelation.Ancestor&quot;&gt;
+            &lt;UITile Size=&quot;UIEXSize.X8&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;p class=&quot;notification is-primary&quot;&gt;
+            【占位】.............................................................................................................................................................................................................
+            &lt;/p&gt;
+            &lt;/UITile&gt;
+            &lt;UITile&gt;
+            &lt;p class=&quot;notification is-success&quot;&gt;
+            【占位】.............................................................................................................
+            &lt;/p&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+        </UICode>
+        <UIBox>
+            <UIContainer>
+                <UITile Relation="UIERelation.Ancestor">
+                    <UITile Size="UIEXSize.X8" IsVertical="true">
+                        <UITile>
+                            <UITile Relation="UIERelation.Parent" IsVertical="true">
+                                <UITile Relation="UIERelation.Child">
+                                    <div class="notification is-primary">
+                                        <p class="title">Vertical...</p>
+                                        <p class="subtitle">Top tile</p>
+                                    </div>
+                                </UITile>
+                                <UITile Relation="UIERelation.Child">
+                                    <div class="notification is-warning">
+                                        <p class="title">...tiles</p>
+                                        <p class="subtitle">Bottom tile</p>
+                                    </div>
+                                </UITile>
+                            </UITile>
+                        </UITile>
+                    </UITile>
+                    <UITile Relation="UIERelation.Parent">
+                        <UITile Relation="UIERelation.Child">
+                            <UIContent>
+                                <div class="notification is-success">
+                                    <p class="title">Tall tile</p>
+                                    <p class="subtitle">With even more content</p>
+                                </div>
+                            </UIContent>
+
+                        </UITile>
+                    </UITile>
+                </UITile>
+            </UIContainer>
+        </UIBox>
+
+        <UICode>
+            &lt;UITile Relation=&quot;UIERelation.Ancestor&quot;&gt;
+            &lt;UITile Size=&quot;UIEXSize.X8&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-primary&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Vertical...&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;Top tile&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-warning&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;...tiles&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;Bottom tile&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;UIContent&gt;
+            &lt;div class=&quot;notification is-success&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Tall tile&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;With even more content&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/UIContent&gt;
+
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+        </UICode>
+
+        <UIBox>
+            <UIContainer>
+                <UITile Relation="UIERelation.Ancestor">
+                    <UITile Size="UIEXSize.X8" IsVertical="true">
+                        <UITile>
+                            <UITile Relation="UIERelation.Parent" IsVertical="true">
+                                <UITile Relation="UIERelation.Child">
+                                    <div class="notification is-primary">
+                                        <p class="title">Vertical...</p>
+                                        <p class="subtitle">Top tile</p>
+                                    </div>
+                                </UITile>
+                                <UITile Relation="UIERelation.Child">
+                                    <div class="notification is-warning">
+                                        <p class="title">...tiles</p>
+                                        <p class="subtitle">Bottom tile</p>
+                                    </div>
+                                </UITile>
+                            </UITile>
+                            <UITile Relation="UIERelation.Parent" IsVertical="true">
+                                <UITile Relation="UIERelation.Child">
+                                    <div class="notification is-info">
+                                        <p class="title">Middle tile</p>
+                                        <p class="subtitle">With an image</p>
+                                        <figure class="image is-4by3">
+                                            <img src="/images/640x480.png">
+                                        </figure>
+                                    </div>
+                                </UITile>
+                            </UITile>
+                        </UITile>
+                    </UITile>
+                    <UITile Relation="UIERelation.Parent">
+                        <UITile Relation="UIERelation.Child">
+                            <div class="notification is-success">
+                                <p class="title">Tall tile</p>
+                                <p class="subtitle">With even more content</p>
+                                <br />
+                                .
+                                <br />
+                                <br />
+                                .
+                                <br />
+                                <br />
+                                .
+                                <br />
+                                <br />
+                                .
+                                <br />
+                                <br />
+                                .
+                                <br />
+                                <br />
+                                .
+                                <br />
+                            </div>
+                        </UITile>
+                    </UITile>
+                </UITile>
+            </UIContainer>
+        </UIBox>
+
+        <UICode>
+            &lt;UITile Relation=&quot;UIERelation.Ancestor&quot;&gt;
+            &lt;UITile Size=&quot;UIEXSize.X8&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-primary&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Vertical...&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;Top tile&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-warning&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;...tiles&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;Bottom tile&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-info&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Middle tile&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;With an image&lt;/p&gt;
+            &lt;figure class=&quot;image is-4by3&quot;&gt;
+            &lt;img src=&quot;/images/640x480.png&quot;&gt;
+            &lt;/figure&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-success&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Tall tile&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;With even more content&lt;/p&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+        </UICode>
+        <UIBox>
+            <UIContainer>
+                <UITile Relation="UIERelation.Ancestor">
+                    <UITile Size="UIEXSize.X8" IsVertical="true">
+                        <UITile>
+                            <UITile Relation="UIERelation.Parent" IsVertical="true">
+                                <UITile Relation="UIERelation.Child">
+                                    <div class="notification is-primary">
+                                        <p class="title">Vertical...</p>
+                                        <p class="subtitle">Top tile</p>
+                                    </div>
+                                </UITile>
+                                <UITile Relation="UIERelation.Child">
+                                    <UIContainer>
+                                        <div class="notification is-warning">
+                                            <p class="title">...tiles</p>
+                                            <p class="subtitle">Bottom tile</p>
+                                        </div>
+                                    </UIContainer>
+
+                                </UITile>
+                            </UITile>
+                            <UITile Relation="UIERelation.Parent" IsVertical="true">
+                                <UITile Relation="UIERelation.Child">
+                                    <div class="notification is-info">
+                                        <p class="title">Middle tile</p>
+                                        <p class="subtitle">With an image</p>
+                                        <figure class="image is-4by3">
+                                            <img src="/images/640x480.png">
+                                        </figure>
+                                    </div>
+                                </UITile>
+                            </UITile>
+                        </UITile>
+                        <UITile Relation="UIERelation.Parent">
+                            <UITile Relation="UIERelation.Child">
+                                <div class="notification is-danger">
+                                    <p class="title">Wide tile</p>
+                                    <p class="subtitle">Aligned with the right tile</p>
+                                </div>
+                            </UITile>
+                        </UITile>
+                    </UITile>
+                    <UITile Relation="UIERelation.Parent">
+                        <UITile Relation="UIERelation.Child">
+                            <UIContent>
+                                <div class="notification is-success">
+                                    <p class="title">Tall tile</p>
+                                    <p class="subtitle">With even more content</p>
+                                    <br />
+                                    .
+                                    <br />
+                                    <br />
+                                    .
+                                    <br />
+                                    <br />
+                                    .
+                                    <br />
+                                    <br />
+                                    .
+                                    <br />
+                                    <br />
+                                    .
+                                    <br />
+                                    <br />
+                                    .
+                                    <br />
+                                </div>
+                            </UIContent>
+                        </UITile>
+                    </UITile>
+                </UITile>
+            </UIContainer>
+        </UIBox>
+
+        <UICode>
+            &lt;UITile Relation=&quot;UIERelation.Ancestor&quot;&gt;
+            &lt;UITile Size=&quot;UIEXSize.X8&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-primary&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Vertical...&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;Top tile&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;UIContainer&gt;
+            &lt;div class=&quot;notification is-warning&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;...tiles&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;Bottom tile&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/UIContainer&gt;
+
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot; IsVertical=&quot;true&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-info&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Middle tile&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;With an image&lt;/p&gt;
+            &lt;figure class=&quot;image is-4by3&quot;&gt;
+            &lt;img src=&quot;/images/640x480.png&quot;&gt;
+            &lt;/figure&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;div class=&quot;notification is-danger&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Wide tile&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;Aligned with the right tile&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;UITile Relation=&quot;UIERelation.Parent&quot;&gt;
+            &lt;UITile Relation=&quot;UIERelation.Child&quot;&gt;
+            &lt;UIContent&gt;
+            &lt;div class=&quot;notification is-success&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Tall tile&lt;/p&gt;
+            &lt;p class=&quot;subtitle&quot;&gt;With even more content&lt;/p&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;br /&gt;
+            .
+            &lt;br /&gt;
+            &lt;/div&gt;
+            &lt;/UIContent&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+            &lt;/UITile&gt;
+        </UICode>
+
+
+    </UIColumn>
+</UIColumns>
+

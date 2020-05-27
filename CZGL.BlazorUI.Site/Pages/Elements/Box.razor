@@ -1,0 +1,144 @@
+﻿@page  "/Doc/Box"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>盒子(UIBox)</UIH2>
+        <p class="subtitle is-4">Box 是一个可以包含其它元素组成的简单的盒子 。</p>
+        <UIContent>你可以通过 razor 语法使用它： <code> &lt;UIBox&gt;&lt;/UIBox&gt;</code></UIContent>
+
+
+        <div class="bd-content">
+            <div class="content">
+                <p> Box 元素只是一个带有阴影、边框、半径和一些填充的容器。<br />你可以做出一个像这样的组件块：</p>
+            </div>
+            <UIMedia>
+                <UIMediaLeft>
+                    <UIImage Size="UIEImageSize.PX128">
+                        <img src="images/128x128.png">
+                    </UIImage>
+                </UIMediaLeft>
+                <UIMediaContent>
+                    <UIContent>
+                        <p>
+                            <strong>John Smith</strong> <small>&#64;johnsmith</small> <small>31m</small>
+                            <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                        </p>
+                    </UIContent>
+                    <UILevel>
+                        <UILevelLeft>
+                            <UILevelItem>
+                                <UIIcon Size="UIETextSize.Small" IconClass="fas fa-reply" />
+                            </UILevelItem>
+                            <UILevelItem>
+                                <UIIcon Size="UIETextSize.Small" IconClass="fas fa-retweet" />
+                            </UILevelItem>
+                            <UILevelItem>
+                                <UIIcon Size="UIETextSize.Small" IconClass="fas fa-heart" />
+                            </UILevelItem>
+                        </UILevelLeft>
+                    </UILevel>
+                </UIMediaContent>
+
+                <UIMediaRight>
+                    <UIDelete />
+                </UIMediaRight>
+            </UIMedia>
+
+            <hr class="hr" />
+            <h3 id="variables" class="title is-4 is-spaced bd-anchor-title">
+                <span class="bd-anchor-name">可选参数</span>
+            </h3>
+
+            <div class="content">
+                <p>通过可选参数，可以配置盒子的外观样式。可选参数可以组合使用。</p>
+            </div>
+            <div class="table-container">
+                <table class="table is-bordered">
+                    <thead>
+                        <tr>
+                            <th>属性</th>
+                            <th>类型</th>
+                            <th>默认值</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>属性</th>
+                            <th>类型</th>
+                            <th>默认值</th>
+                            <th>说明</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td><code>TextColor</code></td>
+                            <td><small class="tag">UIETextColor</small></td>
+                            <td><code>UIETextColor.None</code></td>
+                            <td><code>设置文本颜色</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>BackgroundColor</code></td>
+                            <td><small class="tag">UIEBackColor</small></td>
+                            <td><code>UIEBackColor.None</code></td>
+                            <td><code>设置盒子背景颜色</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>Radius</code></td>
+                            <td><small class="tag">UIERadius</small></td>
+                            <td><code>UIERadius.None</code></td>
+                            <td><code>设置圆角边框</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>Shadow</code></td>
+                            <td><small class="tag">UIEShade</small></td>
+                            <td><code>UIEShade.None</code></td>
+                            <td>黑白之间的阴影</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h3 id="examples" class="title is-4 is-spaced bd-anchor-title">
+            <span class="bd-anchor-name">示例</span>
+        </h3>
+        <div class="columns">
+            <div class="column is-full">
+                <p>
+                    <UIBox style="width:300px;">一个简单的盒子</UIBox>
+                </p>
+
+                <p>
+                    <UIBox TextColor="UIETextColor.Danger" style="width:300px;">设置 TextColor 属性</UIBox>
+                </p>
+                <p>
+                    <UIBox BackgroundColor="UIEBackColor.Success" style="width:300px;">设置 BackgroundColor 属性</UIBox>
+                </p>
+                <p>
+                    <UIBox Radius="UIERadius.Large" style="width:300px;">设置 Radius 属性</UIBox>
+                </p>
+                <p>
+                    <UIBox Shadow="UIEShade.GreyDark" style="width:300px;">设置 Shadow 属性</UIBox>
+                </p>
+                <UIBox>
+                    <div class="bd-snippet-code highlight-full bd-is-more">
+                        <figure class="highlight">
+                            <pre><code class="language-html" data-lang="html">
+    &lt;UIBox style=&quot;width:300px;&quot;&gt;一个简单的盒子&lt;/UIBox&gt;
+    &lt;UIBox TextColor=&quot;UIETextColor.Danger&quot; style=&quot;width:300px;&quot;&gt;设置 TextColor 属性&lt;/UIBox&gt;
+    &lt;UIBox BackgroundColor=&quot;UIEBackColor.Success&quot; style=&quot;width:300px;&quot;&gt;设置 BackgroundColor 属性&lt;/UIBox&gt;
+    &lt;UIBox Radius=&quot;UIERadius.Large&quot; style=&quot;width:300px;&quot;&gt;设置 Radius 属性&lt;/UIBox&gt;
+    &lt;UIBox Shadow=&quot;UIEShade.GreyDark&quot; style=&quot;width:300px;&quot;&gt;设置 Shadow 属性&lt;/UIBox&gt;
+</code></pre>
+                        </figure>
+                    </div>
+                </UIBox>
+            </div>
+        </div>
+
+    </UIColumn>
+</UIColumns>

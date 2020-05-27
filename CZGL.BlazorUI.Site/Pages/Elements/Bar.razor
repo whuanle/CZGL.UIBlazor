@@ -1,0 +1,148 @@
+﻿@page "/Doc/Bar"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>进度条(UIBar)</UIH2>
+        <UIContent>使用 <code>UIBar</code> 组件可以使用进度条。</UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIBar @bind-Value="ThisBar" />
+                    <br />
+                    <UIButtonGroup>
+                        <button class="button is-primary" @onclick="Remove">-1%</button>
+                        <button class="button is-primary" @onclick="Add">+1%</button>
+                    </UIButtonGroup>
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UICode>
+                        &lt;UIBox&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; /&gt;
+                        &lt;br /&gt;
+                        &lt;UIButtonGroup&gt;
+                        &lt;button class=&quot;button is-primary&quot; @@onclick=&quot;Remove&quot;&gt;-1%&lt;/button&gt;
+                        &lt;button class=&quot;button is-primary&quot; @@onclick=&quot;Add&quot;&gt;+1%&lt;/button&gt;
+                        &lt;/UIButtonGroup&gt;
+                        &lt;/UIBox&gt;
+
+                        @@code{
+                        private double ThisBar = 50.0;
+                        private void Add()
+                        {
+                        ThisBar += 1;
+                        }
+                        private void Remove()
+                        {
+                        ThisBar -= 1;
+                        }
+                        }
+                    </UICode>
+                </UIBox>
+            </UIColumn>
+        </UIColumns>
+        <br />
+        <UIH3>颜色</UIH3>
+        <UIContent>
+            <p>使用 Color 属性，设置进度条颜色。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Black" />
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Danger" />
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Info" />
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Success" />
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Primary" />
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Warning" />
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UICode>
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Black&quot; /&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Danger&quot; /&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Info&quot; /&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Success&quot; /&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Primary&quot; /&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Warning&quot; /&gt;
+                    </UICode>
+                </UIBox>
+            </UIColumn>
+        </UIColumns>
+
+        <UIH3>大小</UIH3>
+        <UIContent>
+            <p>使用 Size 属性，设置进度条粗细</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Primary" Size="UIETextSize.Small" />
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Primary" Size="UIETextSize.None" />
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Primary" Size="UIETextSize.Medium" />
+                    <UIBar @bind-Value="ThisBar" Color="UIEColor.Primary" Size="UIETextSize.Large" />
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UICode>
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Primary&quot; Size=&quot;UIETextSize.Small&quot; /&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Primary&quot; Size=&quot;UIETextSize.None&quot; /&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Primary&quot; Size=&quot;UIETextSize.Medium&quot; /&gt;
+                        &lt;UIBar @@bind-Value=&quot;ThisBar&quot; Color=&quot;UIEColor.Primary&quot; Size=&quot;UIETextSize.Large&quot; /&gt;
+                    </UICode>
+                </UIBox>
+            </UIColumn>
+        </UIColumns>
+
+        <UIContent>
+            <p>如果你不设置 Value 的话，进度条会这样</p>
+        </UIContent>
+
+        <UIBox>
+            <UIBar Color="UIEColor.Black" />
+            <UIBar Color="UIEColor.Danger" />
+            <UIBar Color="UIEColor.Info" />
+            <UIBar Color="UIEColor.Success" />
+            <UIBar Color="UIEColor.Primary" />
+            <UIBar Color="UIEColor.Warning" />
+        </UIBox>
+        <p>如果想设置进度条更加粗或细的话，可以使用 style 设置样式</p>
+        <UIBox>
+            <UIBar Color="UIEColor.Black" style="height:2px;" />
+            <UIBar Color="UIEColor.Danger" style="height:2px;" />
+            <UIBar Color="UIEColor.Info" style="height:2px;" />
+            <UIBar Color="UIEColor.Success" style="height:2px;" />
+            <UIBar Color="UIEColor.Primary" style="height:2px;" />
+            <UIBar Color="UIEColor.Warning" style="height:2px;" />
+        </UIBox>
+        <UIBox>
+            <UICode>
+                &lt;UIBar Color=&quot;UIEColor.Black&quot; style=&quot;height:2px;&quot; /&gt;
+                &lt;UIBar Color=&quot;UIEColor.Danger&quot; style=&quot;height:2px;&quot; /&gt;
+                &lt;UIBar Color=&quot;UIEColor.Info&quot; style=&quot;height:2px;&quot; /&gt;
+                &lt;UIBar Color=&quot;UIEColor.Success&quot; style=&quot;height:2px;&quot; /&gt;
+                &lt;UIBar Color=&quot;UIEColor.Primary&quot; style=&quot;height:2px;&quot; /&gt;
+                &lt;UIBar Color=&quot;UIEColor.Warning&quot; style=&quot;height:2px;&quot; /&gt;
+            </UICode>
+        </UIBox>
+    </UIColumn>
+</UIColumns>
+
+
+@code{
+    private double ThisBar = 50.0;
+    private void Add()
+    {
+        ThisBar += 1;
+    }
+    private void Remove()
+    {
+        ThisBar -= 1;
+    }
+}

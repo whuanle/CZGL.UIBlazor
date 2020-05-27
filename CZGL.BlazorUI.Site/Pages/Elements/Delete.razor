@@ -1,0 +1,97 @@
+﻿@page "/Doc/Delete"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+
+        <UIH2>删除徽记</UIH2>
+        <UIContent>
+            <p>
+                <code>UIDelete</code> 组件可以显示一个交叉按钮，并且可以设置一些事件。
+            </p>
+        </UIContent>
+
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIDelete />
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIDelete /&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <br />
+        <UIH3>图标大小</UIH3>
+        <UIContent>
+            <p><code>Size</code> 属性可以设置图标的大小。</p>
+        </UIContent>
+
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.X1">
+                <UIDelete Size="UIETextSize.Small" />
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X1">
+                <UIDelete Size="UIETextSize.None" />
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X1">
+                <UIDelete Size="UIETextSize.Medium" />
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X1">
+                <UIDelete Size="UIETextSize.Large" />
+            </UIColumn>
+            <UIColumn>
+                <UICode>
+                    &lt;UIDelete Size=&quot;UIETextSize.Small&quot; /&gt;
+                    &lt;UIDelete Size=&quot;UIETextSize.None&quot; /&gt;
+                    &lt;UIDelete Size=&quot;UIETextSize.Medium&quot; /&gt;
+                    &lt;UIDelete Size=&quot;UIETextSize.Large&quot; /&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <br />
+        <UIH3>组合</UIH3>
+        <p>你也可以通过与其它组件组合，实现交互。</p>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.X8">
+
+                <UIBox>
+                    <div class="block">
+                        <span class="tag is-success">
+                            Hello World
+                            <button class="delete is-small"></button>
+                        </span>
+                    </div>
+                </UIBox>
+
+                <UIBox>
+                    <div class="notification is-danger">
+                        <button class="delete"></button>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </div>
+                </UIBox>
+                <UIBox>
+                    <article class="message is-info">
+                        <div class="message-header">
+                            Info
+                            <button class="delete"></button>
+                        </div>
+                        <div class="message-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                        </div>
+                    </article>
+                </UIBox>
+
+
+            </UIColumn>
+        </UIColumns>
+
+
+    </UIColumn>
+</UIColumns>

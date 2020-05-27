@@ -1,0 +1,16 @@
+﻿@inherits InputBase
+@if (IsDisabled)
+{
+    <input class="input @_allClass" type="@InputType" placeholder="@Placeholder" @onclick="MouseDownEventArg" disabled />
+}
+else
+{
+    if (IsReadonly)
+    {
+        <input class="input @_allClass" type="@InputType" placeholder="@Placeholder" @onclick="MouseDownEventArg" readonly />
+    }
+    else
+    {
+        <input class="input @_allClass" type="@InputType" placeholder="@Placeholder" @onclick="MouseDownEventArg" />
+    }
+}

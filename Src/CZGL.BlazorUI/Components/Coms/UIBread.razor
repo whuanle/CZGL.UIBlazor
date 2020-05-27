@@ -1,0 +1,25 @@
+﻿@inherits BreadBase
+<nav class="breadcrumb @_allClass" aria-label="breadcrumbs" @*@attributes="UIAttributes">@ChildContent*@</nav>
+
+@code {
+
+    /// <summary>
+    /// 对齐
+    /// </summary>
+    [Parameter]
+    public UIEAlign Align { get; set; }
+
+    private static readonly string[] align = new string[]
+    {
+        "",
+        "is-centered",
+        "is-centered",
+        "",
+        "is-right"
+    };
+
+    protected override void UIInit()
+    {
+        _allClass = align[(int)Align];
+    }
+}

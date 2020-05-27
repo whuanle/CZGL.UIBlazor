@@ -1,0 +1,63 @@
+﻿@inherits ColumnBase
+<div class="column @_allClass" @attributes="UIAttributes">@ChildContent</div>
+@code{
+    /// <summary>
+    /// 列宽度
+    /// </summary>
+    [Parameter]
+    public UIEColumnSize Size { get; set; }
+
+    /// <summary>
+    /// 是否设置为窄列
+    /// </summary>
+    [Parameter]
+    public bool IsNarrow { get; set; }
+
+    /// <summary>
+    /// 指定设备生效
+    /// </summary>
+    [Parameter]
+    public List<ColumnEquip> EquipSize { get; set; }
+    private static string[] equips = new string[]
+    {
+        "",
+        "-mobile",
+        "-tablet",
+        "-desktop",
+        "-widescreen",
+        "-fullhd"};
+
+    /// <summary>
+    /// 列偏移量
+    /// </summary>
+    [Parameter]
+    public UIEColumnOffset Offset { get; set; }
+
+    protected override void UIInit()
+    {
+        string size;
+        if (EquipSize != null)
+            size = GetEquip();
+        else size = CacheData.GetCoumnSizes(Size);
+        _allClass = size + CacheData.GetCoumnOffsetSizes(Offset) + (IsNarrow ? " is-narrow" : "");
+    }
+
+    private string GetEquip()
+    {
+        string size = "";
+        foreach (var item in EquipSize)
+        {
+            string tmp = CacheData.GetCoumnSizes(item.Size);
+            switch (item.Equip)
+            {
+                case UIEEquip.Mobile: tmp += equips[1]; break;
+                case UIEEquip.Tablet: tmp += equips[2]; break;
+                case UIEEquip.Desptop: tmp += equips[3]; break;
+                case UIEEquip.Widescreen: tmp += equips[4]; break;
+                case UIEEquip.Fullhd: tmp += equips[5]; break;
+            }
+            size += " " + tmp;
+        }
+        return size;
+    }
+}

@@ -1,0 +1,143 @@
+﻿@page "/Doc/Modal"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+
+        <UIH2>模态框(UIModal)</UIH2>
+        <UIContent>
+            <p>模态框由背景、主体内容、关闭按钮组成。</p>
+            <p><code>IsActive</code> 可用于设置是否弹出模态框。</p>
+            <p>代码模板如下：</p>
+            <UIContent>
+                <UICode>
+                    &lt;UIButton DownEvent=&quot;Down&quot; Color=&quot;UIEColor.Danger&quot;&gt;弹出&lt;/UIButton&gt;
+
+                    &lt;UIModal @@bind-IsActive=&quot;isActie&quot; @@bind-IsActive:event=&quot;oninout&quot;&gt;
+                    &lt;!--要弹出的内容--&gt;
+                    &lt;/UIModal&gt;
+
+                    @@code{
+                    private bool isActie = false;
+                    private void Down(MouseEventArgs e)
+                    {
+                    isActie = true;
+                    }
+                    }
+                </UICode>
+            </UIContent>
+            <p>
+                由于模态框的内容是透明的，所以最好在<code>UIModal</code> 内使用 <code>UIBox</code> 作为容器包含要显示的内容。
+            </p>
+        </UIContent>
+        <UIContent>
+            <p>下面是一个弹出示例：</p>
+        </UIContent>
+        <UIBox>
+            <UIButton DownEvent="Down" Color="UIEColor.Danger">弹出</UIButton>
+        </UIBox>
+
+        <UIBox>
+            <UICode>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">DownEvent</span>=<span class="hljs-string">"Down"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Danger"</span>&gt;</span>弹出<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIModal</span> @@<span class="hljs-attr">bind-IsActive</span>=<span class="hljs-string">"isActie"</span> @@<span class="hljs-attr">bind-IsActive:event</span>=<span class="hljs-string">"oninout"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIBox</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIMedia</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIMediaLeft</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIImage</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIEImageSize.PX128"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/128x128.png"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIImage</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIMediaLeft</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIMediaContent</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIContent</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>John Smith<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span><span class="hljs-symbol">&amp;#64;</span>johnsmith<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>31m<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIContent</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UILevel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UILevelLeft</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-reply"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-retweet"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-heart"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelLeft</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UILevel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIMediaContent</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIMediaRight</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIMediaRight</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIMedia</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIBox</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIModal</span>&gt;</span>
+
+                    @@code{
+                    private bool isActie = false;
+                    private void Down(MouseEventArgs e)
+                    {
+                    isActie = true;
+                    }
+                    }
+
+            </UICode>
+        </UIBox>
+    </UIColumn>
+</UIColumns>
+
+
+
+<br />
+<UIModal @bind-IsActive="isActie" @bind-IsActive:event="oninout">
+    <UIBox>
+        <UIMedia>
+            <UIMediaLeft>
+                <UIImage Size="UIEImageSize.PX128">
+                    <img src="images/128x128.png">
+                </UIImage>
+            </UIMediaLeft>
+            <UIMediaContent>
+                <UIContent>
+                    <p>
+                        <strong>John Smith</strong> <small>&#64;johnsmith</small> <small>31m</small>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                    </p>
+                </UIContent>
+                <UILevel>
+                    <UILevelLeft>
+                        <UILevelItem>
+                            <UIIcon Size="UIETextSize.Small" IconClass="fas fa-reply" />
+                        </UILevelItem>
+                        <UILevelItem>
+                            <UIIcon Size="UIETextSize.Small" IconClass="fas fa-retweet" />
+                        </UILevelItem>
+                        <UILevelItem>
+                            <UIIcon Size="UIETextSize.Small" IconClass="fas fa-heart" />
+                        </UILevelItem>
+                    </UILevelLeft>
+                </UILevel>
+            </UIMediaContent>
+
+            <UIMediaRight>
+            </UIMediaRight>
+        </UIMedia>
+    </UIBox>
+
+</UIModal>
+@code{
+    private bool isActie = false;
+    private void Down(MouseEventArgs e)
+    {
+        isActie = true;
+    }
+}

@@ -1,0 +1,8 @@
+﻿@inherits ModalBase
+<div @bind-class="_allClass" @bind-class:event="oninput">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        @ChildContent
+    </div>
+    <button class="modal-close @closeSize" aria-label="close" @onclick="ModalClose"></button>
+</div>

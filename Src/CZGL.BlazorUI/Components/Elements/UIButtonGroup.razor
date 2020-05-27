@@ -1,0 +1,50 @@
+﻿@inherits ElementBase
+<div class="buttons@_allClass" @attributes="UIAttributes">@ChildContent</div>
+
+@code{
+
+    /// <summary>
+    /// 对齐
+    /// </summary>
+    [Parameter]
+    public UIEAlign Align { get; set; }
+
+
+    /// <summary>
+    /// 按钮组大小
+    /// </summary>
+    [Parameter]
+    public UIEButtonSize Size { get; set; }
+
+    /// <summary>
+    /// 让多个按钮并排起来
+    /// </summary>
+    [Parameter]
+    public bool IsHasAddons { get; set; }
+
+    private static string[] sizeType = new string[]
+    {
+        "",
+        " are-small",
+        "",
+        " are-medium",
+        " are-large"
+                 };
+    private static readonly string[] align = new string[] 
+    {
+        "",
+        " is-centered",
+        " is-centered",
+        "",
+        " is-right"
+    };
+
+    protected override void UIInit()
+    {
+        _allClass =
+            sizeType[(int)Size] +
+            (IsHasAddons ? " has-addons" : "") +
+            align[(int)Align]
+        ;
+    }
+}

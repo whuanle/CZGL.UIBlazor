@@ -1,0 +1,15 @@
+﻿@inherits FormBase
+<div class="field-label is-normal @_allClass" @attributes="UIAttributes"><label class="label">@ChildContent</label></div>
+@code{
+
+    /// <summary>
+    /// 大小
+    /// </summary>
+    [Parameter]
+    public UIETextSize Size { get; set; } = UIETextSize.None;
+
+    protected override void UIInit()
+    {
+        _allClass = CacheData.GetUIETextSize(Size);
+    }
+}

@@ -1,0 +1,141 @@
+﻿@page "/Doc/Content"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>UIContent 组件</UIH2>
+        <UIContent>
+            <p>
+                此组件适合用于以文本内容为主的块。你现在阅读的文字就放置在 <code>UIContent</code> 中。
+            </p>
+            <p>
+                例如，当你需要使用以下 HTML 标签时，可以放置到 <code>UIContent</code> 组件中。主要考虑显示纯净的文本内容，不出现表单以及一些具有动画的组件。
+
+                <ul>
+                    <li><code>&lt;p&gt;</code>&nbsp;paragraphs</li>
+                    <li><code>&lt;ul&gt;</code>&nbsp;<code>&lt;ol&gt;</code>&nbsp;<code>&lt;dl&gt;</code>&nbsp;lists</li>
+                    <li><code>&lt;h1&gt;</code>&nbsp;to&nbsp;<code>&lt;h6&gt;</code>&nbsp;headings</li>
+                    <li><code>&lt;blockquote&gt;</code>&nbsp;quotes</li>
+                    <li><code>&lt;em&gt;</code>&nbsp;and&nbsp;<code>&lt;strong&gt;</code></li>
+                    <li><code>&lt;table&gt;</code>&nbsp;<code>&lt;tr&gt;</code>&nbsp;<code>&lt;th&gt;</code>&nbsp;<code>&lt;td&gt;</code>&nbsp;tables</li>
+                </ul>
+            </p>
+        </UIContent>
+
+
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIContent>
+                    <ol type="1">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                    <ol type="A">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                    <ol type="a">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                    <ol type="I">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                    <ol type="i">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                </UIContent>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIContent&gt;
+                    &lt;ol type=&quot;1&quot;&gt;
+                    &lt;li&gt;Coffee&lt;/li&gt;
+                    &lt;li&gt;Tea&lt;/li&gt;
+                    &lt;li&gt;Milk&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;ol type=&quot;A&quot;&gt;
+                    &lt;li&gt;Coffee&lt;/li&gt;
+                    &lt;li&gt;Tea&lt;/li&gt;
+                    &lt;li&gt;Milk&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;ol type=&quot;a&quot;&gt;
+                    &lt;li&gt;Coffee&lt;/li&gt;
+                    &lt;li&gt;Tea&lt;/li&gt;
+                    &lt;li&gt;Milk&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;ol type=&quot;I&quot;&gt;
+                    &lt;li&gt;Coffee&lt;/li&gt;
+                    &lt;li&gt;Tea&lt;/li&gt;
+                    &lt;li&gt;Milk&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;ol type=&quot;i&quot;&gt;
+                    &lt;li&gt;Coffee&lt;/li&gt;
+                    &lt;li&gt;Tea&lt;/li&gt;
+                    &lt;li&gt;Milk&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;/UIContent&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <br />
+        <UIH3>大小</UIH3>
+        <UIContent>
+            <p>
+                <code>UIContent</code> 有个属性 <code>TextSize</code> 属性，可以使得文本变大或者变小。
+            </p>
+            <p>另外，外面加上盒子容器(UIBox)，可以出现阴影效果.</p>
+        </UIContent>
+        <UIBox>
+            <UIContent TextSize="UIETextSize.Small">Small</UIContent>
+            <UIContent TextSize="UIETextSize.None">None</UIContent>
+            <UIContent TextSize="UIETextSize.Medium">Medium</UIContent>
+            <UIContent TextSize="UIETextSize.Large">Large</UIContent>
+        </UIBox>
+
+
+        <UIBox>
+            <UIContent TextSize="UIETextSize.None">
+                <h3 class="tile">默认文本</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+                </p>
+            </UIContent>
+        </UIBox>
+
+        <UIBox>
+            <UIContent TextSize="UIETextSize.Small">
+                <h3 class="tile">UIETextSize.Small</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+                </p>
+            </UIContent>
+        </UIBox>
+        <UIBox>
+            <UIContent TextSize="UIETextSize.Medium">
+                <h3 class="tile">UIETextSize.Medium</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+                </p>
+            </UIContent>
+        </UIBox>
+        <UIBox>
+            <UIContent TextSize="UIETextSize.Large">
+                <h3 class="tile">UIETextSize.Large</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+                </p>
+            </UIContent>
+        </UIBox>
+    </UIColumn>
+</UIColumns>

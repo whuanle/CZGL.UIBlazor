@@ -1,0 +1,57 @@
+﻿@page "/Doc/Image"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>图片(UIImage)</UIH2>
+        <UIContent>
+            <p>
+                <code>UIImage</code> 只是一个图片容器，可以在里面放置图片。
+            </p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIImage Size="UIEImageSize.PX128">
+                        <img src="/images/128x128.png" />
+                    </UIImage>
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIImage&gt;
+                    &lt;img src=&quot;/images/128x128.png&quot; /&gt;
+                    &lt;/UIImage&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+        
+        <UIContent>
+            <p><code>Size</code> 属性可以设置图片大小。UIEImageSize 以 PX 开头的为具体图片大小。</p>
+        </UIContent>
+        <UIBox>
+            <UIImage Size="UIEImageSize.PX16">
+                <img src="/images/128x128.png" />
+            </UIImage>
+            <UIImage Size="UIEImageSize.PX32">
+                <img src="/images/128x128.png" />
+            </UIImage>
+            <UIImage Size="UIEImageSize.PX128">
+                <img src="/images/128x128.png" />
+            </UIImage>
+        </UIBox>
+
+        <UIContent>
+            <p><code>IsRounded</code> 属性可以设置图片为圆角图片。</p>
+            <UIBox>
+                <UIImage Size="UIEImageSize.PX128" IsRounded="true">
+                    <img src="/images/128x128.png" />
+                </UIImage>
+            </UIBox>
+        </UIContent>
+        <UIContent>
+            <p>另外还可以设置图片按照比例显示。</p>
+        </UIContent>
+    </UIColumn>
+</UIColumns>

@@ -1,0 +1,9 @@
+﻿@inherits TitleBase
+@if (IsSubTitle)
+{
+    <h3 class="subtitle is-3" @attributes="UIAttributes">@ChildContent</h3>
+}
+else
+{
+    <h3 class="title is-3" @attributes="UIAttributes">@ChildContent</h3>
+}

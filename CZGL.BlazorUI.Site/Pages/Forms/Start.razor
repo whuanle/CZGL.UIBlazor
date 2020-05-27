@@ -1,0 +1,749 @@
+﻿@page "/Doc/FormStart"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>表单控件</UIH2>
+        <UIContent>
+            <p>有两个组件用于容纳表单控件：<code>@nameof(UIFile)</code> 和 <code>@nameof(UIControl)</code> 。</p>
+            <p><code>@nameof(UIControl)</code> 用来包装表单控件，例如在输入框中加上图标。</p>
+            <p><code>@nameof(UIField)</code> 用于将一个表单控件和多个 HTML 标签组合在一起。</p>
+            <p>总是 <code>UIField</code> 包含 <code>UIControl</code> 。</p>
+        </UIContent>
+
+        <UIH3>表单组合示例</UIH3>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIField>
+                        Name：
+                        <UIControl>
+                            <UIInput Placeholder="输入你的名字" />
+                        </UIControl>
+                    </UIField>
+
+                    <UIField>
+                        UserName：
+                        <UIControl IconAlign="UIEAlign.Justify">
+                            <UIInput Placeholder="输入你的名字" value="666" Color="UIEColor.Success" />
+                            <UIIcon IconClass="fas fa-user" />
+                            <UIIcon IconClass="fas fa-check" IsRight="true" />
+                        </UIControl>
+                    </UIField>
+
+                    <UIField>
+                        Email：
+                        <UIControl IconAlign="UIEAlign.Justify">
+                            <UIInput Placeholder="输入你的名字" value="aaa&#64;" Color="UIEColor.Danger" />
+                            <UIIcon IconClass="fas fa-envelope" />
+                            <UIIcon IconClass="fas fa-exclamation-triangle" IsRight="true" />
+                        </UIControl>
+                    </UIField>
+
+                    <UIField>
+                        选择框：
+                        <UIControl>
+                            <UISelect>
+                                <UISelectItem>第一项</UISelectItem>
+                                <UISelectItem>第二项</UISelectItem>
+                            </UISelect>
+                        </UIControl>
+                    </UIField>
+
+                    <UIField>
+                        <UIControl>
+                            复选框：<br />
+                            <UICheckbox>我同意<a href="#">使用协议</a></UICheckbox>
+                        </UIControl>
+                    </UIField>
+                    <UIField>
+                        <UIControl>
+                            <UIRadio>Yes</UIRadio>
+                            <UIRadio>No</UIRadio>
+                        </UIControl>
+                    </UIField>
+
+                    <UIField>
+                        <UIControl style="display:inline;">
+                            <UIButton Color="UIEColor.Primary">提交</UIButton>
+                        </UIControl>
+                        <UIControl style="display:inline;">
+                            <UIButton Color="UIEColor.Danger">重置</UIButton>
+                        </UIControl>
+                    </UIField>
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIContent>
+                    <div class="bd-snippet-code  ">
+                        <figure class="highlight">
+                            <pre><code class="language-html hljs xml">
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+    Name：
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"输入你的名字"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+    UserName：
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">IconAlign</span>=<span class="hljs-string">"UIEAlign.Justify"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"输入你的名字"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"666"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-user"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-check"</span> <span class="hljs-attr">IsRight</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+    Email：
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">IconAlign</span>=<span class="hljs-string">"UIEAlign.Justify"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"输入你的名字"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"aaa<span class="hljs-symbol">&amp;#64;</span>"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Danger"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-envelope"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-exclamation-triangle"</span> <span class="hljs-attr">IsRight</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+    选择框：
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UISelect</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>第一项<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>第二项<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UISelect</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+        复选框：<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UICheckbox</span>&gt;</span>我同意<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>使用协议<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UICheckbox</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIRadio</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">UIRadio</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIRadio</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">UIRadio</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display:inline;"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Primary"</span>&gt;</span>提交<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display:inline;"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Danger"</span>&gt;</span>重置<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+        </code></pre>
+                        </figure>
+                    </div>
+
+                </UIContent>
+            </UIColumn>
+        </UIColumns>
+
+        <h3 class="title is-3">@nameof(UIField) 和 @nameof(UIControl)</h3>
+        <UIContent>
+            <p><code>@nameof(UIField)</code> 容器是一个简单的容器，作用在于让表单字段有一定的距离。</p>
+            <p><code>@nameof(UIControl)</code> 主要作用是让表单控件和多个元素组合在一起。例如上面示例中输入框和图标。</p>
+        </UIContent>
+
+
+        <h3 class="title is-3">使用图标</h3>
+        <UIContent>
+            <p>
+                表单组件可以 <code>@nameof(UIControl)</code> 的 <code>IconAlign</code> 属性嵌入图标，其中
+                <code>Justify</code> 和 <code>Center</code> 枚举，都是让图标显示在组件的首尾两侧，无差别。
+            </p>
+        </UIContent>
+        <UIBox>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <p>设置两个图标，不设置图标对齐。(样式有问题)</p>
+                    <UIField>
+                        <UIControl IconAlign="UIEAlign.None">
+                            <UIInput Placeholder="邮箱地址" value="aaa&#64;" Color="UIEColor.Danger" />
+                            <UIIcon IconClass="fas fa-envelope" />
+                            <UIIcon IconClass="fas fa-exclamation-triangle" />
+                        </UIControl>
+                    </UIField>
+
+                    <p>设置一个图标，左对齐。要 设置 UIControl 的 IconAlign 属性。</p>
+                    <UIField>
+                        <UIControl IconAlign="UIEAlign.Left">
+                            <UIInput Placeholder="邮箱地址" value="aaa&#64;" Color="UIEColor.Success" />
+                            <UIIcon IconClass="fas fa-envelope" />
+                        </UIControl>
+                    </UIField>
+
+                    <p>设置一个图标，右对齐。要 设置 UIControl 的 IconAlign 属性，和 UIIcon 的 IsRight 属性。</p>
+                    <UIField>
+                        <UIControl IconAlign="UIEAlign.Right">
+                            <UIInput Placeholder="邮箱地址" value="aaa&#64;" Color="UIEColor.Success" />
+                            <UIIcon IconClass="fas fa-exclamation-triangle" IsRight="true" />
+                        </UIControl>
+                    </UIField>
+
+
+                    <p>设置两个图标，一左一右。</p>
+                    <UIField>
+                        <UIControl IconAlign="UIEAlign.Justify">
+                            <UIInput Placeholder="邮箱地址" value="aaa&#64;" Color="UIEColor.Success" />
+                            <UIIcon IconClass="fas fa-envelope" />
+                            <UIIcon IconClass="fas fa-exclamation-triangle" IsRight="true" />
+                        </UIControl>
+                    </UIField>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UICode>
+                        &lt;p&gt;设置两个图标，不设置图标对齐。(样式有问题)&lt;/p&gt;
+                        &lt;UIField&gt;
+                        &lt;UIControl IconAlign=&quot;UIEAlign.None&quot;&gt;
+                        &lt;UIInput Placeholder=&quot;邮箱地址&quot; value=&quot;aaa&amp;#64;&quot; Color=&quot;UIEColor.Danger&quot; /&gt;
+                        &lt;UIIcon IconClass=&quot;fas fa-envelope&quot; /&gt;
+                        &lt;UIIcon IconClass=&quot;fas fa-exclamation-triangle&quot; /&gt;
+                        &lt;/UIControl&gt;
+                        &lt;/UIField&gt;
+
+                        &lt;p&gt;设置一个图标，左对齐。要 设置UIControl 的 IconAlign 属性。&lt;/p&gt;
+                        &lt;UIField&gt;
+                        &lt;UIControl IconAlign=&quot;UIEAlign.Left&quot;&gt;
+                        &lt;UIInput Placeholder=&quot;邮箱地址&quot; value=&quot;aaa&amp;#64;&quot; Color=&quot;UIEColor.Success&quot; /&gt;
+                        &lt;UIIcon IconClass=&quot;fas fa-envelope&quot; /&gt;
+                        &lt;/UIControl&gt;
+                        &lt;/UIField&gt;
+
+                        &lt;p&gt;设置一个图标，右对齐。要 设置UIControl 的 IconAlign 属性，和 UIIcon 的 IsRight 属性。&lt;/p&gt;
+                        &lt;UIField&gt;
+                        &lt;UIControl IconAlign=&quot;UIEAlign.Right&quot;&gt;
+                        &lt;UIInput Placeholder=&quot;邮箱地址&quot; value=&quot;aaa&amp;#64;&quot; Color=&quot;UIEColor.Success&quot; /&gt;
+                        &lt;UIIcon IconClass=&quot;fas fa-exclamation-triangle&quot; IsRight=&quot;true&quot; /&gt;
+                        &lt;/UIControl&gt;
+                        &lt;/UIField&gt;
+                    </UICode>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+
+
+        <h3 class="title is-3">表单插件</h3>
+        <UIContent>
+            <p><code>UIField.IsAddon</code> 属性可以设置在容器末尾附加一个元素。</p>
+        </UIContent>
+        <UIBox>
+            <UIField IsAddon="true">
+                <UIControl>
+                    <UIInput Placeholder="请输入关键字" />
+                </UIControl>
+                <UIControl>
+                    <UIButton Color="UIEColor.Info">搜索</UIButton>
+                </UIControl>
+            </UIField>
+        </UIBox>
+        <UICode>
+            &lt;UIField IsAddon=&quot;true&quot;&gt;
+            &lt;UIControl&gt;
+            &lt;UIInput Placeholder=&quot;请输入关键字&quot; /&gt;
+            &lt;/UIControl&gt;
+            &lt;UIControl&gt;
+            &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;搜索&lt;/UIButton&gt;
+            &lt;/UIControl&gt;
+            &lt;/UIField&gt;
+        </UICode>
+
+        <UIBox>
+            <UIField IsAddon="true">
+                <UIControl>
+                    <UIInput Placeholder="输入用户名" />
+                </UIControl>
+                <UIControl>
+                    <UIButton IsStatic="true" Color="UIEColor.Info">@@gmail.com</UIButton>
+                </UIControl>
+            </UIField>
+        </UIBox>
+        <UICode>
+            &lt;UIField IsAddon=&quot;true&quot;&gt;
+            &lt;UIControl&gt;
+            &lt;UIInput Placeholder=&quot;输入用户名&quot; /&gt;
+            &lt;/UIControl&gt;
+            &lt;UIControl&gt;
+            &lt;UIButton IsStatic=&quot;true&quot; Color=&quot;UIEColor.Info&quot;&gt;@@gmail.com&lt;/UIButton&gt;
+            &lt;/UIControl&gt;
+            &lt;/UIField&gt;
+        </UICode>
+
+        <br />
+        <UIH3>更宽的空间</UIH3>
+        <UIContent>
+            <p><code>UIControl.IsExpanded</code> 属性可以使组件填充剩余的空间。</p>
+        </UIContent>
+        <UIField IsAddon="true">
+            <UIControl>
+                <UISelect>
+                    <UISelectItem>学生</UISelectItem>
+                    <UISelectItem>老师</UISelectItem>
+                    <UISelectItem>管理员</UISelectItem>
+                </UISelect>
+            </UIControl>
+            <UIControl>
+                <UIInput Placeholder="名字" />
+            </UIControl>
+
+            <UIControl>
+                <UIButton IsStatic="true">@@xxx.com</UIButton>
+            </UIControl>
+        </UIField>
+
+        <UIField IsAddon="true">
+            <UIControl>
+                <UISelect>
+                    <UISelectItem>学生</UISelectItem>
+                    <UISelectItem>老师</UISelectItem>
+                    <UISelectItem>管理员</UISelectItem>
+                </UISelect>
+            </UIControl>
+            <UIControl IsExpanded="true">
+                <UIInput Placeholder="名字" />
+            </UIControl>
+
+            <UIControl>
+                <UIButton IsStatic="true">@@xxx.com</UIButton>
+            </UIControl>
+        </UIField>
+        <UIContent>
+            <pre><code class="language-html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsAddon</span>=<span class="hljs-string">"true"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UISelect</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>学生<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>老师<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>管理员<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UISelect</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"名字"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">IsStatic</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-symbol">&amp;#64;</span>xxx.com<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsAddon</span>=<span class="hljs-string">"true"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UISelect</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>学生<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>老师<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>管理员<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UISelect</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">IsExpanded</span>=<span class="hljs-string">"true"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"名字"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">IsStatic</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-symbol">&amp;#64;</span>xxx.com<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+        </code></pre>
+        </UIContent>
+
+        <p>
+            如果要下拉框全宽，则需要同时设置 <code>UISelect.IsFullWidth</code> 属性。
+        </p>
+        <UIBox>
+            <UIField IsAddon="true">
+                <UIControl IsExpanded="true">
+                    <UISelect IsFullWidth="true">
+                        <UISelectItem>学生</UISelectItem>
+                        <UISelectItem>老师</UISelectItem>
+                        <UISelectItem>管理员</UISelectItem>
+                    </UISelect>
+                </UIControl>
+
+                <UIControl>
+                    <UIButton Color="UIEColor.Primary">选择</UIButton>
+                </UIControl>
+            </UIField>
+        </UIBox>
+        <UICode>
+            &lt;UIField IsAddon=&quot;true&quot;&gt;
+            &lt;UIControl IsExpanded=&quot;true&quot;&gt;
+            &lt;UISelect IsFullWidth=&quot;true&quot;&gt;
+            &lt;UISelectItem&gt;学生&lt;/UISelectItem&gt;
+            &lt;UISelectItem&gt;老师&lt;/UISelectItem&gt;
+            &lt;UISelectItem&gt;管理员&lt;/UISelectItem&gt;
+            &lt;/UISelect&gt;
+            &lt;/UIControl&gt;
+
+            &lt;UIControl&gt;
+            &lt;UIButton Color=&quot;UIEColor.Primary&quot;&gt;选择&lt;/UIButton&gt;
+            &lt;/UIControl&gt;
+            &lt;/UIField&gt;
+        </UICode>
+        <br />
+        <UIH3>对齐</UIH3>
+        <UIContent>
+            <p><code>@nameof(UIField).@nameof(UIField.Align)</code> 属性可以设置表单组件的对齐方式。</p>
+            <p>默认表单组件是左对齐的。</p>
+        </UIContent>
+        <UIBox>
+            <UIField IsAddon="true" Align="UIEAlign.Left">
+                <UIControl>
+                    <UISelect>
+                        <UISelectItem>学生</UISelectItem>
+                        <UISelectItem>老师</UISelectItem>
+                        <UISelectItem>管理员</UISelectItem>
+                    </UISelect>
+                </UIControl>
+
+                <UIControl>
+                    <UIButton Color="UIEColor.Primary">选择</UIButton>
+                </UIControl>
+            </UIField>
+            <UIField IsAddon="true" Align="UIEAlign.Center">
+                <UIControl>
+                    <UISelect>
+                        <UISelectItem>学生</UISelectItem>
+                        <UISelectItem>老师</UISelectItem>
+                        <UISelectItem>管理员</UISelectItem>
+                    </UISelect>
+                </UIControl>
+
+                <UIControl>
+                    <UIButton Color="UIEColor.Primary">选择</UIButton>
+                </UIControl>
+            </UIField>
+            <UIField IsAddon="true" Align="UIEAlign.Right">
+                <UIControl>
+                    <UISelect>
+                        <UISelectItem>学生</UISelectItem>
+                        <UISelectItem>老师</UISelectItem>
+                        <UISelectItem>管理员</UISelectItem>
+                    </UISelect>
+                </UIControl>
+
+                <UIControl>
+                    <UIButton Color="UIEColor.Primary">选择</UIButton>
+                </UIControl>
+            </UIField>
+        </UIBox>
+
+        <UIH3>表单组</UIH3>
+        <UIContent>
+            <p>如果想将组件组合起来，可以使用 <code>@nameof(UIField).@nameof(UIField.IsGrouped)</code> 属性；设置表单组对齐，可以使用 <code>@nameof(UIField.GroupedAlign)</code> 属性。</p>
+            <p>因为表单控件默认每个占据一行，使用表单组后，可以放在一起。</p>
+        </UIContent>
+
+        <UIBox>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UIContent>
+                        <p>什么也不加</p>
+                    </UIContent>
+                    <UIField>
+                        <UIControl>
+                            <UIButton Color="UIEColor.Primary">提交</UIButton>
+                        </UIControl>
+                        <UIControl>
+                            <UIButton Color="UIEColor.Light">取消</UIButton>
+                        </UIControl>
+                    </UIField>
+                </UIColumn>
+
+                <UIColumn Size="UIEColumnSize.Half">
+                    <!---->
+                    <p>加上 <code>IsGrouped</code></p>
+                    <UIField IsGrouped="true">
+                        <UIControl>
+                            <UIButton Color="UIEColor.Primary">提交</UIButton>
+                        </UIControl>
+                        <UIControl>
+                            <UIButton Color="UIEColor.Light">取消</UIButton>
+                        </UIControl>
+                    </UIField>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+        <p>另外,<code>IsGroupedMultiline</code> 属性，可以使表单组的控件，能够换行展示。</p>
+        <UIBox>
+            <p>不加 <code>IsGroupedMultiline</code> :</p>
+            <UIField IsGrouped="true">
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">One</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Two</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Three</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Four</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Five</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Six</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Seven</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Eight</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Nine</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Ten</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Eleven</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Twelve</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Thirteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Fourteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Sixteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Seventeen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Eightteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Nineteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Twenty</UIButton></UIControl>
+            </UIField>
+        </UIBox>
+        <UIBox>
+            <p>加上 <code>IsGroupedMultiline</code> :</p>
+            <UIField IsGrouped="true" IsGroupedMultiline="true">
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">One</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Two</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Three</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Four</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Five</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Six</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Seven</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Eight</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Nine</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Ten</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Eleven</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Twelve</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Thirteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Fourteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Sixteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Seventeen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Eightteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Nineteen</UIButton></UIControl>
+                <UIControl><UIButton IsOutLine="true" Color="UIEColor.Primary">Twenty</UIButton></UIControl>
+            </UIField>
+        </UIBox>
+        <br />
+        <UIH3>水平表单</UIH3>
+        <UIContent>
+            <p>表单常常是多种元素组合的，使用 <code>UIField.IsHorizontal</code> 属性，可以使得表单水平排布。</p>
+            <p>另外<code>UIfieldLabel</code> 和 <code>UIFieldBody</code> 可以辅助设计表单。</p>
+        </UIContent>
+        <UIBox>
+            <UIField IsHorizontal="true">
+                <UIFieldLabel>联系方式</UIFieldLabel>
+                <UIFieldBody>
+                    <UIField>
+                        <UIControl IsExpanded="true" IconAlign="UIEAlign.Left">
+                            <UIInput Placeholder="Name" />
+                            <UIIcon IconClass="fas fa-user" Size="UIETextSize.Small" />
+                        </UIControl>
+                    </UIField>
+                    <UIField>
+                        <UIControl IsExpanded="true" IconAlign="UIEAlign.Justify">
+                            <UIInput Color="UIEColor.Success" Type="UIEInputType.Email" Placeholder="Email" />
+                            <UIIcon IconClass="fas fa-envelope" Size="UIETextSize.Small" />
+                            <UIIcon IconClass="fas fa-check" Size="UIETextSize.Small" IsRight="true" />
+                        </UIControl>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+            <UIField IsHorizontal="true">
+                <UIFieldLabel></UIFieldLabel>
+                <UIFieldBody>
+                    <UIField IsAddon="true">
+                        <UIControl>
+                            <UIButton IsStatic="true">+86</UIButton>
+                        </UIControl>
+                        <UIControl IsExpanded="true">
+                            <UIInput Type="UIEInputType.Tel" Placeholder="Your phone number" />
+                        </UIControl>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+
+            <UIField IsHorizontal="true">
+                <UIFieldLabel>所在部门</UIFieldLabel>
+                <UIFieldBody>
+                    <UIField>
+                        <UIControl>
+                            <UISelect IsFullWidth="true">
+                                <UISelectItem>Business development</UISelectItem>
+                                <UISelectItem>Marketing</UISelectItem>
+                                <UISelectItem>Sales</UISelectItem>
+                            </UISelect>
+                        </UIControl>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+
+            <UIField IsHorizontal="true">
+                <UIFieldLabel>是否 996 公司</UIFieldLabel>
+                <UIFieldBody>
+                    <UIField>
+                        <UIControl>
+                            <UIRadio Name="996">Yes</UIRadio>
+                            <UIRadio Name="996">No</UIRadio>
+                        </UIControl>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+
+            <UIField IsHorizontal="true">
+                <UIFieldLabel>合作主题</UIFieldLabel>
+                <UIFieldBody>
+                    <UIField>
+                        <UIControl>
+                            <UIInput Color="UIEColor.Danger" Placeholder="示例：网站业务" />
+                        </UIControl>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+
+            <UIField IsHorizontal="true">
+                <UIFieldLabel>咨询</UIFieldLabel>
+                <UIFieldBody>
+                    <UIField>
+                        <UIControl>
+                            <UITextarea Placeholder="我们应该如何帮助你？"></UITextarea>
+                        </UIControl>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+
+            <UIField IsHorizontal="true">
+                <UIFieldLabel></UIFieldLabel>
+                <UIFieldBody>
+                    <UIField>
+                        <UIControl>
+                            <UIButton Color="UIEColor.Primary">提交</UIButton>
+                        </UIControl>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+        </UIBox>
+        <UIBox>
+            <div class="bd-snippet-code  ">
+                <figure class="highlight">
+                    <pre><code class="language-html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsHorizontal</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldLabel</span>&gt;</span>联系方式<span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldLabel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldBody</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">IsExpanded</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">IconAlign</span>=<span class="hljs-string">"UIEAlign.Left"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"Name"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-user"</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">IsExpanded</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">IconAlign</span>=<span class="hljs-string">"UIEAlign.Justify"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span> <span class="hljs-attr">Type</span>=<span class="hljs-string">"UIEInputType.Email"</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"Email"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-envelope"</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-check"</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> <span class="hljs-attr">IsRight</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldBody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsHorizontal</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldLabel</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldLabel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldBody</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsAddon</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">IsStatic</span>=<span class="hljs-string">"true"</span>&gt;</span>+86<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">IsExpanded</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Type</span>=<span class="hljs-string">"UIEInputType.Tel"</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"Your phone number"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldBody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsHorizontal</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldLabel</span>&gt;</span>所在部门<span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldLabel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldBody</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UISelect</span> <span class="hljs-attr">IsFullWidth</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>Business development<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>Marketing<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>Sales<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UISelect</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldBody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsHorizontal</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldLabel</span>&gt;</span>是否 996 公司<span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldLabel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldBody</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIRadio</span> <span class="hljs-attr">Name</span>=<span class="hljs-string">"996"</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">UIRadio</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIRadio</span> <span class="hljs-attr">Name</span>=<span class="hljs-string">"996"</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">UIRadio</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldBody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsHorizontal</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldLabel</span>&gt;</span>合作主题<span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldLabel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldBody</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Danger"</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"示例：网站业务"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldBody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsHorizontal</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldLabel</span>&gt;</span>咨询<span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldLabel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldBody</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UITextarea</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"我们应该如何帮助你？"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UITextarea</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldBody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsHorizontal</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldLabel</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldLabel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIFieldBody</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Primary"</span>&gt;</span>提交<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIFieldBody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+        </code></pre>
+                </figure>
+            </div>
+        </UIBox>
+
+        <p>
+            <code>UIFieldLabel</code> 主要是为表单提供标注提示，为了与表单中的控件大小一致，例如 <code>UIButton</code> 一致，可以使用
+            <code>Size</code> 属性设置文本大小。
+        </p>
+
+        <UIH3>禁用表单</UIH3>
+        <UIContent>
+            <p><code>UIField.IsDisabled</code> 属性，可以设置禁用表单。</p>
+        </UIContent>
+
+        <UIBox>
+            <UIField IsHorizontal="true" IsAddon="true">
+                <UIFieldLabel>联系方式</UIFieldLabel>
+                <UIFieldBody>
+                    <UIField>
+                        <UIControl IsExpanded="true" IconAlign="UIEAlign.Left">
+                            <UIInput Placeholder="Name" />
+                            <UIIcon IconClass="fas fa-user" Size="UIETextSize.Small" />
+                        </UIControl>
+                    </UIField>
+                    <UIField>
+                        <UIControl IsExpanded="true" IconAlign="UIEAlign.Justify">
+                            <UIInput Color="UIEColor.Success" Type="UIEInputType.Email" Placeholder="Email" />
+                            <UIIcon IconClass="fas fa-envelope" Size="UIETextSize.Small" />
+                            <UIIcon IconClass="fas fa-check" Size="UIETextSize.Small" IsRight="true" />
+                        </UIControl>
+                    </UIField>
+                </UIFieldBody>
+            </UIField>
+        </UIBox>
+
+    </UIColumn>
+</UIColumns>

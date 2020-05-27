@@ -1,0 +1,11 @@
+﻿@inherits FieldBase
+@if (IsDisabled)
+{
+    <fieldset disabled>
+        <div class="field @_allClass" @attributes="UIAttributes">@ChildContent</div>
+    </fieldset>
+}
+else
+{
+    <div class="field @_allClass" @attributes="UIAttributes">@ChildContent</div>
+}

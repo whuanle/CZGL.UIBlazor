@@ -1,0 +1,29 @@
+﻿@inject IJSRuntime JSRuntime
+
+<div class="bd-snippet-code  ">
+    <figure class="highlight">
+        <pre><code class="@Language" @attributes="UIAttributes">@ChildContent</code></pre>
+    </figure>
+</div>
+
+@code
+{
+    [Parameter]
+    public string Language { get; set; } = "language-html";
+    /// <summary>
+    /// 自定义组件元素属性
+    /// </summary>
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> UIAttributes { get; set; }
+
+    /// <summary>
+    /// 内嵌子元素
+    /// </summary>
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("hljs.initHighlightingOnLoad", null);
+    }
+}

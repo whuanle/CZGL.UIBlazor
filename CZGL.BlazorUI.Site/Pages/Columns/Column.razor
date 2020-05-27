@@ -1,0 +1,50 @@
+﻿@page "/Doc/Column"
+@using CZGL.BlazorUI.Components.Columns
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>列(@nameof(UIColumns))</UIH2>
+        <UIH3 IsSubTitle="true"></UIH3>
+        <UIContent>
+            <p><code>UIColumn</code>可以创建一个响应式列布局。列布局由以下两个组件构成层次结构：</p>
+            <ul>
+                <li>
+                    添加一个 <code>@nameof(UIColumns)</code> 容器，作为外层容器。相当于 Bootstrap 的 <code>row</code>。
+                </li>
+                <li>
+                    添加一个 <code>@nameof(UIColumn)</code> 作为内层列容器。相当于 Bootstrap 的 <code>col</code>。
+                </li>
+            </ul>
+            <p>
+                无论他们有多少列，默认情况下，他们的宽度都会 <b>自动均分</b>。
+            </p>
+        </UIContent>
+
+        <UIBox>
+            <UIColumns>
+                <UIColumn><p class="bd-notification is-primary">First column</p></UIColumn>
+                <UIColumn><p class="bd-notification is-primary">Second column</p></UIColumn>
+                <UIColumn><p class="bd-notification is-primary">Third column</p></UIColumn>
+                <UIColumn><p class="bd-notification is-primary">Fourth column</p></UIColumn>
+            </UIColumns>
+        </UIBox>
+        <UIContent>
+            <pre>
+            <code class="language-html hljs xml">
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumns</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-primary"</span>&gt;</span>First column<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-primary"</span>&gt;</span>Second column<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-primary"</span>&gt;</span>Third column<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-primary"</span>&gt;</span>Fourth column<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
+            </code></pre>
+        </UIContent>
+
+
+
+    </UIColumn>
+</UIColumns>
+

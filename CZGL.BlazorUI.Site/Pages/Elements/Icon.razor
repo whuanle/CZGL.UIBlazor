@@ -1,0 +1,85 @@
+﻿@page "/Doc/Icon"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>图标</UIH2>
+        <UIContent>
+            你可以使用以下图标框架以及其它框架与 CZGL.BlazorUI 一起使用：
+            <ul>
+                <li><a href="https://fontawesome.com/" target="_blank" rel="external nofollow noopener noreferrer">Font Awesome 5</a></li>
+                <li><a href="http://fontawesome.io/" target="_blank" rel="external nofollow noopener noreferrer">Font Awesome 4</a></li>
+                <li><a href="https://materialdesignicons.com/" target="_blank" rel="external nofollow noopener noreferrer">Material Design Icons</a></li>
+                <li><a href="http://ionicons.com/" target="_blank" rel="external nofollow noopener noreferrer">Ionicons</a>, etc.</li>
+            </ul>
+        </UIContent>
+        <p>
+            使用时，将 icon 类作为参数传递进去即可。
+        </p>
+
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIIcon IconClass="fas fa-home" />
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    &lt;UIIcon IconClass=&quot;fas fa-home&quot; /&gt;
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+        <UIContent><p>这个 <code>fas fa-home</code> 就是这个图标需要传递的 CSS 类。具体由你使用的框架决定。文档的所有示例使用的图标,都是来自于 Font Awesome 5 。</p></UIContent>
+
+        <br />
+        <UIH3>颜色</UIH3>
+        <UIContent>
+            <p>你可以使用 <code>Color</code> 属性来控制图标的颜色。</p>
+            <p>图标的样式是取决于你所使用的框架，而属性的控制，是在本框架完成的。也就是说，你可以自定义使用任何 icon 框架显示图形，然后使用组件的属性控制样式。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIIcon IconClass="fas fa-home" Color="UIETextColor.Danger" />
+                    <UIIcon IconClass="fas fa-home" Color="UIETextColor.Dark" />
+                    <UIIcon IconClass="fas fa-home" Color="UIETextColor.Grey" />
+                    <UIIcon IconClass="fas fa-home" Color="UIETextColor.Info" />
+                    <UIIcon IconClass="fas fa-home" Color="UIETextColor.Primary" />
+                    <UIIcon IconClass="fas fa-home" Color="UIETextColor.Warning" />
+                </UIBox>
+                <UIBox>
+                    <UIIcon IconClass="fas fa-check-square" Color="UIETextColor.Danger" />
+                    <UIIcon IconClass="fas fa-exclamation-triangle" Color="UIETextColor.Dark" />
+                    <UIIcon IconClass="fas fa-ban" Color="UIETextColor.Grey" />
+                    <UIIcon IconClass="fas fa-ban" Color="UIETextColor.Info" />
+                    <UIIcon IconClass="fas fa-ban" Color="UIETextColor.Primary" />
+                    <UIIcon IconClass="fas fa-info-circle" Color="UIETextColor.Warning" />
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UICode>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIBox</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-home"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Danger"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-home"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Dark"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-home"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Grey"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-home"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Info"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-home"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Primary"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-home"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Warning"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIBox</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIBox</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-check-square"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Danger"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-exclamation-triangle"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Dark"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-ban"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Grey"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-ban"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Info"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-ban"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Primary"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-info-circle"</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIETextColor.Warning"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">UIBox</span>&gt;</span>
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+
+        <br />
+    </UIColumn>
+</UIColumns>

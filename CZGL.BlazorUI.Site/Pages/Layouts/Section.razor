@@ -1,0 +1,36 @@
+﻿@page "/Doc/Section"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>节(UISection)</UIH2>
+        <UIContent>
+            <p>
+                <code>@nameof(UISection)</code> 没有什么用处，这个组件可以将声明这是一个块元素，并且设置一些相距空间。
+                用于标准 HTML 中文档的节、段落块。
+            </p>
+        </UIContent>
+
+        <UISection>
+            <UIContainer>
+                <h1 class="title">Section</h1>
+                <h2 class="subtitle">
+                    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+                </h2>
+            </UIContainer>
+        </UISection>
+        <UICode>
+            &lt;UISection&gt;
+            &lt;UIContainer&gt;
+            &lt;h1 class=&quot;title&quot;&gt;Section&lt;/h1&gt;
+            &lt;h2 class=&quot;subtitle&quot;&gt;
+            A simple container to divide your page into &lt;strong&gt;sections&lt;/strong&gt;, like the one you&#x27;re currently reading
+            &lt;/h2&gt;
+            &lt;/UIContainer&gt;
+            &lt;/UISection&gt;
+        </UICode>
+    </UIColumn>
+</UIColumns>
+

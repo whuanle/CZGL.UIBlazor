@@ -1,0 +1,38 @@
+﻿@page "/"
+@namespace CZGL.BlazorUI.Site.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CZGL.BlazorUI 演示站点</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link rel="stylesheet" href="fontawesome5/css/all.min.css" />
+    <link rel="stylesheet" href="css/bulma-docs.min.css" />
+    <link rel="stylesheet" href="highlight/default.min.css">
+    <script src="highlight/highlight.min.js"></script>
+</head>
+<body>
+    <app>
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
+    </app>
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="is-loading">Reload</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>

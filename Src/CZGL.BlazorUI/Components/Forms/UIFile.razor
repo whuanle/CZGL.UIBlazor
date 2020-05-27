@@ -1,0 +1,37 @@
+﻿@inherits FileBase
+
+@if (IsShowFile)
+{
+    <div class="file has-name @_allClass">
+        <label class="file-label">
+            <input class="file-input" type="file" name="@Name" @onchange="SelectFile">
+            <span class="file-cta">
+                <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                    @ChildContent
+                </span>
+            </span>
+            <span class="file-name">
+                @FileName
+            </span>
+        </label>
+    </div>
+}
+else
+{
+    <div class="file  @_allClass">
+        <label class="file-label">
+            <input class="file-input" type="file" name="@Name">
+            <span class="file-cta">
+                <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                    @ChildContent
+                </span>
+            </span>
+        </label>
+    </div>
+}
