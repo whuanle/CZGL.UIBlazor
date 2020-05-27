@@ -1,0 +1,142 @@
+﻿@page "/Doc/Alert"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>通知(Alert/Notification)</UIH2>
+        <UIContent>
+            <p>因为 Notification(通知)单词比较长，而且 Bootstrap 使用 Alert 来表示一个通知或提示消息的，所以 UIBlazor 为了方便，可以使用 <code>UIAlert</code> 和 <code>UINotification</code> 表示同一个东西。</p>
+            <p>
+                主要考虑用于一些提示或者通知消息，内部主要显示文本内容。
+            </p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIAlert>一个简单的通知消息</UIAlert>
+                </UIBox>
+
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UIAlert>一个简单的通知消息<UIDelete /></UIAlert>
+                </UIBox>
+            </UIColumn>
+        </UIColumns>
+        <UIContent>
+            <UICode>
+                &lt;UIAlert&gt;一个简单的通知消息&lt;/UIAlert&gt;
+                &lt;UIAlert&gt;一个简单的通知消息&lt;UIDelete /&gt;&lt;/UIAlert&gt;
+            </UICode>
+        </UIContent>
+
+        <UIH3>颜色</UIH3>
+        <p>使用 Color 属性，可以设置通知框的颜色。</p>
+
+        <UIBox>
+            <UIColumns IsMultiline="true">
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert>未加上任何效果的 <code>UIAlert</code> 组件<UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert Color="UIEColor.Black">使用了 UIEColor.Black <UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert Color="UIEColor.Danger">使用了 UIEColor.Danger <UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert Color="UIEColor.Info">使用了 UIEColor.Info <UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert Color="UIEColor.Success">使用了 UIEColor.Success <UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert Color="UIEColor.Warning">使用了 UIEColor.Warning <UIDelete /></UIAlert>
+                </UIColumn>
+
+            </UIColumns>
+        </UIBox>
+
+        <UIBox>
+            <UICode>
+                &lt;UIAlert&gt;未加上任何效果的 &lt;code&gt;UIAlert&lt;/code&gt; 组件&lt;UIDelete /&gt;&lt;/UIAlert&gt;
+                &lt;UIAlert Color=&quot;UIEColor.Black&quot;&gt;使用了 UIEColor.Black &lt;UIDelete /&gt;&lt;/UIAlert&gt;
+                &lt;UIAlert Color=&quot;UIEColor.Danger&quot;&gt;使用了 UIEColor.Danger &lt;UIDelete /&gt;&lt;/UIAlert&gt;
+                &lt;UIAlert Color=&quot;UIEColor.Info&quot;&gt;使用了 UIEColor.Info &lt;UIDelete /&gt;&lt;/UIAlert&gt;
+                &lt;UIAlert Color=&quot;UIEColor.Success&quot;&gt;使用了 UIEColor.Success &lt;UIDelete /&gt;&lt;/UIAlert&gt;
+                &lt;UIAlert Color=&quot;UIEColor.Warning&quot;&gt;使用了 UIEColor.Warning &lt;UIDelete /&gt;&lt;/UIAlert&gt;
+            </UICode>
+        </UIBox>
+
+        <UIContent>
+            <p><code>IsLight</code> 属性可以使颜色变淡一些。</p>
+        </UIContent>
+        <UIBox>
+            <UIColumns IsMultiline="true">
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert IsLight="true">未加上任何效果的 <code>UIAlert</code> 组件<UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert IsLight="true" Color="UIEColor.Black">使用了 UIEColor.Black <UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert IsLight="true" Color="UIEColor.Danger">使用了 UIEColor.Danger <UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert IsLight="true" Color="UIEColor.Info">使用了 UIEColor.Info <UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert IsLight="true" Color="UIEColor.Success">使用了 UIEColor.Success <UIDelete /></UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X3">
+                    <UIAlert IsLight="true" Color="UIEColor.Warning">使用了 UIEColor.Warning <UIDelete /></UIAlert>
+                </UIColumn>
+            </UIColumns>
+        </UIBox>
+
+        <UIContent>
+            <p>通过绑定事件，可以实现取消控件的显示。</p>
+        </UIContent>
+
+        @if (IsShow)
+        {
+            <UIBox>
+                <UIAlert Color="UIEColor.Warning">一条可以关闭的提示 <UIDelete MouseEventArg="DownEvent" /></UIAlert>
+            </UIBox>
+        }
+        else
+        {
+        }
+        <UIBox>
+            <UICode>
+                @@if (IsShow)
+                {
+                &lt;UIBox&gt;
+                &lt;UIAlert Color=&quot;UIEColor.Warning&quot;&gt;一条可以关闭的提示 &lt;UIDelete MouseEventArg=&quot;DownEvent&quot; /&gt;&lt;/UIAlert&gt;
+                &lt;/UIBox&gt;
+                }
+                else
+                {
+                }
+
+                @@code{
+                private  bool IsShow = true;
+                private void DownEvent(MouseEventArgs e)
+                {
+                IsShow = false;
+                }
+                }
+            </UICode>
+        </UIBox>
+    </UIColumn>
+</UIColumns>
+@code{
+    private bool IsShow = true;
+    private void DownEvent(MouseEventArgs e)
+    {
+        IsShow = false;
+    }
+
+}
