@@ -10,21 +10,33 @@ namespace UIBlazor.Components.Coms
         /// </summary>
         [Parameter]
         public bool IsMouseDown { get; set; } = false;
+
+        /// <summary>
+        /// 是否靠右浮动
+        /// </summary>
+        [Parameter]
+        public bool IsRight { get; set; }
+
+        /// <summary>
+        /// 向上显示
+        /// </summary>
+        [Parameter]
+        public bool IsUp { get; set; }
+
         /// <summary>
         /// 标题
         /// </summary>
         [Parameter]
-        public RenderFragment Title { get; set; }
+        public RenderFragment DropTitle { get; set; }
 
         /// <summary>
         /// 底部标题
         /// </summary>
         [Parameter]
-        public RenderFragment Footer { get; set; }
+        public RenderFragment DropFoot { get; set; }
 
         protected override void UIInit()
         {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -1,2 +1,56 @@
 ﻿@inherits CardBase
-<footer class="card-footer" @attributes="UIAttributes">@ChildContent</footer>
+<footer class="card-footer" @attributes="UIAttributes">
+    @foreach (var item in list)
+    {
+        if (!(item is null))
+        {
+            <p class="card-footer-item">@item</p>
+        }
+
+    }
+</footer>
+@code{
+
+    /// <summary>
+    /// 底部内容
+    /// </summary>
+    [Parameter]
+    public RenderFragment FootItem1 { get; set; }
+
+    /// <summary>
+    /// 底部内容
+    /// </summary>
+    [Parameter]
+    public RenderFragment FootItem2 { get; set; }
+
+    /// <summary>
+    /// 底部内容
+    /// </summary>
+    [Parameter]
+    public RenderFragment FootItem3 { get; set; }
+
+    /// <summary>
+    /// 底部内容
+    /// </summary>
+    [Parameter]
+    public RenderFragment FootItem4 { get; set; }
+
+    /// <summary>
+    /// 底部内容
+    /// </summary>
+    [Parameter]
+    public RenderFragment FootItem5 { get; set; }
+    private List<RenderFragment> list;
+
+    protected override void UIInit()
+    {
+        list = new List<RenderFragment>
+{
+            FootItem1,
+            FootItem2,
+            FootItem3,
+            FootItem4,
+            FootItem5
+        };
+    }
+}

@@ -1,10 +1,5 @@
 ﻿@inject IJSRuntime JSRuntime
-
-<div class="bd-snippet-code  ">
-    <figure class="highlight">
-        <pre><code class="@Language" @attributes="UIAttributes">@ChildContent</code></pre>
-    </figure>
-</div>
+<pre><code class="@Language" @attributes="UIAttributes">@ChildContent</code></pre>
 
 @code
 {
@@ -24,6 +19,6 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await JSRuntime.InvokeVoidAsync("hljs.initHighlightingOnLoad", null);
+        await JSRuntime.InvokeVoidAsync("Prism.highlightAll", null);
     }
 }

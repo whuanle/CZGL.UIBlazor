@@ -1,0 +1,81 @@
+﻿@page "/Doc/Dropdown"
+
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+
+        <UIH2>下拉框(UIDropdown)</UIH2>
+        <UIContent>
+            <p>
+                <code>UIDropdown</code> 是下拉框组件，其模板如下：
+            </p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.X3">
+                <UIDropdown>
+                    <DropTitle>标题</DropTitle>
+                    <ChildContent>
+                        <UIDropdownItem>
+                            选项一
+                        </UIDropdownItem>
+                        <UIDropdownItem>
+                            选项二
+                        </UIDropdownItem>
+                        <UIDropdownItem>
+                            选项三
+                        </UIDropdownItem>
+                    </ChildContent>
+                    <DropFoot>底部</DropFoot>
+                </UIDropdown>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Full">
+                <UICode>
+                    @((MarkupString)@"&lt;UIDropdown&gt;
+            &lt;DropTitle&gt;标题&lt;/DropTitle&gt;
+            &lt;ChildContent&gt;
+                &lt;UIDropdownItem&gt;
+                    选项一
+                &lt;/UIDropdownItem&gt;
+                &lt;UIDropdownItem&gt;
+                    选项二
+                &lt;/UIDropdownItem&gt;
+                &lt;UIDropdownItem&gt;
+                    选项三
+                &lt;/UIDropdownItem&gt;
+            &lt;/ChildContent&gt;
+            &lt;DropFoot&gt;底部&lt;/DropFoot&gt;
+        &lt;/UIDropdown&gt;")
+                </UICode>
+            </UIColumn>
+        </UIColumns>
+        <UIContent>
+            <p>默认移动到相应位置，即出现下拉选项。你可以使用 <code>IsMouseDown</code> 属性，这样需要点击时才会显示下拉框。</p>
+            <p>
+                <UIDropdown IsMouseDown="true">
+                    <DropTitle>标题</DropTitle>
+                    <ChildContent>
+                        <UIDropdownItem>
+                            选项一
+                        </UIDropdownItem>
+                        <UIDropdownItem>
+                            选项二
+                        </UIDropdownItem>
+                        <UIDropdownItem>
+                            选项三
+                        </UIDropdownItem>
+                    </ChildContent>
+                    <DropFoot>底部</DropFoot>
+                </UIDropdown>
+            </p>
+        </UIContent>
+
+        <UIContent>
+            <p>使用 <code>IsRight</code> 属性，可以使下拉框向右浮动。<code>IsUp</code> 可以使选项向上展开。</p>
+        </UIContent>
+
+
+
+    </UIColumn>
+</UIColumns>

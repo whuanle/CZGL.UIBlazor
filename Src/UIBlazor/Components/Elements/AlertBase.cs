@@ -18,10 +18,17 @@ namespace UIBlazor.Components.Elements
         [Parameter]
         public bool IsLight { get; set; }
 
+        /// <summary>
+        /// 内部的文本如何对齐
+        /// </summary>
+        [Parameter]
+        public UIEAlign TextAlign { get; set; }
+
         protected override void UIInit()
         {
             _allClass =
                 CacheData.GetUIEColor(Color) +
+                CacheData.GetUIEAlign(TextAlign)+
                 (IsLight ? " is-light" : "");
         }
     }

@@ -5,14 +5,15 @@
     </UIColumn>
     <UIColumn Size="UIEColumnSize.X10">
 
-        <UIH2>列尺寸(UIColumn.Size)</UIH2>
-        <UIH3 IsSubTitle="true">用于设置列的宽度</UIH3>
+        <UIH2>列尺寸(Size)</UIH2>
+        <UIH4 IsSubTitle="true">用于设置列的宽度</UIH4>
+        <hr />
         <UIContent>
             <p>
                 默认情况下，使用 <code>@nameof(UIColumns)</code> 组件，多个列会自动均分。当然也可以使用 <code>@nameof(UIColumn)</code> 的 <code>@nameof(UIColumn.Size)</code> 属性设置单个列占据的宽度。
-                <code>@nameof(UIColumns)</code> 比 Bootstrap 的十二栅格系统布局设计丰富得多。
+                <code>@nameof(UIColumns)</code> 比 Bootstrap 的十二栅格系统布局自由性丰富得多。
             </p>
-            <p><code>@nameof(UIColumn.Size)</code> 是 <code>UIEColumnSize</code> 枚举类型，里面包含列占据宽度的所有样式种类。根据不同的相对比例，可以分为多种情况。</p>
+            <p><code>@nameof(UIColumn.Size)</code> 是 <code>@nameof(UIEColumnSize)</code> 枚举类型，里面包含列占据宽度的所有样式种类。根据不同的相对比例，可以分为多种情况。</p>
             <p>按照二、三、四等份均分：</p>
             <p>
                 <ul>
@@ -40,49 +41,33 @@
             <UIColumn><p class="bd-notification is-fojeisj">Auto</p></UIColumn>
             <UIColumn><p class="bd-notification is-fojeisj">Auto</p></UIColumn>
         </UIColumns>
-
-        <UIContent>
-            <pre><code class="language-html hljs xml">
+        <UIBox>
+            <UICodeShow>
+                <pre><code class="language-html hljs xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">UIColumns</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIEColumnSize.ThreeQuarters"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>@nameof(UIEColumnSize.ThreeQuarters)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-fojeisj"</span>&gt;</span>Auto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-fojeisj"</span>&gt;</span>Auto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIEColumnSize.ThreeQuarters"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>@nameof(UIEColumnSize.ThreeQuarters)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-fojeisj"</span>&gt;</span>Auto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-fojeisj"</span>&gt;</span>Auto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
         </code></pre>
-        </UIContent>
+            </UICodeShow>
+        </UIBox>
+
         <UIColumns>
             <UIColumn Size="UIEColumnSize.TwoThirds"><p class="bd-notification is-info">@nameof(UIEColumnSize.TwoThirds)</p></UIColumn>
             <UIColumn><p class="bd-notification is-fojeisj">Auto</p></UIColumn>
             <UIColumn><p class="bd-notification is-fojeisj">Auto</p></UIColumn>
         </UIColumns>
 
-        <UIContent>
-            <pre><code class="language-html hljs xml">
+        <UICodeShow>
+            <pre><code class="language-html">
 <span class="hljs-tag">&lt;<span class="hljs-name">UIColumns</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIEColumnSize.TwoThirds"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>@@nameof(UIEColumnSize.TwoThirds)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-fojeisj"</span>&gt;</span>Auto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-fojeisj"</span>&gt;</span>Auto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
         </code></pre>
-        </UIContent>
-        <UIBox>
-            <pre><code class="language-html hljs xml">
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumns</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>First column<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">UIColumns</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>First nested column<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>Second nested column<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
-        </code></pre>
-        </UIBox>
+        </UICodeShow>
 
 
         <UIBox>
@@ -105,13 +90,33 @@
                 </UIColumn>
             </UIColumns>
         </UIBox>
+        <UIBox>
+            <UICodeShow>
+                @((MarkupString)@"        &lt;UIColumns&gt;
+                &lt;UIColumn&gt;
+                    &lt;p class=&quot;bd-notification is-danger&quot;&gt;Second column&lt;/p&gt;
+                &lt;/UIColumn&gt;
+            &lt;/UIColumns&gt;
 
+            &lt;UIColumns&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.Half&quot;&gt;
+                    &lt;p class=&quot;bd-notification is-danger&quot;&gt;50%&lt;/p&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn&gt;
+                    &lt;p class=&quot;bd-notification is-danger&quot;&gt;Auto&lt;/p&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn&gt;
+                    &lt;p class=&quot;bd-notification is-danger&quot;&gt;Auto&lt;/p&gt;
+                &lt;/UIColumn&gt;
+            &lt;/UIColumns&gt;")
+            </UICodeShow>
+        </UIBox>
         <br />
         <UIH3>12列栅格系统</UIH3>
         <UIContent>
             <p>如果你使用过 Bosstrap ，应该了解 Bootstrap 的十二栅格网格，本框架中也可以实现对应的效果。</p>
             <p>使用 <code>UIEColumnSize</code> 中 X 开头的枚举即可设置12栅格系统。枚举 X1~X12 对应 1~12 个栅格。</p>
-            <p>使用：<code>&lt;UIColumn Size=&quot;UIEColumnSize.X2&quot;&gt;&lt;/UIColumn&gt;</code></p>
+            <p>例如：<code>&lt;UIColumn Size=&quot;UIEColumnSize.X2&quot;&gt;&lt;/UIColumn&gt;</code></p>
             <p>完整实例如下：</p>
         </UIContent>
         <UIBox>
@@ -127,21 +132,21 @@
                 </UIColumns>
             }
         </UIBox>
-        <UIContent>
-            <pre><code class="language-csharp hljs csharp">
-    @@for (int i = 0; i <span class="hljs-tag">&lt; <span class="hljs-attr">12</span>; <span class="hljs-attr">i</span>++)
-    {
-            <span class="hljs-attr">int</span> <span class="hljs-attr">tmp</span> = <span class="hljs-string">i;</span>
-        &lt;<span class="hljs-attr">UIColumns</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"@@(UIEColumnSize.X1+tmp)"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-info"</span>&gt;</span>X@@(tmp + 1)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-            @@for (int k = 11 - tmp; k &gt; 0; k--)
-            {
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-fojeisj"</span>&gt;</span>Auto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-            }
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
-    }
-        </code></pre>
-        </UIContent>
+        <UIBox>
+            <UICodeShow>
+                @@for (int i = 0; i &lt; 12; i++)
+                {
+                int tmp = i;
+                &lt;UIColumns&gt;
+                &lt;UIColumn Size=&quot;@@(UIEColumnSize.X1+tmp)&quot;&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;X@@(tmp + 1)&lt;/p&gt;&lt;/UIColumn&gt;
+                @@for (int k = 11 - tmp; k &gt; 0; k--)
+                {
+                &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-fojeisj&quot;&gt;Auto&lt;/p&gt;&lt;/UIColumn&gt;
+                }
+                &lt;/UIColumns&gt;
+                }
+            </UICodeShow>
+        </UIBox>
         <br />
         <UIH3>列偏移(Offset)</UIH3>
         <UIContent>
@@ -211,24 +216,25 @@
                 </UIColumn>
             </UIColumns>
         </UIBox>
-        <UIContent>
-            <pre><code class="language-html hljs xml">
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIColumns</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span> <span class="hljs-attr">IsNarrow</span>=<span class="hljs-string">"true"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-primary"</span>&gt;</span>
-            列的宽度
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box is-info"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:200px;"</span>&gt;</span>内部子元素只有200px;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIColumn</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIEColumnSize.Half"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-success"</span>&gt;</span>
-            UIEColumnSize.Half
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bd-notification is-warning"</span>&gt;</span>一半的宽度<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumn</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIColumns</span>&gt;</span>
-        </code></pre>
-        </UIContent>
+        <UIBox>
+            <UICodeShow>
+@((MarkupString)(@"
+             &lt;UIColumns&gt;
+                &lt;UIColumn IsNarrow=&quot;true&quot;&gt;
+                    &lt;div class=&quot;bd-notification is-primary&quot;&gt;
+                        列的宽度
+                        &lt;div class=&quot;box is-info&quot; style=&quot;width:200px;&quot;&gt;内部子元素只有200px;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.Half&quot;&gt;
+                    &lt;div class=&quot;bd-notification is-success&quot;&gt;
+                        UIEColumnSize.Half
+                        &lt;div class=&quot;bd-notification is-warning&quot;&gt;一半的宽度&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/UIColumn&gt;
+            &lt;/UIColumns&gt;"))
+            </UICodeShow>
+        </UIBox>
     </UIColumn>
 </UIColumns>
 

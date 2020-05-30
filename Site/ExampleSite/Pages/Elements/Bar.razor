@@ -7,8 +7,6 @@
     <UIColumn Size="UIEColumnSize.X10">
         <UIH2>进度条(UIBar)</UIH2>
         <UIContent>使用 <code>UIBar</code> 组件可以使用进度条。</UIContent>
-        <UIColumns>
-            <UIColumn Size="UIEColumnSize.Half">
                 <UIBox>
                     <UIBar @bind-Value="ThisBar" />
                     <br />
@@ -17,10 +15,9 @@
                         <button class="button is-primary" @onclick="Add">+1%</button>
                     </UIButtonGroup>
                 </UIBox>
-            </UIColumn>
-            <UIColumn Size="UIEColumnSize.Half">
+
                 <UIBox>
-                    <UICode>
+                    <UICodeShow>
                         &lt;UIBox&gt;
                         &lt;UIBar @@bind-Value=&quot;ThisBar&quot; /&gt;
                         &lt;br /&gt;
@@ -41,10 +38,8 @@
                         ThisBar -= 1;
                         }
                         }
-                    </UICode>
+                    </UICodeShow>
                 </UIBox>
-            </UIColumn>
-        </UIColumns>
         <br />
         <UIH3>颜色</UIH3>
         <UIContent>

@@ -5,7 +5,7 @@
     </UIColumn>
     <UIColumn Size="UIEColumnSize.X10">
         <UIH2>媒体对象(UIMedia)</UIH2>
-        <UIH3>容纳多种媒体组件的容器。</UIH3>
+        <UIH4>容纳多种媒体组件的容器。</UIH4>
         <UIContent>
             <p><code>UIMedia</code> 组件可用于组成复杂的媒体对象。</p>
             <p>其内部组成层次结构为：</p>
@@ -17,11 +17,14 @@
                     <li><code>UIMediaRight</code> 靠右</li>
                 </ul>
             </ul>
-            <p><code>UIMedia</code> 和 <code>UILevel</code> 较为相似，都是用于水平组合多种元素。
-            <code>UILevel</code> 主要是水平多种元素，靠左靠右浮动。<code>UIMedia</code> 是左中右三个部分组成。</p>
+            <p><code>UIMedia</code> 将内部分为左中右三个部分。</p>
+            <p>
+                <code>UIMedia</code> 和 <code>UILevel</code> 较为相似，都是用于水平组合多种元素。
+                <code>UILevel</code> 主要是水平多种元素，靠左靠右浮动。<code>UIMedia</code> 是左中右三个部分组成。
+            </p>
         </UIContent>
         <UIContent>
-            <p><code>UIMedia</code> 每天对象组件非常适合重复嵌套的UI元素。内容分为左中右三个部分。下面来完成一些组合元素块。代码模板如下：</p>
+            <p><code>UIMedia</code> 媒体对象组件非常适合重复嵌套的UI元素。内容分为左中右三个部分。下面来完成一些组合元素块。代码模板如下：</p>
             <UICode>
                 &lt;UIMedia&gt;
                 &lt;UIMediaLeft&gt;
@@ -44,80 +47,82 @@
         <UIBox>
             <UIColumns>
                 <UIColumn>
-                    <UIMedia>
-                        <UIMediaLeft>
-                            <UIImage Size="UIEImageSize.PX128">
-                                <img src="images/128x128.png">
-                            </UIImage>
-                        </UIMediaLeft>
-                        <UIMediaContent>
-                            <UIContent>
-                                <p>
-                                    <strong>John Smith</strong> <small>&#64;johnsmith</small> <small>31m</small>
-                                    <br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                                </p>
-                            </UIContent>
-                            <UILevel>
-                                <UILevelLeft>
-                                    <UILevelItem>
-                                        <UIIcon Size="UIETextSize.Small" IconClass="fas fa-reply"/>
-                                    </UILevelItem>
-                                    <UILevelItem>
-                                        <UIIcon Size="UIETextSize.Small" IconClass="fas fa-retweet" />
-                                    </UILevelItem>
-                                    <UILevelItem>
-                                        <UIIcon Size="UIETextSize.Small" IconClass="fas fa-heart" />
-                                    </UILevelItem>
-                                </UILevelLeft>
-                            </UILevel>
-                        </UIMediaContent>
+                    @if (IsShow)
+                    {
+                        <UIMedia>
+                            <UIMediaLeft>
+                                <UIImage Size="UIEImageSize.PX128">
+                                    <img src="images/128x128.png">
+                                </UIImage>
+                            </UIMediaLeft>
+                            <UIMediaContent>
+                                <UIContent>
+                                    <p>
+                                        <strong>John Smith</strong> <small>&#64;johnsmith</small> <small>31m</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                    </p>
+                                </UIContent>
+                                <UILevel>
+                                    <UILevelLeft>
+                                        <UILevelItem>
+                                            <a><UIIcon Size="UIETextSize.Small" Color="UIETextColor.Info" IconClass="fas fa-reply" /></a>
+                                        </UILevelItem>
+                                        <UILevelItem>
+                                            <a><UIIcon Size="UIETextSize.Small" Color="UIETextColor.Info" IconClass="fas fa-retweet" /></a>
+                                        </UILevelItem>
+                                        <UILevelItem>
+                                            <a><UIIcon Size="UIETextSize.Small" Color="UIETextColor.Info" IconClass="fas fa-heart" /></a>
+                                        </UILevelItem>
+                                    </UILevelLeft>
+                                </UILevel>
+                            </UIMediaContent>
 
-                        <UIMediaRight>
-                            <UIDelete />
-                        </UIMediaRight>
-                    </UIMedia>
+                            <UIMediaRight>
+                                <UIDelete />
+                            </UIMediaRight>
+                        </UIMedia>
+                    }
+                    else { }
                 </UIColumn>
             </UIColumns>
         </UIBox>
         <UIBox>
-            <UIContent>
-                <pre><code class="language-html hljs xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">UIMedia</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIMediaLeft</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIImage</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIEImageSize.PX128"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/128x128.png"</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIImage</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIMediaLeft</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIMediaContent</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIContent</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>John Smith<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span><span class="hljs-symbol">&amp;#64;</span>johnsmith<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>31m<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIContent</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevel</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevelLeft</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-reply"</span>/&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-retweet"</span> /&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIIcon</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIETextSize.Small"</span> <span class="hljs-attr">IconClass</span>=<span class="hljs-string">"fas fa-heart"</span> /&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelLeft</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevel</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIMediaContent</span>&gt;</span>
+            <UICodeShow>
+                @((MarkupString)@"&lt;UIMedia&gt;
+                        &lt;UIMediaLeft&gt;
+                            &lt;UIImage Size=&quot;UIEImageSize.PX128&quot;&gt;
+                                &lt;img src=&quot;images/128x128.png&quot;&gt;
+                            &lt;/UIImage&gt;
+                        &lt;/UIMediaLeft&gt;
+                        &lt;UIMediaContent&gt;
+                            &lt;UIContent&gt;
+                                &lt;p&gt;
+                                    &lt;strong&gt;John Smith&lt;/strong&gt; &lt;small&gt;&amp;#64;johnsmith&lt;/small&gt; &lt;small&gt;31m&lt;/small&gt;
+                                    &lt;br&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                &lt;/p&gt;
+                            &lt;/UIContent&gt;
+                            &lt;UILevel&gt;
+                                &lt;UILevelLeft&gt;
+                                    &lt;UILevelItem&gt;
+                                        &lt;UIButton&gt;&lt;UIIcon Size=&quot;UIETextSize.Small&quot; Color=&quot;UIETextColor.Info&quot; IconClass=&quot;fas fa-reply&quot; /&gt;&lt;/UIButton&gt;
+                                    &lt;/UILevelItem&gt;
+                                    &lt;UILevelItem&gt;
+                                        &lt;UIButton&gt;&lt;UIIcon Size=&quot;UIETextSize.Small&quot; Color=&quot;UIETextColor.Info&quot; IconClass=&quot;fas fa-retweet&quot; /&gt;&lt;/UIButton&gt;
+                                    &lt;/UILevelItem&gt;
+                                    &lt;UILevelItem&gt;
+                                        &lt;UIButton&gt;&lt;UIIcon Size=&quot;UIETextSize.Small&quot; Color=&quot;UIETextColor.Info&quot; IconClass=&quot;fas fa-heart&quot; /&gt;&lt;/UIButton&gt;
+                                    &lt;/UILevelItem&gt;
+                                &lt;/UILevelLeft&gt;
+                            &lt;/UILevel&gt;
+                        &lt;/UIMediaContent&gt;
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIMediaRight</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIDelete</span> /&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIMediaRight</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UIMedia</span>&gt;</span>
-        </code></pre>
-            </UIContent>
+                        &lt;UIMediaRight&gt;
+                            &lt;UIDelete /&gt;
+                        &lt;/UIMediaRight&gt;
+                    &lt;/UIMedia&gt;")
+            </UICodeShow>
         </UIBox>
         <UIContent>
             <p>下面，我们来继续实现一个评论框。</p>
@@ -133,48 +138,53 @@
                             <UITextarea Placeholder="Add a comment..."></UITextarea>
                         </UIControl>
                     </UIField>
-                        <UILevel>
-                            <UILevelLeft>
-                                <UILevelItem><UIButton Color="UIEColor.Info">提交评论</UIButton></UILevelItem>
-                            </UILevelLeft>
-                            <UILevelRight>
-                                <UILevelItem>
-                                    <UICheckbox>同时转发到个人空间</UICheckbox>
-                                </UILevelItem>
-                            </UILevelRight>
-                        </UILevel>
+                    <UILevel>
+                        <UILevelLeft>
+                            <UILevelItem><UIButton Color="UIEColor.Info">提交评论</UIButton></UILevelItem>
+                        </UILevelLeft>
+                        <UILevelRight>
+                            <UILevelItem>
+                                <UICheckbox>同时转发到个人空间</UICheckbox>
+                            </UILevelItem>
+                        </UILevelRight>
+                    </UILevel>
                 </UIMediaContent>
             </UIMedia>
         </UIBox>
 
         <UIBox>
-            <UIContent>
-                <pre><code class="language-html hljs xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">UIMedia</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIMediaLeft</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIImage</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"UIEImageSize.PX64"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/images/128x128.png"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UIImage</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIMediaLeft</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIMediaContent</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UITextarea</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"Add a comment..."</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UITextarea</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevel</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevelLeft</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Info"</span>&gt;</span>提交评论<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelLeft</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevelRight</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">UICheckbox</span>&gt;</span>同时转发到个人空间<span class="hljs-tag">&lt;/<span class="hljs-name">UICheckbox</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelRight</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UILevel</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">UIMediaContent</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UIMedia</span>&gt;</span>
-        </code></pre>
-            </UIContent>
+            <UICodeShow>
+                @((MarkupString)@"&lt;UIMedia&gt;
+                &lt;UIMediaLeft&gt;
+                    &lt;UIImage Size=&quot;UIEImageSize.PX64&quot;&gt;&lt;img src=&quot;/images/128x128.png&quot; /&gt;&lt;/UIImage&gt;
+                &lt;/UIMediaLeft&gt;
+                &lt;UIMediaContent&gt;
+                    &lt;UIField&gt;
+                        &lt;UIControl&gt;
+                            &lt;UITextarea Placeholder=&quot;Add a comment...&quot;&gt;&lt;/UITextarea&gt;
+                        &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                        &lt;UILevel&gt;
+                            &lt;UILevelLeft&gt;
+                                &lt;UILevelItem&gt;&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;提交评论&lt;/UIButton&gt;&lt;/UILevelItem&gt;
+                            &lt;/UILevelLeft&gt;
+                            &lt;UILevelRight&gt;
+                                &lt;UILevelItem&gt;
+                                    &lt;UICheckbox&gt;同时转发到个人空间&lt;/UICheckbox&gt;
+                                &lt;/UILevelItem&gt;
+                            &lt;/UILevelRight&gt;
+                        &lt;/UILevel&gt;
+                &lt;/UIMediaContent&gt;
+            &lt;/UIMedia&gt;")
+            </UICodeShow>
         </UIBox>
     </UIColumn>
 </UIColumns>
 
+@code{
+    private bool IsShow = true;
+    private void Down(MouseEventArgs e)
+    {
+        IsShow = false;
+    }
+}

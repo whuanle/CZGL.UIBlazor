@@ -13,40 +13,81 @@
             <div class="content">
                 <p> Box 元素只是一个带有阴影、边框、半径和一些填充的容器。<br />你可以做出一个像这样的组件块：</p>
             </div>
-            <UIMedia>
-                <UIMediaLeft>
-                    <UIImage Size="UIEImageSize.PX128">
-                        <img src="images/128x128.png">
-                    </UIImage>
-                </UIMediaLeft>
-                <UIMediaContent>
-                    <UIContent>
-                        <p>
-                            <strong>John Smith</strong> <small>&#64;johnsmith</small> <small>31m</small>
-                            <br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                        </p>
-                    </UIContent>
-                    <UILevel>
-                        <UILevelLeft>
-                            <UILevelItem>
-                                <UIIcon Size="UIETextSize.Small" IconClass="fas fa-reply" />
-                            </UILevelItem>
-                            <UILevelItem>
-                                <UIIcon Size="UIETextSize.Small" IconClass="fas fa-retweet" />
-                            </UILevelItem>
-                            <UILevelItem>
-                                <UIIcon Size="UIETextSize.Small" IconClass="fas fa-heart" />
-                            </UILevelItem>
-                        </UILevelLeft>
-                    </UILevel>
-                </UIMediaContent>
 
-                <UIMediaRight>
-                    <UIDelete />
-                </UIMediaRight>
-            </UIMedia>
+            @if (IsShow)
+            {
+                <UIMedia>
+                    <UIMediaLeft>
+                        <UIImage Size="UIEImageSize.PX128">
+                            <img src="images/128x128.png">
+                        </UIImage>
+                    </UIMediaLeft>
+                    <UIMediaContent>
+                        <UIContent>
+                            <p>
+                                <strong>John Smith</strong> <small>&#64;johnsmith</small> <small>31m</small>
+                                <br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                            </p>
+                        </UIContent>
+                        <UILevel>
+                            <UILevelLeft>
+                                <UILevelItem>
+                                    <UIIcon Size="UIETextSize.Small" IconClass="fas fa-reply" />
+                                </UILevelItem>
+                                <UILevelItem>
+                                    <UIIcon Size="UIETextSize.Small" IconClass="fas fa-retweet" />
+                                </UILevelItem>
+                                <UILevelItem>
+                                    <UIIcon Size="UIETextSize.Small" IconClass="fas fa-heart" />
+                                </UILevelItem>
+                            </UILevelLeft>
+                        </UILevel>
+                    </UIMediaContent>
 
+                    <UIMediaRight>
+                        <UIDelete MouseEventArg="Down" />
+                    </UIMediaRight>
+                </UIMedia>
+            }
+            else { }
+            <UIBox>
+                <UICodeShow>
+                    @((MarkupString)@"&lt;UIMedia&gt;
+                    &lt;UIMediaLeft&gt;
+                        &lt;UIImage Size=&quot;UIEImageSize.PX128&quot;&gt;
+                            &lt;img src=&quot;images/128x128.png&quot;&gt;
+                        &lt;/UIImage&gt;
+                    &lt;/UIMediaLeft&gt;
+                    &lt;UIMediaContent&gt;
+                        &lt;UIContent&gt;
+                            &lt;p&gt;
+                                &lt;strong&gt;John Smith&lt;/strong&gt; &lt;small&gt;&amp;#64;johnsmith&lt;/small&gt; &lt;small&gt;31m&lt;/small&gt;
+                                &lt;br&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                            &lt;/p&gt;
+                        &lt;/UIContent&gt;
+                        &lt;UILevel&gt;
+                            &lt;UILevelLeft&gt;
+                                &lt;UILevelItem&gt;
+                                    &lt;UIIcon Size=&quot;UIETextSize.Small&quot; IconClass=&quot;fas fa-reply&quot; /&gt;
+                                &lt;/UILevelItem&gt;
+                                &lt;UILevelItem&gt;
+                                    &lt;UIIcon Size=&quot;UIETextSize.Small&quot; IconClass=&quot;fas fa-retweet&quot; /&gt;
+                                &lt;/UILevelItem&gt;
+                                &lt;UILevelItem&gt;
+                                    &lt;UIIcon Size=&quot;UIETextSize.Small&quot; IconClass=&quot;fas fa-heart&quot; /&gt;
+                                &lt;/UILevelItem&gt;
+                            &lt;/UILevelLeft&gt;
+                        &lt;/UILevel&gt;
+                    &lt;/UIMediaContent&gt;
+
+                    &lt;UIMediaRight&gt;
+                        &lt;UIDelete  /&gt;
+                    &lt;/UIMediaRight&gt;
+                &lt;/UIMedia&gt;")
+                </UICodeShow>
+            </UIBox>
             <hr class="hr" />
             <h3 id="variables" class="title is-4 is-spaced bd-anchor-title">
                 <span class="bd-anchor-name">可选参数</span>
@@ -78,19 +119,19 @@
                             <td><code>TextColor</code></td>
                             <td><small class="tag">UIETextColor</small></td>
                             <td><code>UIETextColor.None</code></td>
-                            <td><code>设置文本颜色</code></td>
+                            <td>设置文本颜色</td>
                         </tr>
                         <tr>
                             <td><code>BackgroundColor</code></td>
                             <td><small class="tag">UIEBackColor</small></td>
                             <td><code>UIEBackColor.None</code></td>
-                            <td><code>设置盒子背景颜色</code></td>
+                            <td>设置盒子背景颜色</td>
                         </tr>
                         <tr>
                             <td><code>Radius</code></td>
                             <td><small class="tag">UIERadius</small></td>
                             <td><code>UIERadius.None</code></td>
-                            <td><code>设置圆角边框</code></td>
+                            <td>设置圆角边框</td>
                         </tr>
                         <tr>
                             <td><code>Shadow</code></td>
@@ -106,39 +147,53 @@
         <h3 id="examples" class="title is-4 is-spaced bd-anchor-title">
             <span class="bd-anchor-name">示例</span>
         </h3>
-        <div class="columns">
-            <div class="column is-full">
-                <p>
-                    <UIBox style="width:300px;">一个简单的盒子</UIBox>
-                </p>
+        <UIColumns IsMultiline="true">
+            <UIColumn Size="UIEColumnSize.X4">
+                <UIBox>一个简单的盒子</UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UIBox TextColor="UIETextColor.Danger">设置 TextColor 属性</UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UIBox BackgroundColor="UIEBackColor.Success">设置 BackgroundColor 属性</UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UIBox Radius="UIERadius.Large">设置 Radius 属性</UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.X4">
+                <UIBox Shadow="UIEShade.GreyDark">设置 Shadow 属性</UIBox>
+            </UIColumn>
 
-                <p>
-                    <UIBox TextColor="UIETextColor.Danger" style="width:300px;">设置 TextColor 属性</UIBox>
-                </p>
-                <p>
-                    <UIBox BackgroundColor="UIEBackColor.Success" style="width:300px;">设置 BackgroundColor 属性</UIBox>
-                </p>
-                <p>
-                    <UIBox Radius="UIERadius.Large" style="width:300px;">设置 Radius 属性</UIBox>
-                </p>
-                <p>
-                    <UIBox Shadow="UIEShade.GreyDark" style="width:300px;">设置 Shadow 属性</UIBox>
-                </p>
-                <UIBox>
-                    <div class="bd-snippet-code highlight-full bd-is-more">
-                        <figure class="highlight">
-                            <pre><code class="language-html" data-lang="html">
-    &lt;UIBox style=&quot;width:300px;&quot;&gt;一个简单的盒子&lt;/UIBox&gt;
-    &lt;UIBox TextColor=&quot;UIETextColor.Danger&quot; style=&quot;width:300px;&quot;&gt;设置 TextColor 属性&lt;/UIBox&gt;
-    &lt;UIBox BackgroundColor=&quot;UIEBackColor.Success&quot; style=&quot;width:300px;&quot;&gt;设置 BackgroundColor 属性&lt;/UIBox&gt;
-    &lt;UIBox Radius=&quot;UIERadius.Large&quot; style=&quot;width:300px;&quot;&gt;设置 Radius 属性&lt;/UIBox&gt;
-    &lt;UIBox Shadow=&quot;UIEShade.GreyDark&quot; style=&quot;width:300px;&quot;&gt;设置 Shadow 属性&lt;/UIBox&gt;
-</code></pre>
-                        </figure>
-                    </div>
-                </UIBox>
-            </div>
-        </div>
+        </UIColumns>
+        <UIBox>
+            <UICode>
+@((MarkupString)@"
+        &lt;UIColumns IsMultiline=&quot;true&quot;&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UIBox&gt;一个简单的盒子&lt;/UIBox&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UIBox TextColor=&quot;UIETextColor.Danger&quot;&gt;设置 TextColor 属性&lt;/UIBox&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UIBox BackgroundColor=&quot;UIEBackColor.Success&quot;&gt;设置 BackgroundColor 属性&lt;/UIBox&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UIBox Radius=&quot;UIERadius.Large&quot;&gt;设置 Radius 属性&lt;/UIBox&gt;
+            &lt;/UIColumn&gt;
+            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UIBox Shadow=&quot;UIEShade.GreyDark&quot;&gt;设置 Shadow 属性&lt;/UIBox&gt;
+            &lt;/UIColumn&gt;")
+            </UICode>
+        </UIBox>
 
     </UIColumn>
 </UIColumns>
+@code{
+    private bool IsShow = true;
+    private void Down(MouseEventArgs e)
+    {
+        IsShow = false;
+    }
+
+}

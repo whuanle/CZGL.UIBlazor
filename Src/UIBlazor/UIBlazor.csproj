@@ -1,8 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
+    <Authors>痴者工良</Authors>
+    <Version>0.0.1</Version>
+    <PackageId>CZGL.UIBlazor</PackageId>
+    <Description>基于 Blazor 打造的一个轻量 UI 组件库，无任何 JS，完全由 C# + CSS 编写，使用简单方便。</Description>
+    <RepositoryUrl>https://github.com/UIBlazor/UIBlazor.git</RepositoryUrl>
+    <PackageReleaseNotes>预览版本 0.1</PackageReleaseNotes>
   </PropertyGroup>
 
 

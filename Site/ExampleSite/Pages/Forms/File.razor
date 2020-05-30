@@ -26,8 +26,13 @@
         <hr />
         <UIColumns>
             <UIColumn Size="UIEColumnSize.Half">
-                <p>使用 <code>IsShowFile</code> 默认会显示选择的文件完整路径和文件名称。如果不想带有文件路径等，可以将 <code>IsHasPath</code> 设置为 false。</p>
-                <p><code>FileDefaultName</code> 可以设置在为选择文件前，选择框显示的文字。你可以分别在下面三个选择框中选择文件，看看输出如何。</p>
+                <UIContent>
+                    <p>使用 <code>IsShowFile</code> 默认会显示选择的文件完整路径和文件名称。</p>
+                    <p>如果不想带有文件路径等，可以将 <code>IsHasPath</code> 设置为 false。</p>
+                    <p><code>FileDefaultName</code> 可以设置在为选择文件前，选择框显示的文字。</p>
+                    <p>你可以分别在下面三个选择框中选择文件，看看输出如何。</p>
+                </UIContent>
+
                 <UIFile IsShowFile="true">选择文件</UIFile>
                 <UIFile IsShowFile="true" IsHasPath="false">选择文件</UIFile>
                 <UIFile IsShowFile="true" FileDefaultName="请选择文件">选择文件</UIFile>
@@ -41,6 +46,9 @@
             </UIColumn>
         </UIColumns>
         <hr />
+        <UIContent>
+            <p>可以使用 <code>IsBox</code> 设置选择框为一个盒子样式。</p>
+        </UIContent>
         <p>可以使用 <code>IsBox</code> 设置选择框为一个盒子样式。</p>
         <UIColumns>
             <UIColumn Size="UIEColumnSize.X2">

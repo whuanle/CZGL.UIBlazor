@@ -1,2 +1,9 @@
 ﻿@inherits TagBase
-<span class="tag @_allClass">@ChildContent </span>
+@if (IsDelete)
+{
+    <span class="tag is-delete @_allClass">@ChildContent</span>
+}
+else
+{
+    <a class="tag @_allClass">@ChildContent</a>
+}

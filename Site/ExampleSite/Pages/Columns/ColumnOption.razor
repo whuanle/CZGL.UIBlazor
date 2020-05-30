@@ -15,6 +15,7 @@
                 <UIColumn Size="UIEColumnSize.X3"><p class="bd-notification is-info">Second column with more content. This is so you can see the vertical alignment</p></UIColumn>
             </UIColumns>
         </UIBox>
+        <p>加上 <code>UIColumns.IsVcentered</code> ：</p>
         <UIBox>
             <UIColumns IsVcentered="true">
                 <UIColumn Size="UIEColumnSize.X9"><p class="bd-notification is-info">1</p></UIColumn>
@@ -37,24 +38,38 @@
 
         <UIH3>居中列</UIH3>
         <UIContent>
-            <p>默认列是从左到右铺满行，两头对齐。</p>
-            <p><code>UIColumns.IsCentered</code> 属性可以让列居中对齐。</p>
+            <p>默认列是从左到右铺满行，两头对齐的。要使列居中，我们可以使用列偏移(Offset)。</p>
+            <p>我们还可以使用 <code>UIColumns.IsCentered</code> 属性让列居中对齐。</p>
         </UIContent>
         <UIBox>
             <UIColumns IsCentered="true">
-                <UIColumn Size="UIEColumnSize.Half">
-                    <p class="bd-notification is-info">居中</p>
+                <UIColumn Size="UIEColumnSize.X2">
+                    <UIAlert Color="UIEColor.Info" TextAlign="UIEAlign.Center">居中</UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
+                    <UIAlert Color="UIEColor.Info" TextAlign="UIEAlign.Center">居中</UIAlert>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
+                    <UIAlert Color="UIEColor.Info" TextAlign="UIEAlign.Center">居中</UIAlert>
                 </UIColumn>
             </UIColumns>
         </UIBox>
-    </UIColumn>
-    <UIContent>
-        <UICode>
+        <UIBox>
+            <UICodeShow>
+                @((MarkupString)@"
             &lt;UIColumns IsCentered=&quot;true&quot;&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.Half&quot;&gt;
-            &lt;p class=&quot;bd-notification is-info&quot;&gt;居中&lt;/p&gt;
-            &lt;/UIColumn&gt;
-            &lt;/UIColumns&gt;
-        </UICode>
-    </UIContent>
+                &lt;UIColumn Size=&quot;UIEColumnSize.X2&quot;&gt;
+                    &lt;UIAlert Color=&quot;UIEColor.Info&quot; TextAlign=&quot;UIEAlign.Center&quot;&gt;居中&lt;/UIAlert&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X2&quot;&gt;
+                    &lt;UIAlert Color=&quot;UIEColor.Info&quot; TextAlign=&quot;UIEAlign.Center&quot;&gt;居中&lt;/UIAlert&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X2&quot;&gt;
+                    &lt;UIAlert Color=&quot;UIEColor.Info&quot; TextAlign=&quot;UIEAlign.Center&quot;&gt;居中&lt;/UIAlert&gt;
+                &lt;/UIColumn&gt;
+            &lt;/UIColumns&gt;")
+            </UICodeShow>
+        </UIBox>
+    </UIColumn>
+
 </UIColumns>

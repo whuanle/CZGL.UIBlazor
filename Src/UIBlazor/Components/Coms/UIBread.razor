@@ -1,5 +1,5 @@
 ﻿@inherits BreadBase
-<nav class="breadcrumb @_allClass" aria-label="breadcrumbs" @*@attributes="UIAttributes">@ChildContent*@</nav>
+<nav class="breadcrumb @_allClass" aria-label="breadcrumbs" @attributes="UIAttributes"><ul>@ChildContent</ul></nav>
 
 @code {
 
@@ -9,17 +9,39 @@
     [Parameter]
     public UIEAlign Align { get; set; }
 
+    /// <summary>
+    /// 分隔符类型
+    /// </summary>
+    [Parameter]
+    public UIEBreadSeparator Separator { get; set; }
+
+    /// <summary>
+    /// 大小
+    /// </summary>
+    [Parameter]
+    public UIETextSize Size { get; set; }
+
+    private static readonly string[] separator = new string[]
+    {
+        "",
+        " has-arrow-separator",
+        " has-bullet-separator",
+        " has-dot-separator",
+        " has-succeeds-separator"
+            };
+
     private static readonly string[] align = new string[]
     {
         "",
-        "is-centered",
-        "is-centered",
+        " is-centered",
+        " is-centered",
         "",
-        "is-right"
-    };
+        " is-right"
+                };
+
 
     protected override void UIInit()
     {
-        _allClass = align[(int)Align];
+        _allClass = align[(int)Align] + separator[(int)Separator] + CacheData.GetUIETextSize(Size);
     }
 }

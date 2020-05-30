@@ -1,0 +1,36 @@
+﻿@inherits ComsBase
+    <article class="message @_allClass">
+        @if (!(MessageHead is null))
+        {
+            <div class="message-header">@MessageHead</div>
+        }
+
+        <div class="message-body">@MessageBody</div>
+    </article>
+    @code{
+
+        [Parameter]
+        public RenderFragment MessageHead { get; set; }
+
+        [Parameter]
+        public RenderFragment MessageBody { get; set; }
+
+        /// <summary>
+        /// 颜色
+        /// </summary>
+        [Parameter]
+        public UIEColor Color { get; set; }
+
+        /// <summary>
+        /// 大小
+        /// </summary>
+        [Parameter]
+        public UIETextSize Size { get; set; }
+
+        protected override void UIInit()
+        {
+            _allClass =
+                CacheData.GetUIEColor(Color) +
+                CacheData.GetUIETextSize(Size);
+        }
+    }

@@ -36,11 +36,12 @@
     /// </summary>
     [Parameter]
     public bool IsCentered { get; set; }
+
     /// <summary>
     /// 设置列之间的间隙大小
     /// </summary>
     [Parameter]
-    public UIEGap GapSize { get; set; } = UIEGap.None;
+    public UIEGap GapSize { get; set; }
 
     protected override void UIInit()
     {
@@ -51,7 +52,7 @@
             (IsMultiline ? " is-multiline" : "") +
             (IsVcentered ? "is-vcentered" : "") +
             (IsCentered ? " is-centered" : "") +
-            (GapSize == UIEGap.None ? "" : CacheData.GetUIEGap(GapSize));
+            CacheData.GetUIEGap(GapSize);
     }
 
 }

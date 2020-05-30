@@ -1,6 +1,7 @@
 ﻿@inherits ColumnBase
-<div class="column @_allClass" @attributes="UIAttributes">@ChildContent</div>
+<div class="column @_allClass" @attributes="UIAttributes" draggable="@IsDraggable" >@ChildContent</div>
 @code{
+
     /// <summary>
     /// 列宽度
     /// </summary>
@@ -26,6 +27,12 @@
         "-desktop",
         "-widescreen",
         "-fullhd"};
+
+    /// <summary>
+    /// 元素是否可以被拖动
+    /// </summary>
+    [Parameter]
+    public bool IsDraggable { get; set; } = false;
 
     /// <summary>
     /// 列偏移量
@@ -60,4 +67,5 @@
         }
         return size;
     }
+
 }

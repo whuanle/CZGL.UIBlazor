@@ -6,7 +6,7 @@
     </UIColumn>
     <UIColumn Size="UIEColumnSize.X10">
         <UIH2>按钮(UIButton)</UIH2>
-        <p 使用 <code>@nameof(UIButton)</code> 组件即可使用按钮。示例如下：
+        <p> 使用 <code>@nameof(UIButton)</code> 组件会生成按钮。示例如下：
         </p>
         <br />
 
@@ -19,9 +19,9 @@
         <p>
             代码如下：
         </p>
-<pre>
-        &lt;UIButton&gt;Button&lt;/UIButton&gt;
-</pre>
+        <UICode>
+            &lt;UIButton&gt;Button&lt;/UIButton&gt;
+        </UICode>
         <br />
         <UIH3>颜色</UIH3>
         <p class="tile">
@@ -63,19 +63,22 @@
                 <UIButton Color="UIEColor.While">While</UIButton>
             </UIColumn>
         </UIColumns>
-<pre>
-        &lt;UIButton Color=&quot;UIEColor.None&quot;&gt;None&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Black&quot;&gt;Black&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Danger&quot;&gt;Danger&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Dark&quot;&gt;Black&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Info&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Light&quot;&gt;Light&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Link&quot;&gt;Link&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Primary&quot;&gt;Primary&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Success&quot;&gt;Success&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.Warning&quot;&gt;Warning&lt;/UIButton&gt;
-        &lt;UIButton Color=&quot;UIEColor.While&quot;&gt;While&lt;/UIButton&gt;
-</pre>
+        <UIBox>
+            <UICodeShow>
+                &lt;UIButton Color=&quot;UIEColor.None&quot;&gt;None&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Black&quot;&gt;Black&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Danger&quot;&gt;Danger&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Dark&quot;&gt;Black&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Info&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Light&quot;&gt;Light&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Link&quot;&gt;Link&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Primary&quot;&gt;Primary&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Success&quot;&gt;Success&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Warning&quot;&gt;Warning&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.While&quot;&gt;While&lt;/UIButton&gt;
+            </UICodeShow>
+        </UIBox>
+
         <UIContent>
             <p>使用 <code>IsLight</code> 属性，则可以使颜色变淡。</p>
         </UIContent>
@@ -148,14 +151,16 @@
                 </UIColumn>
             </UIColumns>
         </UIBox>
+        <UIBox>
+            <UICodeShow>
+                &lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.None&quot;&gt;None&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Small&quot;&gt;Small&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Normal&quot;&gt;Normal&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Medium&quot;&gt;Medium&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Large&quot;&gt;Large&lt;/UIButton&gt;
+            </UICodeShow>
+        </UIBox>
 
-<pre>
-&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.None&quot;&gt;None&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Small&quot;&gt;Small&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Normal&quot;&gt;Normal&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Medium&quot;&gt;Medium&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Primary&quot; Size=&quot;UIEButtonSize.Large&quot;&gt;Large&lt;/UIButton&gt;
-</pre>
 
         <UIH3>按钮组</UIH3>
         <UIContent>
@@ -186,26 +191,28 @@
                 </UIButtonGroup>
             </UIColumn>
         </UIColumns>
+        <UIBox>
+            <UICodeShow>
+                &lt;UIButtonGroup Size=&quot;UIEButtonSize.Small&quot;&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
+                &lt;/UIButtonGroup&gt;
 
-<pre>
-&lt;UIButtonGroup Size=&quot;UIEButtonSize.Small&quot;&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Small&lt;/UIButton&gt;
-&lt;/UIButtonGroup&gt;
+                &lt;UIButtonGroup Size=&quot;UIEButtonSize.Medium&quot;&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
+                &lt;/UIButtonGroup&gt;
 
-&lt;UIButtonGroup Size=&quot;UIEButtonSize.Medium&quot;&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Medium&lt;/UIButton&gt;
-&lt;/UIButtonGroup&gt;
+                &lt;UIButtonGroup Size=&quot;UIEButtonSize.Large&quot;&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
+                &lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
+                &lt;/UIButtonGroup&gt;
+            </UICodeShow>
+        </UIBox>
 
-&lt;UIButtonGroup Size=&quot;UIEButtonSize.Large&quot;&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
-&lt;UIButton Color=&quot;UIEColor.Info&quot;&gt;Large&lt;/UIButton&gt;
-&lt;/UIButtonGroup&gt;
-</pre>
 
         <UIH3>全宽度</UIH3>
         <p>
@@ -312,38 +319,38 @@
             使用 <code>IsRound</code> 来设置按钮是否为圆角。
         </p>
         <UIBox>
-            <UIColumns>
-                <UIColumn>
+            <UIColumns IsMultiline="true">
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.None" IsRounded="true">None</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Black" IsRounded="true">Black</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Danger" IsRounded="true">Danger</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Dark" IsRounded="true">Dark</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Info" IsRounded="true">Info</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Light" IsRounded="true">Light</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Link" IsRounded="true">Link</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Primary" IsRounded="true">Primary</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Success" IsRounded="true">Success</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.Warning" IsRounded="true">Warning</UIButton>
                 </UIColumn>
-                <UIColumn>
+                <UIColumn Size="UIEColumnSize.X2">
                     <UIButton Color="UIEColor.While" IsRounded="true">While</UIButton>
                 </UIColumn>
             </UIColumns>
@@ -420,43 +427,43 @@
         <UIBox>
             <UIColumns IsMultiline="true">
                 <UIColumn>
-                    <UIButton Color="UIEColor.None" disabled>None</UIButton>
+                    <UIButton Color="UIEColor.None" IsDisabled="true">None</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Black" disabled>Black</UIButton>
+                    <UIButton Color="UIEColor.Black" IsDisabled="true">Black</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Danger" disabled>Danger</UIButton>
+                    <UIButton Color="UIEColor.Danger" IsDisabled="true">Danger</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Dark" disabled>Dark</UIButton>
+                    <UIButton Color="UIEColor.Dark" IsDisabled="true">Dark</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Info" disabled>Info</UIButton>
+                    <UIButton Color="UIEColor.Info" IsDisabled="true">Info</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Light" disabled>Light</UIButton>
+                    <UIButton Color="UIEColor.Light" IsDisabled="true">Light</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Link" disabled>Link</UIButton>
+                    <UIButton Color="UIEColor.Link" IsDisabled="true">Link</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Primary" disabled>Primary</UIButton>
+                    <UIButton Color="UIEColor.Primary" IsDisabled="true">Primary</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Success" disabled>Success</UIButton>
+                    <UIButton Color="UIEColor.Success" IsDisabled="true">Success</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.Warning" disabled>Warning</UIButton>
+                    <UIButton Color="UIEColor.Warning" IsDisabled="true">Warning</UIButton>
                 </UIColumn>
                 <UIColumn>
-                    <UIButton Color="UIEColor.While" disabled>While</UIButton>
+                    <UIButton Color="UIEColor.While" IsDisabled="true">While</UIButton>
                 </UIColumn>
             </UIColumns>
         </UIBox>
 
         <UIContent>
-            <UICode>&lt;UIButton Color=&quot;UIEColor.None&quot; disabled&gt;None&lt;/UIButton&gt;</UICode>
+            <UICode>&lt;UIButton Color=&quot;UIEColor.None&quot; IsDisabled=&quot;true&quot;&gt;None&lt;/UIButton&gt;</UICode>
         </UIContent>
 
 
@@ -560,23 +567,23 @@
                 <UIColumn Size="UIEColumnSize.Half">
                     <UIContent>
                         <UICode>
-                            &lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Left&quot;&gt;
-                            &lt;UIButton&gt;Yes&lt;/UIButton&gt;
-                            &lt;UIButton&gt;Maybe&lt;/UIButton&gt;
-                            &lt;UIButton&gt;No&lt;/UIButton&gt;
-                            &lt;/UIButtonGroup&gt;
+@((MarkupString)@"&lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Left&quot;&gt;
+&lt;UIButton&gt;Yes&lt;/UIButton&gt;
+&lt;UIButton&gt;Maybe&lt;/UIButton&gt;
+&lt;UIButton&gt;No&lt;/UIButton&gt;
+&lt;/UIButtonGroup&gt;
 
-                            &lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Center&quot;&gt;
-                            &lt;UIButton&gt;Yes&lt;/UIButton&gt;
-                            &lt;UIButton&gt;Maybe&lt;/UIButton&gt;
-                            &lt;UIButton&gt;No&lt;/UIButton&gt;
-                            &lt;/UIButtonGroup&gt;
+&lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Center&quot;&gt;
+&lt;UIButton&gt;Yes&lt;/UIButton&gt;
+&lt;UIButton&gt;Maybe&lt;/UIButton&gt;
+&lt;UIButton&gt;No&lt;/UIButton&gt;
+&lt;/UIButtonGroup&gt;
 
-                            &lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Right&quot;&gt;
-                            &lt;UIButton&gt;Yes&lt;/UIButton&gt;
-                            &lt;UIButton&gt;Maybe&lt;/UIButton&gt;
-                            &lt;UIButton&gt;No&lt;/UIButton&gt;
-                            &lt;/UIButtonGroup&gt;
+&lt;UIButtonGroup IsHasAddons=&quot;true&quot; Align=&quot;UIEAlign.Right&quot;&gt;
+&lt;UIButton&gt;Yes&lt;/UIButton&gt;
+&lt;UIButton&gt;Maybe&lt;/UIButton&gt;
+&lt;UIButton&gt;No&lt;/UIButton&gt;
+&lt;/UIButtonGroup&gt;")
                         </UICode>
                     </UIContent>
                 </UIColumn>

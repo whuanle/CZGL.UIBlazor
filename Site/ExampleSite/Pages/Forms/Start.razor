@@ -311,43 +311,44 @@
                 <UIButton IsStatic="true">@@xxx.com</UIButton>
             </UIControl>
         </UIField>
-        <UIContent>
-            <pre><code class="language-html hljs xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsAddon</span>=<span class="hljs-string">"true"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UISelect</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>学生<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>老师<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>管理员<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UISelect</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"名字"</span> /&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+        <UIBox>
+            <UICodeShow>
+                @((MarkupString)
+@"        &lt;UIField IsAddon=&quot;true&quot;&gt;
+            &lt;UIControl&gt;
+                &lt;UISelect&gt;
+                    &lt;UISelectItem&gt;学生&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;老师&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;管理员&lt;/UISelectItem&gt;
+                &lt;/UISelect&gt;
+            &lt;/UIControl&gt;
+            &lt;UIControl&gt;
+                &lt;UIInput Placeholder=&quot;名字&quot; /&gt;
+            &lt;/UIControl&gt;
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">IsStatic</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-symbol">&amp;#64;</span>xxx.com<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
+            &lt;UIControl&gt;
+                &lt;UIButton IsStatic=&quot;true&quot;&gt;@@xxx.com&lt;/UIButton&gt;
+            &lt;/UIControl&gt;
+        &lt;/UIField&gt;
 
-<span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsAddon</span>=<span class="hljs-string">"true"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UISelect</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>学生<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>老师<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UISelectItem</span>&gt;</span>管理员<span class="hljs-tag">&lt;/<span class="hljs-name">UISelectItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UISelect</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span> <span class="hljs-attr">IsExpanded</span>=<span class="hljs-string">"true"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"名字"</span> /&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
+        &lt;UIField IsAddon=&quot;true&quot;&gt;
+            &lt;UIControl&gt;
+                &lt;UISelect&gt;
+                    &lt;UISelectItem&gt;学生&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;老师&lt;/UISelectItem&gt;
+                    &lt;UISelectItem&gt;管理员&lt;/UISelectItem&gt;
+                &lt;/UISelect&gt;
+            &lt;/UIControl&gt;
+            &lt;UIControl IsExpanded=&quot;true&quot;&gt;
+                &lt;UIInput Placeholder=&quot;名字&quot; /&gt;
+            &lt;/UIControl&gt;
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">IsStatic</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-symbol">&amp;#64;</span>xxx.com<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
-        </code></pre>
-        </UIContent>
+            &lt;UIControl&gt;
+                &lt;UIButton IsStatic=&quot;true&quot;&gt;@@xxx.com&lt;/UIButton&gt;
+            &lt;/UIControl&gt;
+        &lt;/UIField&gt;"))
+            </UICodeShow>
+        </UIBox>
 
         <p>
             如果要下拉框全宽，则需要同时设置 <code>UISelect.IsFullWidth</code> 属性。
@@ -734,7 +735,7 @@
                             <UIIcon IconClass="fas fa-user" Size="UIETextSize.Small" />
                         </UIControl>
                     </UIField>
-                    <UIField>
+                    <UIField IsDisabled="true">
                         <UIControl IsExpanded="true" IconAlign="UIEAlign.Justify">
                             <UIInput Color="UIEColor.Success" Type="UIEInputType.Email" Placeholder="Email" />
                             <UIIcon IconClass="fas fa-envelope" Size="UIETextSize.Small" />
@@ -744,6 +745,28 @@
                 </UIFieldBody>
             </UIField>
         </UIBox>
-
+        <UIBox>
+            <UICodeShow>
+                @((MarkupString)
+@"           &lt;UIField IsHorizontal=&quot;true&quot; IsAddon=&quot;true&quot;&gt;
+                &lt;UIFieldLabel&gt;联系方式&lt;/UIFieldLabel&gt;
+                &lt;UIFieldBody&gt;
+                    &lt;UIField&gt;
+                        &lt;UIControl IsExpanded=&quot;true&quot; IconAlign=&quot;UIEAlign.Left&quot;&gt;
+                            &lt;UIInput Placeholder=&quot;Name&quot; /&gt;
+                            &lt;UIIcon IconClass=&quot;fas fa-user&quot; Size=&quot;UIETextSize.Small&quot; /&gt;
+                        &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                    &lt;UIField IsDisabled=&quot;true&quot;&gt;
+                        &lt;UIControl IsExpanded=&quot;true&quot; IconAlign=&quot;UIEAlign.Justify&quot;&gt;
+                            &lt;UIInput Color=&quot;UIEColor.Success&quot; Type=&quot;UIEInputType.Email&quot; Placeholder=&quot;Email&quot; /&gt;
+                            &lt;UIIcon IconClass=&quot;fas fa-envelope&quot; Size=&quot;UIETextSize.Small&quot; /&gt;
+                            &lt;UIIcon IconClass=&quot;fas fa-check&quot; Size=&quot;UIETextSize.Small&quot; IsRight=&quot;true&quot; /&gt;
+                        &lt;/UIControl&gt;
+                    &lt;/UIField&gt;
+                &lt;/UIFieldBody&gt;
+            &lt;/UIField&gt;")
+            </UICodeShow>
+        </UIBox>
     </UIColumn>
 </UIColumns>

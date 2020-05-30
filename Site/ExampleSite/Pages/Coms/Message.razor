@@ -1,0 +1,58 @@
+﻿@page "/Doc/Message"
+    <UIColumns>
+        <UIColumn Size="UIEColumnSize.X2">
+            <DocsMenu />
+        </UIColumn>
+
+        <UIColumn Size="UIEColumnSize.X10">
+
+            <UIContent>
+                <p>消息组件可用于显示便利贴类似的内容。其使用模板如下：</p>
+                <UICode>
+@((MarkupString)@"                    &lt;UIMessage&gt;
+                        &lt;MessageHead&gt;
+
+                        &lt;/MessageHead&gt;
+
+                        &lt;MessageBody&gt;
+
+                        &lt;/MessageBody&gt;
+                    &lt;/UIMessage&gt;")
+                </UICode>
+            </UIContent>
+
+            <UIContent>
+                <p>下面是一个简单的示例：</p>
+            </UIContent>
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UIMessage>
+                        <MessageHead>
+                            <p>Hello World</p>
+                            <UIDelete />
+                        </MessageHead>
+
+                        <MessageBody>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                        </MessageBody>
+                    </UIMessage>
+                </UIColumn>
+                <UIColumn Size="UIEColumnSize.Half">
+                    <UICode>
+                        &lt;MessageHead&gt;
+                        &lt;p&gt;Hello World&lt;/p&gt;
+                        &lt;UIDelete /&gt;
+                        &lt;/MessageHead&gt;
+
+                        &lt;MessageBody&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. &lt;strong&gt;Pellentesque risus mi&lt;/strong&gt;, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum &lt;a&gt;felis venenatis&lt;/a&gt; efficitur. Aenean ac &lt;em&gt;eleifend lacus&lt;/em&gt;, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                        &lt;/MessageBody&gt;
+                        &lt;/UIMessage&gt;
+                    </UICode>
+                </UIColumn>
+            </UIColumns>
+
+            <p><code>Color</code> 可以设置颜色；标题 <code>MessageHead</code> 可以留空。<code>Size</code> 属性可以设置大小。</p>
+
+        </UIColumn>
+    </UIColumns>

@@ -33,13 +33,15 @@
             &lt;UIColumn&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;4&lt;/p&gt;&lt;/UIColumn&gt;
             &lt;/UIColumns&gt;
         </UICode>
-
-        <UIH3>允许列换行</UIH3>
         <br />
-        <p>
-            你也可以使用 <code>UIColumns.IsMultiline</code> 设置一行容纳不下的时候，允许列出现在下一行。
-        </p>
-        <p>例如，设置每一个列是四分之一，但是设置了五个列，可以看到，多设置的列会超出布局范围。</p>
+        <UIH3>允许列换行</UIH3>
+        <UIContent>
+            <p>
+                你也可以使用 <code>UIColumns.IsMultiline</code> 设置一行容纳不下的时候，允许列出现在下一行。
+            </p>
+            <p>例如，设置每一个列是四分之一，但是设置了五个列，可以看到，多设置的列会超出布局范围。</p>
+        </UIContent>
+
         <UIBox>
             <UIColumns>
                 <UIColumn Size="UIEColumnSize.OneQuarter"><p class="bd-notification is-info">1/4</p></UIColumn>
@@ -70,31 +72,40 @@
             &lt;UIColumn Size=&quot;UIEColumnSize.OneQuarter&quot;&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;1/4&lt;/p&gt;&lt;/UIColumn&gt;
             &lt;/UIColumns&gt;
         </UICode>
-
+        <br />
         <UIH3>可变间隙</UIH3>
-        <p>当然，也可以使用可变间隙。后面实现这个功能#*#</p>
+
         <UIContent>
-            <p>你可以使用 <code>UIColumns.GapSize</code> 属性，设置每个列的间隙宽度。数字越大，代表间隙越大。</p>
-            <p>下面是一个示例，你可以双击下面的按钮，设置间隙。
+            <p>当然，也可以使用可变间隙。</p>
+            <p><code>UIColumns.GapSize</code> 属性，设置每个列的间隙宽度。数字越大，代表间隙越大。</p>
+            <p>
+                下面是一个示例，你可以双击下面的按钮，设置间隙。
             </p>
         </UIContent>
         <UIBox>
             <UIButtonGroup>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap0">Size0</UIButton>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap1">Size1</UIButton>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap2">Size2</UIButton>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap3">Size3</UIButton>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap4">Size4</UIButton>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap5">Size5</UIButton>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap6">Size6</UIButton>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap7">Size7</UIButton>
-                <UIButton Color="UIEColor.Primary" DownEvent="DownGap8">Size8</UIButton>
+                @for (int i = 0; i <= 8; i++)
+                {
+                    int tmp = i;
+                    <UIButton Color="UIEColor.Primary" DownEvent="async (e)=> { await DownGap0(e,tmp); }">Size@(tmp)</UIButton>
+                }
             </UIButtonGroup>
-            <UIColumns @bind-GapSize="gap" RefreshEvent="SetRefresh">
+            <UIColumns GapSize="gap" RefreshEvent="SetRefresh">
                 <UIColumn Size="UIEColumnSize.OneThird"><p class="bd-notification is-info">1</p></UIColumn>
                 <UIColumn Size="UIEColumnSize.OneThird"><p class="bd-notification is-info">2</p></UIColumn>
                 <UIColumn Size="UIEColumnSize.OneThird"><p class="bd-notification is-info">3</p></UIColumn>
             </UIColumns>
+        </UIBox>
+
+        <UIBox>
+            <UICode>
+                @((MarkupString)@"
+            &lt;UIColumns GapSize=&quot;UIEGap.Size3&quot;  RefreshEvent=&quot;SetRefresh&quot;&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.OneThird&quot;&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;1&lt;/p&gt;&lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.OneThird&quot;&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;2&lt;/p&gt;&lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.OneThird&quot;&gt;&lt;p class=&quot;bd-notification is-info&quot;&gt;3&lt;/p&gt;&lt;/UIColumn&gt;
+            &lt;/UIColumns&gt;")
+            </UICode>
         </UIBox>
     </UIColumn>
 </UIColumns>
@@ -106,48 +117,10 @@
     {
         downEvent = e;
     }
-    private void DownGap0(MouseEventArgs e)
+    private async Task DownGap0(MouseEventArgs e,int n)
     {
-        gap = UIEGap.Size0;
-        downEvent.InvokeAsync(new object()).Wait();
-    }
-    private void DownGap1(MouseEventArgs e)
-    {
-        gap = UIEGap.Size1;
-        downEvent.InvokeAsync(new object()).Wait();
-    }
-    private void DownGap2(MouseEventArgs e)
-    {
-        gap = UIEGap.Size2;
-        downEvent.InvokeAsync(new object()).Wait();
-    }
-    private void DownGap3(MouseEventArgs e)
-    {
-        gap = UIEGap.Size3;
-        downEvent.InvokeAsync(new object()).Wait();
-    }
-    private void DownGap4(MouseEventArgs e)
-    {
-        gap = UIEGap.Size4;
-        downEvent.InvokeAsync(new object()).Wait();
-    }
-    private void DownGap5(MouseEventArgs e)
-    {
-        downEvent.InvokeAsync(new object()).Wait();
-    }
-    private void DownGap6(MouseEventArgs e)
-    {
-        gap = UIEGap.Size6;
-        downEvent.InvokeAsync(new object()).Wait();
-    }
-    private void DownGap7(MouseEventArgs e)
-    {
-        gap = UIEGap.Size7;
-        downEvent.InvokeAsync(new object()).Wait();
-    }
-    private void DownGap8(MouseEventArgs e)
-    {
-        gap = UIEGap.Size8;
-        downEvent.InvokeAsync(new object()).Wait();
+        gap = (UIEGap)n;
+        StateHasChanged();
+        await downEvent.InvokeAsync(new object());
     }
 }

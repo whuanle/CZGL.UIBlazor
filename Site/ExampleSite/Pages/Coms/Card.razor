@@ -1,1 +1,151 @@
 ﻿@page "/Doc/Card"
+    <UIColumns>
+        <UIColumn Size="UIEColumnSize.X2"><DocsMenu /></UIColumn>
+        <UIColumn Size="UIEColumnSize.X10">
+            <UIH3>卡片(UICard)</UIH3>
+            <UIContent>
+                <p><code>UICard</code> 组件的使用比较复杂，它由以下部分组成：</p>
+                <p>
+                    <ul>
+                        <li><code>UICard</code> 卡片容器</li>
+                        <ul>
+                            <li><code>UICardHeader</code> 头部标题，与 <code>UICardImage</code> 二选一</li>
+                            <ul>
+                                <li><code>HeaderTitle</code> 标题</li>
+                                <li><code>HeaderIcon</code> 图标</li>
+                            </ul>
+                            <li><code>UICardImage</code> ，与 <code>UICardHeader</code> 二选一</li>
+                            <li><code>UIContent</code> 卡片主体内容</li>
+                            <li><code>UICardFoot</code>卡片页脚</li>
+                            <ul>
+                                <li><code>FootItem</code></li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </p>
+            </UIContent>
+
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.OneThird">
+                    <UICard>
+                        <UICardImage>
+                            <UIImage Size="UIEImageSize.FourVThree">
+                                <img src="/images/128x128.png" />
+                            </UIImage>
+                        </UICardImage>
+
+                        <UICardBody>
+                            <UIMedia>
+                                <UIMediaLeft>
+                                    <UIImage Size="UIEImageSize.PX48"><img src="/images/128x128.png" /></UIImage>
+                                </UIMediaLeft>
+                                <UIMediaContent>
+                                    <UIH4>痴者工良</UIH4>
+                                    <UIH6 IsSubTitle="true">@@whuanle.cn</UIH6>
+                                </UIMediaContent>
+                            </UIMedia>
+                            <UIContent>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>@@whuanle.cn</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                @DateTime.Now.ToString()
+                            </UIContent>
+                        </UICardBody>
+                    </UICard>
+                </UIColumn>
+                <UIBox>
+                    <UICodeShow>
+                        @((MarkupString)@"
+                    &lt;UICard&gt;
+                        &lt;UICardImage&gt;
+                            &lt;UIImage Size=&quot;UIEImageSize.FourVThree&quot;&gt;
+                                &lt;img src=&quot;/images/128x128.png&quot; /&gt;
+                            &lt;/UIImage&gt;
+                        &lt;/UICardImage&gt;
+
+                        &lt;UICardBody&gt;
+                            &lt;UIMedia&gt;
+                                &lt;UIMediaLeft&gt;
+                                    &lt;UIImage Size=&quot;UIEImageSize.PX48&quot;&gt;&lt;img src=&quot;/images/128x128.png&quot; /&gt;&lt;/UIImage&gt;
+                                &lt;/UIMediaLeft&gt;
+                                &lt;UIMediaContent&gt;
+                                    &lt;UIH4&gt;痴者工良&lt;/UIH4&gt;
+                                    &lt;UIH6 IsSubTitle=&quot;true&quot;&gt;@@whuanle.cn&lt;/UIH6&gt;
+                                &lt;/UIMediaContent&gt;
+                            &lt;/UIMedia&gt;
+                            &lt;UIContent&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. &lt;a&gt;@@whuanle.cn&lt;/a&gt;.
+                                &lt;a href=&quot;#&quot;&gt;#css&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;#responsive&lt;/a&gt;
+                                &lt;br&gt;
+                                @DateTime.Now.ToString()
+                            &lt;/UIContent&gt;
+                        &lt;/UICardBody&gt;
+                    &lt;/UICard&gt;")
+                    </UICodeShow>
+                </UIBox>
+            </UIColumns>
+            <p>由于卡片是根据容器大小自动缩放的，使用时请将其放置在合适大小的容器中。</p>
+
+            <br />
+            <UIColumns>
+                <UIColumn Size="UIEColumnSize.OneThird">
+                    <UICard>
+                        <UICardHead>
+                            <HeaderTitle>
+                                Component
+                            </HeaderTitle>
+                            <HeaderIcon>
+                                <a><UIIcon IconClass="fas fa-angle-down" /></a>  
+                            </HeaderIcon>
+                        </UICardHead>
+
+                        <UICardBody>
+                            <UIContent>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                                <a href="#">@@whuanle.cn</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                                @DateTime.Now.ToString()
+                            </UIContent>
+                        </UICardBody>
+
+                        <UICardFoot>             
+                            <FootItem1><a href="#">Save</a></FootItem1>
+                            <FootItem2><a href="#">Edit</a></FootItem2>
+                            <FootItem3><a href="#">Delete</a></FootItem3>
+                            <!--最多支持五个子元素-->
+                        </UICardFoot>
+                    </UICard>
+                </UIColumn>
+                <UIBox>
+                    <UICodeShow>
+@((MarkupString)@"&lt;UICard&gt;
+                        &lt;UICardHead&gt;
+                            &lt;HeaderTitle&gt;
+                                Component
+                            &lt;/HeaderTitle&gt;
+                            &lt;HeaderIcon&gt;
+                                &lt;a&gt;&lt;UIIcon IconClass=&quot;fas fa-angle-down&quot; /&gt;&lt;/a&gt;  
+                            &lt;/HeaderIcon&gt;
+                        &lt;/UICardHead&gt;
+
+                        &lt;UICardBody&gt;
+                            &lt;UIContent&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                                &lt;a href=&quot;#&quot;&gt;@@whuanle.cn&lt;/a&gt;. &lt;a href=&quot;#&quot;&gt;#css&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;#responsive&lt;/a&gt;
+                                @DateTime.Now.ToString()
+                            &lt;/UIContent&gt;
+                        &lt;/UICardBody&gt;
+
+                        &lt;UICardFoot&gt;             
+                            &lt;FootItem1&gt;&lt;a href=&quot;#&quot;&gt;Save&lt;/a&gt;&lt;/FootItem1&gt;
+                            &lt;FootItem2&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/FootItem2&gt;
+                            &lt;FootItem3&gt;&lt;a href=&quot;#&quot;&gt;Delete&lt;/a&gt;&lt;/FootItem3&gt;
+                            &lt;!--最多支持五个子元素--&gt;
+                        &lt;/UICardFoot&gt;
+                    &lt;/UICard&gt;")
+                    </UICodeShow>
+                </UIBox>
+            </UIColumns>
+        </UIColumn>
+    </UIColumns>

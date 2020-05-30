@@ -2,18 +2,18 @@
 <div @bind-class="IsActive" @bind-class:event="oninput" @onmousedown="MouseDown" @onmousemove="MouseMove" @onmouseout="MouseOut">
     <div class="dropdown-trigger">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-            <span>@Title</span>
+            <span>@DropTitle</span>
             <span class="icon is-small">
                 <i class="fas fa-angle-down" aria-hidden="true"></i>
             </span>
         </button>
     </div>
-    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-menu" role="menu">
         <div class="dropdown-content">
             @ChildContent
             <hr class="dropdown-divider">
             <div class="dropdown-item">
-                @Footer
+                @DropFoot
             </div>
         </div>
     </div>
@@ -24,21 +24,34 @@
         "dropdown",
         "dropdown is-hoverable",
         "dropdown is-active"
-                    };
-
+                                        };
+    private bool isShow = false;
     private string IsActive = "dropdown";
     private void MouseDown(MouseEventArgs e)
     {
         if (IsMouseDown)
-            IsActive = DropdownActive[2];
+        {
+            IsActive =
+                (isShow ? DropdownActive[0] : DropdownActive[2]) +
+                (IsRight ? " is-right" : "") +
+                (IsUp ? " is-up" : "");
+        }
+
+
+        isShow = !isShow;
     }
     private void MouseMove(MouseEventArgs e)
     {
         if (!IsMouseDown)
-            IsActive = DropdownActive[1];
+            IsActive = DropdownActive[1] +
+                (IsRight ? " is-right" : "") +
+                (IsUp ? " is-up" : "");
     }
     private void MouseOut(MouseEventArgs e)
-    {        if (!IsMouseDown)
-        IsActive = DropdownActive[0];
+    {
+        if (!IsMouseDown)
+            IsActive = DropdownActive[0] +
+                (IsRight ? " is-right" : "") +
+                (IsUp ? " is-up" : "");
     }
 }

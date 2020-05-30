@@ -1,0 +1,112 @@
+﻿@page "/Doc/Menu"
+<UIColumns>
+    <UIColumn Size="UIEColumnSize.X2">
+        <DocsMenu />
+    </UIColumn>
+    <UIColumn Size="UIEColumnSize.X10">
+        <UIH2>菜单(UIMenu)</UIH2>
+        <UIContent>
+            <p>菜单组件，由以下结构组成：</p>
+            <ul>
+                <li><code>UIMenu</code> 菜单容器</li>
+                <ul>
+                    <li><code>UIMenuLabel</code> 文字标签</li>
+                    <li><code>UIMenuItems</code> 菜单项组</li>
+                </ul>
+            </ul>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIContent>
+                    <p>每一项使用 <code>@("<li>")</code> 标签标记。</p>
+                </UIContent>
+                <UIMenu>
+                    <UIMenuLabel>手机</UIMenuLabel>
+                    <UIMenuItems>
+                        <li><a>华为</a></li>
+                        <li><a>三星</a></li>
+                        <li><a>苹果</a></li>
+                    </UIMenuItems>
+                    <UIMenuLabel>电脑</UIMenuLabel>
+                    <UIMenuItems>
+                        <li><a>戴尔</a></li>
+                        <li><a>宏基</a></li>
+                    </UIMenuItems>
+                </UIMenu>
+                <UICodeShow>
+@((MarkupString)@"&lt;UIMenu&gt;
+                    &lt;UIMenuLabel&gt;手机&lt;/UIMenuLabel&gt;
+                    &lt;UIMenuItems&gt;
+                        &lt;li&gt;&lt;a&gt;华为&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a&gt;三星&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a&gt;苹果&lt;/a&gt;&lt;/li&gt;
+                    &lt;/UIMenuItems&gt;
+                    &lt;UIMenuLabel&gt;电脑&lt;/UIMenuLabel&gt;
+                    &lt;UIMenuItems&gt;
+                        &lt;li&gt;&lt;a&gt;戴尔&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a&gt;宏基&lt;/a&gt;&lt;/li&gt;
+                    &lt;/UIMenuItems&gt;
+                &lt;/UIMenu&gt;")
+                </UICodeShow>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIContent>
+                    <p>如果需要再加一层菜单，可以使用 <code>ul</code> 标签。</p>
+                </UIContent>
+                <UIMenu>
+                    <UIMenuLabel>移动设备</UIMenuLabel>
+                    <UIMenuItems>
+                        <li><a class="is-active">华为</a></li>
+                        <li>
+                            <ul>
+                                <li><a>华为手机</a></li>
+                                <li><a>华为平板</a></li>
+                            </ul>
+                        </li>
+                        <li><a>三星</a></li>
+                        <li><a>苹果</a></li>
+                    </UIMenuItems>
+                    <UIMenuLabel>电脑</UIMenuLabel>
+                    <UIMenuItems>
+                        <li><a>戴尔</a></li>
+                        <li><a>宏基</a></li>
+                    </UIMenuItems>
+                </UIMenu>
+                <UICodeShow>
+@((MarkupString)@"&lt;UIMenu&gt;
+                    &lt;UIMenuLabel&gt;移动设备&lt;/UIMenuLabel&gt;
+                    &lt;UIMenuItems&gt;
+                        &lt;li&gt;&lt;a class=&quot;is-active&quot;&gt;华为&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a&gt;华为手机&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a&gt;华为平板&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&lt;a&gt;三星&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a&gt;苹果&lt;/a&gt;&lt;/li&gt;
+                    &lt;/UIMenuItems&gt;
+                    &lt;UIMenuLabel&gt;电脑&lt;/UIMenuLabel&gt;
+                    &lt;UIMenuItems&gt;
+                        &lt;li&gt;&lt;a&gt;戴尔&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a&gt;宏基&lt;/a&gt;&lt;/li&gt;
+                    &lt;/UIMenuItems&gt;
+                &lt;/UIMenu&gt;")
+                </UICodeShow>
+            </UIColumn>
+        </UIColumns>
+
+
+
+        <hr />
+        <aside class="menu">
+            <p class="menu-label">
+                General
+            </p>
+            <ul class="menu-list">
+                <li><a>Dashboard</a></li>
+                <li><a>Customers</a></li>
+            </ul>
+        </aside>
+    </UIColumn>
+</UIColumns>

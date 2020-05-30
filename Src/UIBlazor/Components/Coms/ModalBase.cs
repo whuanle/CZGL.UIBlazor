@@ -7,8 +7,7 @@ namespace UIBlazor.Components.Coms
 {
     public class ModalBase : ComsBase
     {
-        private bool active = false;
-        private static readonly string[] ModalState = new string[]
+        protected string[] ModalState = new string[]
         {
             "modal",
             "modal is-active"
@@ -18,7 +17,19 @@ namespace UIBlazor.Components.Coms
         /// 是否弹出模态框
         /// </summary>
         [Parameter]
-        public bool IsActive { get { return active; } set { active = value; _allClass = (IsActive ? ModalState[1] : ModalState[0]); } }
+        public bool IsActive { get; set; }
+
+        /// <summary>
+        /// 是否关闭右上角的关闭按钮，默认为显示
+        /// </summary>
+        [Parameter]
+        public bool IsShowClose { get; set; } = true;
+
+        /// <summary>
+        /// 模态框自动适应内容的大小
+        /// </summary>
+        [Parameter]
+        public bool IsAutoSize { get; set; }
 
         /// <summary>
         /// 关闭按钮大小
@@ -28,7 +39,6 @@ namespace UIBlazor.Components.Coms
         protected string closeSize;
         protected override void UIInit()
         {
-            _allClass = (IsActive ? ModalState[1] : ModalState[0]);
             closeSize = CacheData.GetUIEButtonSize(CloseSize);
         }
         protected void ModalClose(MouseEventArgs e)

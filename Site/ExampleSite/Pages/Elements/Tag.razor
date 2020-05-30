@@ -6,14 +6,16 @@
     </UIColumn>
     <UIColumn Size="UIEColumnSize.X10">
         <UIH2>Tag 标签</UIH2>
+        <UIContent>
+            <p>由于文档需要使用代码着色，一些 css 刚刚好跟 <code>UITag</code> 的样式冲突了，会导致文档查看时样式不够美观，实际样式可以参考
+                                        <a href="https://bulma.io/documentation/elements/tag/">https://bulma.io/documentation/elements/tag/</a></p>
+            <p>
+                <code>UITag</code> 相当于 Bootstrap 中的 Badge，效果如下。
+            </p>
+        </UIContent>
         <UIColumns>
             <UIColumn Size="UIEColumnSize.X6">
-                <UIContent>
-                    <p>
-                        内容等待完善。
-                        相当于 Bootstrap 中的 Badge，效果如下。
-                    </p>
-                </UIContent>
+
                 <UIBox>
                     <UITag>666</UITag>
                 </UIBox>
@@ -26,27 +28,49 @@
                 </UIBox>
             </UIColumn>
         </UIColumns>
+
+        <UIContent>
+            <p>
+                你可以使用 Color 属性设置徽章颜色。
+            </p>
+        </UIContent>
         <UIColumns>
-            <UIColumn Size="UIEColumnSize.X6">
-                <UIContent>
-                    <p>
-                        你可以使用 Color 属性设置徽章颜色。
-                    </p>
-                </UIContent>
-                <UIBox>
-                    <UITag Color="UIEColor.Black">Black</UITag>
-                    <UITag Color="UIEColor.Dark">Dark</UITag>
-                    <UITag Color="UIEColor.Light">Light</UITag>
-                    <UITag Color="UIEColor.While">While</UITag>
-                    <UITag Color="UIEColor.Primary">Primary</UITag>
-                    <UITag Color="UIEColor.Link">Link</UITag>
-                    <UITag Color="UIEColor.Info">Info</UITag>
-                    <UITag Color="UIEColor.Success">Success</UITag>
-                    <UITag Color="UIEColor.Warning">Warning</UITag>
-                    <UITag Color="UIEColor.Danger">Danger</UITag>
-                </UIBox>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIColumns IsMultiline="true">
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Black">Black</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Dark">Dark</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Light">Light</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.While">While</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Primary">Primary</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Link">Link</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Info">Info</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Success">Success</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Warning">Warning</UITag>
+                    </UIColumn>
+                    <UIColumn Size="UIEColumnSize.X2">
+                        <UITag Color="UIEColor.Danger">Danger</UITag>
+                    </UIColumn>
+                </UIColumns>
+
             </UIColumn>
-            <UIColumn Size="UIEColumnSize.X6">
+            <UIColumn Size="UIEColumnSize.Half">
                 <UIBox>
                     <pre>
             &lt;UITag Color=&quot;UIEColor.Black&quot;&gt;Black&lt;/UITag&gt;
@@ -64,5 +88,117 @@
             </UIColumn>
         </UIColumns>
 
+        <UIContent>
+            <p><code>IsLight</code> 属性可以使颜色变淡。</p>
+        </UIContent>
+
+        <UIH3>大小</UIH3>
+        <UIContent>
+            <p><code>Size</code> 属性可设置标签的大小。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn><UITag Size="UIETextSize.Small" Color="UIEColor.Info" /></UIColumn>
+            <UIColumn><UITag Size="UIETextSize.None" Color="UIEColor.Info" /></UIColumn>
+            <UIColumn><UITag Size="UIETextSize.Medium" Color="UIEColor.Info" /></UIColumn>
+            <UIColumn><UITag Size="UIETextSize.Large" Color="UIEColor.Info" /></UIColumn>
+        </UIColumns>
+
+        <UIH3>标签组</UIH3>
+        <UIContent>
+            <p><code>UITags</code> 标签组用于包含多个标签组件。</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UITags>
+                    <UITag>One</UITag>
+                    <UITag>Two</UITag>
+                    <UITag>Three</UITag>
+                    <UITag>Four</UITag>
+                    <UITag>Five</UITag>
+                    <UITag>Six</UITag>
+                    <UITag>Seven</UITag>
+                    <UITag>Eight</UITag>
+                    <UITag>Nine</UITag>
+                    <UITag>Ten</UITag>
+                    <UITag>Eleven</UITag>
+                    <UITag>Twelve</UITag>
+                    <UITag>Thirteen</UITag>
+                    <UITag>Fourteen</UITag>
+                    <UITag>Fifteen</UITag>
+                    <UITag>Sixteen</UITag>
+                    <UITag>Seventeen</UITag>
+                    <UITag>Eighteen</UITag>
+                    <UITag>Nineteen</UITag>
+                    <UITag>Twenty</UITag>
+                </UITags>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UICodeShow>
+                        &lt;UITags&gt;
+                        &lt;UITag&gt;One&lt;/UITag&gt;
+                        &lt;UITag&gt;Two&lt;/UITag&gt;
+                        &lt;UITag&gt;Three&lt;/UITag&gt;
+                        &lt;UITag&gt;Four&lt;/UITag&gt;
+                        &lt;UITag&gt;Five&lt;/UITag&gt;
+                        &lt;UITag&gt;Six&lt;/UITag&gt;
+                        &lt;UITag&gt;Seven&lt;/UITag&gt;
+                        &lt;UITag&gt;Eight&lt;/UITag&gt;
+                        &lt;UITag&gt;Nine&lt;/UITag&gt;
+                        &lt;UITag&gt;Ten&lt;/UITag&gt;
+                        &lt;UITag&gt;Eleven&lt;/UITag&gt;
+                        &lt;UITag&gt;Twelve&lt;/UITag&gt;
+                        &lt;UITag&gt;Thirteen&lt;/UITag&gt;
+                        &lt;UITag&gt;Fourteen&lt;/UITag&gt;
+                        &lt;UITag&gt;Fifteen&lt;/UITag&gt;
+                        &lt;UITag&gt;Sixteen&lt;/UITag&gt;
+                        &lt;UITag&gt;Seventeen&lt;/UITag&gt;
+                        &lt;UITag&gt;Eighteen&lt;/UITag&gt;
+                        &lt;UITag&gt;Nineteen&lt;/UITag&gt;
+                        &lt;UITag&gt;Twenty&lt;/UITag&gt;
+                        &lt;/UITags&gt;
+                    </UICodeShow>
+                </UIBox>
+            </UIColumn>
+        </UIColumns>
+
+        <UIH3>组合标签</UIH3>
+        <UIContent>
+            <p><code>UITags</code> 的 <code>IsHasAddons</code> 属性，可以将多个标签组合起来(一般两个)，生成胶囊样式。</p>
+            <p>例如：</p>
+        </UIContent>
+        <UIColumns>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UITags IsHasAddons="true">
+                        <UITag>Package</UITag>
+                        <UITag Color="UIEColor.Primary">Blazor</UITag>
+                    </UITags>
+                </UIBox>
+            </UIColumn>
+            <UIColumn Size="UIEColumnSize.Half">
+                <UIBox>
+                    <UITags IsHasAddons="true">
+                        <UITag Color="UIEColor.Danger">BlazorUI</UITag>
+                        <UITag IsDelete="true"></UITag>
+                    </UITags>
+                </UIBox>
+            </UIColumn>
+        </UIColumns>
+        <UIBox>
+            <UICodeShow>
+                &lt;!--1--&gt;
+                &lt;UITags&gt;
+                &lt;UITag&gt;Package&lt;/UITag&gt;
+                &lt;UITag Color=&quot;UIEColor.Primary&quot;&gt;BlazorUI&lt;/UITag&gt;
+                &lt;/UITags&gt;
+
+                &lt;!--2--&gt;
+                &lt;UITags IsHasAddons=&quot;true&quot;&gt;
+                &lt;UITag&gt;Message:20&lt;/UITag&gt;
+                &lt;a&gt;&lt;UITag IsDelete=&quot;true&quot;&gt;&lt;/UITag&gt;&lt;/a&gt;
+                &lt;/UITags&gt;
+            </UICodeShow>
+        </UIBox>
     </UIColumn>
 </UIColumns>

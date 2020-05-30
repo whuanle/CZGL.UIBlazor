@@ -57,40 +57,38 @@
                 </UILevelRight>
             </UILevel>
         </UIBox>
-        <UIContent>
-            <pre><code class="language-html hljs xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">UIBox</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevel</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelLeft</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIH5</span> <span class="hljs-attr">IsSubTitle</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>123<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> posts<span class="hljs-tag">&lt;/<span class="hljs-name">UIH5</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIField</span> <span class="hljs-attr">IsAddon</span>=<span class="hljs-string">"true"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIInput</span> <span class="hljs-attr">Placeholder</span>=<span class="hljs-string">"Fina apost"</span> /&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIControl</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIField</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelLeft</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelRight</span>&gt;</span>
+        <UIBox>
+            <UICodeShow>
+            @((MarkupString)@"&lt;UILevel&gt;
+                &lt;UILevelLeft&gt;
+                    &lt;UILevelItem&gt;
+                        &lt;UIH5 IsSubTitle=&quot;true&quot;&gt;&lt;strong&gt;123&lt;/strong&gt; posts&lt;/UIH5&gt;
+                    &lt;/UILevelItem&gt;
+                    &lt;UILevelItem&gt;
+                        &lt;UIField IsAddon=&quot;true&quot;&gt;
+                            &lt;UIControl&gt;
+                                &lt;UIInput Placeholder=&quot;Fina apost&quot; /&gt;
+                            &lt;/UIControl&gt;
+                            &lt;UIControl&gt;
+                                &lt;UIButton&gt;Search&lt;/UIButton&gt;
+                            &lt;/UIControl&gt;
+                        &lt;/UIField&gt;
+                    &lt;/UILevelItem&gt;
+                &lt;/UILevelLeft&gt;
+                &lt;UILevelRight&gt;
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>All<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Published<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Drafts<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Deleted<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">UIButton</span> <span class="hljs-attr">Color</span>=<span class="hljs-string">"UIEColor.Success"</span>&gt;</span>New<span class="hljs-tag">&lt;/<span class="hljs-name">UIButton</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelRight</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevel</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UIBox</span>&gt;</span>
-        </code></pre>
-        </UIContent>
+                    &lt;UILevelItem&gt;&lt;strong&gt;All&lt;/strong&gt;&lt;/UILevelItem&gt;
+                    &lt;UILevelItem&gt;&lt;a&gt;Published&lt;/a&gt;&lt;/UILevelItem&gt;
+                    &lt;UILevelItem&gt;&lt;a&gt;Drafts&lt;/a&gt;&lt;/UILevelItem&gt;
+                    &lt;UILevelItem&gt;&lt;a&gt;Deleted&lt;/a&gt;&lt;/UILevelItem&gt;
+                    &lt;UILevelItem&gt;&lt;a href=&quot;#&quot;&gt;&lt;UIButton Color=&quot;UIEColor.Success&quot;&gt;New&lt;/UIButton&gt;&lt;/a&gt;&lt;/UILevelItem&gt;
+                &lt;/UILevelRight&gt;
+            &lt;/UILevel&gt;")
+            </UICodeShow>
+        </UIBox>
 
         <UIContent>
-            <p>如果只使用 <code>UILevelItem</code> ，则元素可以居中对齐。</p>
+            <p>前面说了 <code>UILevelLeft</code> 和 <code>UILevelRight</code> 只是用于对齐元素，如果只使用 <code>UILevelItem</code> ，则元素是居中对齐的。</p>
         </UIContent>
         <UIBox>
             <UILevel>
@@ -121,35 +119,38 @@
             </UILevel>
         </UIBox>
 
+        <UIBox>
+            <UICodeShow>
+            @((MarkupString)@"&lt;UILevel&gt;
+                &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                    &lt;UIContent&gt;
+                        &lt;p class=&quot;heading&quot;&gt;Tweets&lt;/p&gt;
+                        &lt;p class=&quot;title&quot;&gt;3,456&lt;/p&gt;
+                    &lt;/UIContent&gt;
+                &lt;/UILevelItem&gt;
+                &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                    &lt;UIContent&gt;
+                        &lt;p class=&quot;heading&quot;&gt;Following&lt;/p&gt;
+                        &lt;p class=&quot;title&quot;&gt;123&lt;/p&gt;
+                    &lt;/UIContent&gt;
+                &lt;/UILevelItem&gt;
+                &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                    &lt;UIContent&gt;
+                        &lt;p class=&quot;heading&quot;&gt;Followers&lt;/p&gt;
+                        &lt;p class=&quot;title&quot;&gt;456K&lt;/p&gt;
+                    &lt;/UIContent&gt;
+                &lt;/UILevelItem&gt;
+                &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                    &lt;UIContent&gt;
+                        &lt;p class=&quot;heading&quot;&gt;Likers&lt;/p&gt;
+                        &lt;p class=&quot;title&quot;&gt;789&lt;/p&gt;
+                    &lt;/UIContent&gt;
+                &lt;/UILevelItem&gt;
+            &lt;/UILevel&gt;")
+            </UICodeShow>
+        </UIBox>
         <UIContent>
-            <pre><code class="language-html hljs xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">UILevel</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIContent</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heading"</span>&gt;</span>Tweets<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>3,456<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIContent</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIContent</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heading"</span>&gt;</span>Following<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>123<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIContent</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIContent</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heading"</span>&gt;</span>Followers<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>456K<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIContent</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIContent</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heading"</span>&gt;</span>Likers<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>789<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIContent</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UILevel</span>&gt;</span>
-        </code></pre>
+            <p>下面是一个顶部菜单栏的示例：</p>
         </UIContent>
         <UILevel>
             <UILevelItem Align="UIEAlign.Center">
@@ -168,28 +169,27 @@
                 <a class="link is-info">Contact</a>
             </UILevelItem>
         </UILevel>
-
-        <UIContent>
-            <pre><code class="language-html hljs xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">UILevel</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link is-info"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link is-info"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/images/128x128.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height: 30px;"</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link is-info"</span>&gt;</span>Reservations<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UILevelItem</span> <span class="hljs-attr">Align</span>=<span class="hljs-string">"UIEAlign.Center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link is-info"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UILevelItem</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UILevel</span>&gt;</span>
-        </code></pre>
-        </UIContent>
+        <UIBox>
+            <UICodeShow>
+        @((MarkupString)@"&lt;UILevel&gt;
+            &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                &lt;a class=&quot;link is-info&quot;&gt;Home&lt;/a&gt;
+            &lt;/UILevelItem&gt;
+            &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                &lt;a class=&quot;link is-info&quot;&gt;Menu&lt;/a&gt;
+            &lt;/UILevelItem&gt;
+            &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                &lt;img src=&quot;/images/128x128.png&quot; alt=&quot;&quot; style=&quot;height: 30px;&quot;&gt;
+            &lt;/UILevelItem&gt;
+            &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                &lt;a class=&quot;link is-info&quot;&gt;Reservations&lt;/a&gt;
+            &lt;/UILevelItem&gt;
+            &lt;UILevelItem Align=&quot;UIEAlign.Center&quot;&gt;
+                &lt;a class=&quot;link is-info&quot;&gt;Contact&lt;/a&gt;
+            &lt;/UILevelItem&gt;
+        &lt;/UILevel&gt;")
+            </UICodeShow>
+        </UIBox>
 
     </UIColumn>
 </UIColumns>

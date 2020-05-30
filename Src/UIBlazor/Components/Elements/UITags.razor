@@ -1,0 +1,14 @@
+﻿@inherits ElementBase
+<div class="tags @_allClass" @attributes="UIAttributes">@ChildContent</div>
+@code{
+
+    /// <summary>
+    /// 多个标签合并
+    /// </summary>
+    [Parameter]
+    public bool IsHasAddons { get; set; }
+    protected override void UIInit()
+    {
+        _allClass = IsHasAddons ? "has-addons" : "";
+    }
+}

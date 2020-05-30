@@ -97,37 +97,40 @@
                 <UITextarea Placeholder="Warning" Color="UIEColor.Warning"></UITextarea>
             </UIColumn>
         </UIColumns>
-        <UICode>
-            &lt;UIColumns IsMultiline=&quot;true&quot;&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Black&quot; Color=&quot;UIEColor.Black&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Danger&quot; Color=&quot;UIEColor.Danger&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Dark&quot; Color=&quot;UIEColor.Dark&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Info&quot; Color=&quot;UIEColor.Info&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Light&quot; Color=&quot;UIEColor.Light&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Link&quot; Color=&quot;UIEColor.Link&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Primary&quot; Color=&quot;UIEColor.Primary&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Success&quot; Color=&quot;UIEColor.Success&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
-            &lt;UITextarea Placeholder=&quot;Warning&quot; Color=&quot;UIEColor.Warning&quot;&gt;&lt;/UITextarea&gt;
-            &lt;/UIColumn&gt;
-            &lt;/UIColumns&gt;
-        </UICode>
+        <UIBox>
+            <UICodeShow>
+                &lt;UIColumns IsMultiline=&quot;true&quot;&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Black&quot; Color=&quot;UIEColor.Black&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Danger&quot; Color=&quot;UIEColor.Danger&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Dark&quot; Color=&quot;UIEColor.Dark&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Info&quot; Color=&quot;UIEColor.Info&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Light&quot; Color=&quot;UIEColor.Light&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Link&quot; Color=&quot;UIEColor.Link&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Primary&quot; Color=&quot;UIEColor.Primary&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Success&quot; Color=&quot;UIEColor.Success&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;UIColumn Size=&quot;UIEColumnSize.X4&quot;&gt;
+                &lt;UITextarea Placeholder=&quot;Warning&quot; Color=&quot;UIEColor.Warning&quot;&gt;&lt;/UITextarea&gt;
+                &lt;/UIColumn&gt;
+                &lt;/UIColumns&gt;
+            </UICodeShow>
+        </UIBox>
+
 
         <br />
         <h3 class="title is-3">大小</h3>
@@ -186,11 +189,11 @@
 
 
         <UIH3>其它设置</UIH3>
-        <p><code>@nameof(UITextarea)</code>拥有跟 <code>@nameof(UIInput)</code> 一样的状态属性。</p>
+        <p><code>@nameof(UITextarea)</code> 拥有跟 <code>@nameof(UIInput)</code> 一样的状态属性。</p>
         <p><code>State</code> 属性可以配置控件状态。</p>
         <p><code>IsStatic</code> 属性可以设置控件为静态。</p>
         <p><code>IsReadonly</code> 属性设置只读。</p>
-        <p><code>IsDisabled</code> 属性设置控件为禁用状态。具体可参考<UICode>@nameof(UIInput)</UICode> ，这里不再赘述，毕竟写文档是很累的，整个网站的文档全靠手撸。</p>
+        <p><code>IsDisabled</code> 属性设置控件为禁用状态。具体可参考<code>@nameof(UIInput)</code> ，这里不再赘述，毕竟写文档是很累的，整个网站的文档全靠手撸。</p>
     </UIColumn>
 </UIColumns>
 

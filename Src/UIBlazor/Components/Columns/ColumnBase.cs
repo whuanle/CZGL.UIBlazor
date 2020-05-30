@@ -19,6 +19,10 @@ namespace UIBlazor.Components.Columns
         [Parameter(CaptureUnmatchedValues = true)]
         public Dictionary<string, object> UIAttributes { get; set; }
 
+        /// <summary>
+        /// 对象本身的实例
+        /// </summary>
+        public object Instance { get { return this; }  }
         #region 初始化和动态刷新组件
 
         protected override void OnInitialized()

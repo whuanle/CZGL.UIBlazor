@@ -27,4 +27,12 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ChangeDLLExtensions.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Target Name="ChangeDLLFileExtensions" AfterTargets="Publish" Condition="'$(Configuration)'=='Release'">
+    <Exec Command="powershell.exe -command &quot;&amp; { .\ChangeDLLExtensions.ps1 '$(SolutionDir)' '$(TargetFramework)'}&quot;" />
+  </Target>
 </Project>

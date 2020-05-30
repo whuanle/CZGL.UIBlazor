@@ -1,2 +1,7 @@
 ﻿@inherits CheckboxBase
-<label class="checkbox"> <input type="checkbox" name="@Name" />@ChildContent </label>
+@if (IsDisable)
+{
+    <label class="checkbox"> <input type="checkbox" name="@Name" disabled />@ChildContent </label>
+}
+else
+{<label class="checkbox"> <input type="checkbox" name="@Name" />@ChildContent </label>}

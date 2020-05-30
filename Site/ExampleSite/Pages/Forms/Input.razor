@@ -192,13 +192,7 @@
                         <UIInput Placeholder="Loading" />
                     </UIControl>
                 </UIField>
-                <p>设置加载状态，要在 <code>UIControl</code> 中设置，在输入框中设置无效。</p>
-                <p>如果要设置禁用输入框得话，可以在后面加上 <code>disabled</code> 暂时未实现#*#。</p>
-                <UIField>
-                    <UIControl>
-                        <UIInput Placeholder="disabled" disabled />
-                    </UIControl>
-                </UIField>
+                <p>设置加载状态，要在 <code>UIControl</code> 组件中中设置，在输入框中设置无效。</p>
             </UIColumn>
             <UIColumn Size="UIEColumnSize.Half">
                 <UICode>
@@ -233,7 +227,7 @@
             <p>禁用：</p>
             <UIInput Color="UIEColor.Primary" IsDisabled="true" />
             <p>只读：</p>
-            <UIInput Color="UIEColor.Primary" IsReadonly="true" value="你可以复制，但不能编辑这句话。" />
+            <UIInput Color="UIEColor.Primary" IsReadonly="true" Placeholder="你可以复制，但不能编辑这句话。" value="你可以复制，但不能编辑这句话。" />
         </UIBox>
 
         <br />

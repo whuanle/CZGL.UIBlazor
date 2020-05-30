@@ -33,8 +33,7 @@
             </UIHeroBody>
         </UIHero>
         <UIBox>
-            <UIContent>
-                <UICode>
+                <UICodeShow>
                     &lt;UIHero&gt;
                     &lt;UIHeroBody&gt;
                     &lt;UIContainer&gt;
@@ -47,11 +46,10 @@
                     &lt;/UIContainer&gt;
                     &lt;/UIHeroBody&gt;
                     &lt;/UIHero&gt;
-                </UICode>
-            </UIContent>
+                </UICodeShow>
         </UIBox>
         <br />
-        <p>其它子元素位置：</p>
+        <p>三个子元素所在位置：</p>
         <UIHero Color="UIEColor.Success">
             <UIHeroHead>
                 <h1 class="title">Head</h1>
@@ -65,23 +63,24 @@
                 <h1 class="title">Foot</h1>
             </UIHeroFoot>
         </UIHero>
-        <UIContent>
-            <pre><code class="language-html hljs xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">UIHero</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIHeroHead</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Head<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIHeroHead</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIHeroBody</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIContainer</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIContainer</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIHeroBody</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">UIHeroFoot</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Foot<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">UIHeroFoot</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">UIHero</span>&gt;</span>
-        </code></pre>
-        </UIContent>
+        <UIBox>
+            <UICodeShow>
+                @((MarkupString)
+@"&lt;UIHero&gt;
+            &lt;UIHeroHead&gt;
+            &lt;h1 class=&quot;title&quot;&gt;Head&lt;/h1&gt;
+            &lt;/UIHeroHead&gt;
+            &lt;UIHeroBody&gt;
+            &lt;UIContainer&gt;
+            &lt;h1 class=&quot;title&quot;&gt;&lt;/h1&gt;
+            &lt;/UIContainer&gt;
+            &lt;/UIHeroBody&gt;
+            &lt;UIHeroFoot&gt;
+            &lt;h1 class=&quot;title&quot;&gt;Foot&lt;/h1&gt;
+            &lt;/UIHeroFoot&gt;
+&lt;/UIHero&gt;")
+            </UICodeShow>
+        </UIBox>
         <br />
         <h3 class="title is-3">颜色(Color)</h3>
         <UIContent>
@@ -99,20 +98,23 @@
                 </UIContainer>
             </UIHeroBody>
         </UIHero>
-        <UICode>
-            &lt;UIHero Color=&quot;UIEColor.Primary&quot;&gt;
-            &lt;UIHeroBody&gt;
-            &lt;UIContainer&gt;
-            &lt;h1 class=&quot;title&quot;&gt;
-            Hero title
-            &lt;/h1&gt;
-            &lt;h2 class=&quot;subtitle&quot;&gt;
-            Hero subtitle
-            &lt;/h2&gt;
-            &lt;/UIContainer&gt;
-            &lt;/UIHeroBody&gt;
-            &lt;/UIHero&gt;
-        </UICode>
+        <UIBox>
+            <UICodeShow>
+                &lt;UIHero Color=&quot;UIEColor.Primary&quot;&gt;
+                &lt;UIHeroBody&gt;
+                &lt;UIContainer&gt;
+                &lt;h1 class=&quot;title&quot;&gt;
+                Hero title
+                &lt;/h1&gt;
+                &lt;h2 class=&quot;subtitle&quot;&gt;
+                Hero subtitle
+                &lt;/h2&gt;
+                &lt;/UIContainer&gt;
+                &lt;/UIHeroBody&gt;
+                &lt;/UIHero&gt;
+            </UICodeShow>
+        </UIBox>
+
         <p>
             其它样式演示：
         </p>

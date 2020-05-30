@@ -1,8 +1,24 @@
 ﻿@inherits ModalBase
-<div @bind-class="_allClass" @bind-class:event="oninput">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-        @ChildContent
-    </div>
-    <button class="modal-close @closeSize" aria-label="close" @onclick="ModalClose"></button>
-</div>
+        <div class="@(IsActive ? ModalState[1] : ModalState[0])">
+            @if (IsAutoSize)
+            {
+                <style>
+                    .modal-auto-size {
+                        width: min-content;
+                        margin: auto;
+                    }
+                </style>
+                <div class="modal-background modal-auto-size"></div>
+            }
+            else
+            {
+                <div class="modal-background"></div>
+            }
+            <div class="modal-content">
+                @ChildContent
+            </div>
+            @if (IsShowClose)
+            {
+                <button class="modal-close @closeSize" aria-label="close" @onclick="ModalClose"></button>
+            }
+        </div>

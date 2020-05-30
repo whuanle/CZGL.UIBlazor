@@ -1,13 +1,25 @@
 ﻿@inherits CardBase
-<header class="card-header">
-    @if (!(Title is null))
-        @Title
-@ChildContent
+<header class="card-header" @attributes="UIAttributes">
+    @if (!(HeaderTitle is null))
+    {
+        <p class="card-header-title">@HeaderTitle</p>
+    }
+    @if (!(HeaderIcon is null))
+    {
+        <div class="card-header-icon" aria-label="more options">@HeaderIcon</div>
+    }
 </header>
+
 @code{
     /// <summary>
     /// 标题
     /// </summary>
     [Parameter]
-    public RenderFragment Title { get; set; }
+    public RenderFragment HeaderTitle { get; set; }
+
+    /// <summary>
+    /// 右上角图标
+    /// </summary>
+    [Parameter]
+    public RenderFragment HeaderIcon { get; set; }
 }

@@ -1,2 +1,35 @@
 ﻿@page "/"
-一篇空白一片空白一片空白
+<UIH3>第一步</UIH3>
+<UIContent>
+    <p>创建一个 Blazor 项目，Server 或 Wasm 都可以。</p>
+    <UICardImage>
+        <img src="/images/index/01.png" style="width:700px;" />
+    </UICardImage>
+
+    <UIH3>下载 css 和 Nuget 引入 组件库。</UIH3>
+    <UIContent>
+        <p>点击顶部菜单栏的，下载 CSS 文件，放入项目的 <code>wwwroot</code> 文件夹(可以放入里面的任意目录)；为项目添加名为 UIBlazor 的 Nuget 包</p>
+        <UICardImage>
+            <img src="/images/index/02.png" />
+        </UICardImage>
+    </UIContent>
+    <UIContent>
+        <p>
+            然后打开项目的 <code>_Inports.razor</code> 文件，加入以下命名空间：
+            <UIBox>
+                <UICode>
+                    @@using UIBlazor.UIEnum
+                    @@using UIBlazor.Components
+                    @@using UIBlazor.Components.Columns
+                    @@using UIBlazor.Components.Coms
+                    @@using UIBlazor.Components.Elements
+                    @@using UIBlazor.Components.Forms
+                    @@using UIBlazor.Components.Layouts
+
+                </UICode>
+            </UIBox>
+        </p>
+        <p>然后将项目默认自带的 Bootstrap 样式文件删除干净，就可以使用了。</p>
+        <p>你可以参考本站的文档。</p>
+    </UIContent>
+</UIContent>

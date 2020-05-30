@@ -6,22 +6,37 @@
     </UINavbarBrand>
     <UINavbarMenu style="margin-top:20px;">
         <UINavbarStart>
-            <NavLink class="is-link" href="/" Match="NavLinkMatch.All">
+            <NavLink href="/" Match="NavLinkMatch.All">
                 <UINavbarItem>
                     <UIIcon IconClass="fas fa-home" style="margin-right:10px;" />
                     主页
                 </UINavbarItem>
             </NavLink>
-            <NavLink class="is-link" href="@nameof(Pages.Doc)">
+            <NavLink href="@nameof(Pages.Doc)">
                 <UINavbarItem>
                     <UIIcon IconClass="fas fa-book" style="margin-right:10px;" />
                     文档
                 </UINavbarItem>
             </NavLink>
+            <a href="/css/bulma.min.css" download="bulma.min.css">
+                <UINavbarItem>
+                    <UIIcon IconClass="fas fa-download" style="margin-right:10px;" />
+                    下载 css
+                </UINavbarItem>
+            </a>
+            <a href="https://www.nuget.org/packages/CZGL.UIBlazor">
+                <UINavbarItem>
+                    <UIIcon IconClass="fas fa-download" style="margin-right:10px;" />
+                    下载组件库
+                </UINavbarItem>
+            </a>
         </UINavbarStart>
         <UINavbarEnd>
             <UINavbarItem>
+                <span>给个星星？</span>
                 <UIButtonGroup>
+                    <UIButton><a href="https://github.com/whuanle/CZGL.UIBlazor"><UIIcon IconClass="fab fa-github" /><span>GitHub</span></a></UIButton>
+
                     <UIButton Color="UIEColor.Primary">
                         登录
                     </UIButton>

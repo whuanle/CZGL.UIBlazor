@@ -1,9 +1,9 @@
 ﻿@inherits SelectBase
 @if (Line == null)
 {
-    <div class="select @_allClass"><select>@ChildContent</select></div>
+    <div class="select @_allClass" @attributes="UIAttributes"><select>@ChildContent</select></div>
 }
 else
 {
-    <div class="select is-multiple @_allClass"><select multiple size="@(Line.Value)">@ChildContent</select></div>
+    <div class="select is-multiple @_allClass" @attributes="UIAttributes"><select multiple size="@(Line.Value)">@ChildContent</select></div>
 }

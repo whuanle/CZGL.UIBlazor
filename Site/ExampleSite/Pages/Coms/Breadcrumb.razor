@@ -5,6 +5,149 @@
         <DocsMenu />
     </UIColumn>
     <UIColumn Size="UIEColumnSize.X10">
-        文档正在编写中。
+        <UIH2>面包屑</UIH2>
+        <UIContent>
+            <p><code>@nameof(UIBread)</code> 是面包屑导航容器，<code>@nameof(UIBreadItem)</code> 是面包屑子元素。</p>
+        </UIContent>
+        <UIBread>
+            <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+            <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+            <UIBreadItem><a href="#">Components</a></UIBreadItem>
+            <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+        </UIBread>
+        <UIBox>
+            <UICodeShow>
+                &lt;UIBread&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;BlazorUI&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Documentation&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem IsActive=&quot;true&quot;&gt;&lt;a href=&quot;#&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;/UIBread&gt;
+            </UICodeShow>
+        </UIBox>
+        <p><code>IsActive</code> 属性用于设置当前子元素处于活动状态。</p>
+        <UIH3>对齐</UIH3>
+        <UIContent>
+            <p><code>@nameof(UIBread.Align)</code> 用于设置面包屑对齐位置。</p>
+        </UIContent>
+        <UIBox>
+            <p>默认：</p>
+            <UIBread>
+                <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#">Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+            </UIBread>
+            <p>居中：</p>
+            <UIBread Align="UIEAlign.Center">
+                <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#">Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+            </UIBread>
+            <p>居右：</p>
+            <UIBread Align="UIEAlign.Right">
+                <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#">Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+            </UIBread>
+        </UIBox>
+        <br />
+        <UIH3>加入图标</UIH3>
+        <UIContent><p>
+            你可以使用 <code>UIIcon</code> 轻松加入图标。
+            </p></UIContent>
+        <UIBox>
+            <UIBread>
+                <UIBreadItem><a href="#"><UIIcon Size="UIETextSize.Small" IconClass="fas fa-home" />BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#"><UIIcon Size="UIETextSize.Small" IconClass="fas fa-book" />Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#"><UIIcon Size="UIETextSize.Small" IconClass="fas fa-puzzle-piece" />Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#"><UIIcon Size="UIETextSize.Small" IconClass="fas fa-thumbs-up" />Breadcrumb</a></UIBreadItem>
+            </UIBread>
+        </UIBox>
+        <UIBox>
+            <UICodeShow>
+                &lt;UIBread&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;&lt;UIIcon Size=&quot;UIETextSize.Small&quot; IconClass=&quot;fas fa-home&quot; /&gt;BlazorUI&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;&lt;UIIcon Size=&quot;UIETextSize.Small&quot; IconClass=&quot;fas fa-book&quot; /&gt;Documentation&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;&lt;UIIcon Size=&quot;UIETextSize.Small&quot; IconClass=&quot;fas fa-puzzle-piece&quot; /&gt;Components&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem IsActive=&quot;true&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;UIIcon Size=&quot;UIETextSize.Small&quot; IconClass=&quot;fas fa-thumbs-up&quot; /&gt;Breadcrumb&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;/UIBread&gt;
+            </UICodeShow>
+        </UIBox>
+
+        <br />
+        <UIH3>分隔符</UIH3>
+        <UIContent>
+            <p>默认多个元素间是斜杆符号分隔的，你可以使用 <code>Separator</code> 属性，设置补贴的分隔符。</p>
+        </UIContent>
+        <UIBox>
+            <UIBread>
+                <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#">Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+            </UIBread>
+            <UIBread Separator="UIEBreadSeparator.Arrow">
+                <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#">Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+            </UIBread>
+            <UIBread Separator="UIEBreadSeparator.Bullet">
+                <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#">Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+            </UIBread>
+            <UIBread Separator="UIEBreadSeparator.Dot">
+                <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#">Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+            </UIBread>
+            <UIBread Separator="UIEBreadSeparator.Succeed">
+                <UIBreadItem><a href="#">BlazorUI</a></UIBreadItem>
+                <UIBreadItem><a href="#">Documentation</a></UIBreadItem>
+                <UIBreadItem><a href="#">Components</a></UIBreadItem>
+                <UIBreadItem IsActive="true"><a href="#">Breadcrumb</a></UIBreadItem>
+            </UIBread>
+        </UIBox>
+        <UIBox>
+            <UICodeShow>
+@((MarkupString)@"            &lt;UIBread&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;BlazorUI&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Documentation&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem IsActive=&quot;true&quot;&gt;&lt;a href=&quot;#&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/UIBreadItem&gt;
+            &lt;/UIBread&gt;
+            &lt;UIBread Separator=&quot;UIEBreadSeparator.Arrow&quot;&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;BlazorUI&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Documentation&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem IsActive=&quot;true&quot;&gt;&lt;a href=&quot;#&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/UIBreadItem&gt;
+            &lt;/UIBread&gt;
+            &lt;UIBread Separator=&quot;UIEBreadSeparator.Bullet&quot;&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;BlazorUI&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Documentation&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem IsActive=&quot;true&quot;&gt;&lt;a href=&quot;#&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/UIBreadItem&gt;
+            &lt;/UIBread&gt;
+            &lt;UIBread Separator=&quot;UIEBreadSeparator.Dot&quot;&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;BlazorUI&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Documentation&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem IsActive=&quot;true&quot;&gt;&lt;a href=&quot;#&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/UIBreadItem&gt;
+            &lt;/UIBread&gt;
+            &lt;UIBread Separator=&quot;UIEBreadSeparator.Succeed&quot;&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;BlazorUI&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Documentation&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem&gt;&lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/UIBreadItem&gt;
+                &lt;UIBreadItem IsActive=&quot;true&quot;&gt;&lt;a href=&quot;#&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/UIBreadItem&gt;
+            &lt;/UIBread&gt;")
+            </UICodeShow>
+        </UIBox>
+        <UIContent><p>另外，<code>Size</code> 属性可以设置大小。</p></UIContent>
     </UIColumn>
 </UIColumns>
